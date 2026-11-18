@@ -83,7 +83,7 @@ class ChatTest extends TestCase
         $response->assertSee('/en/my-chat/subscription/'.$this->thread->id, false);
         $response->assertSee('/en/my-chat/subscription/'.$this->thread->id.'/messages', false);
         $response->assertSee('window.check_chat_url = "/en/my-chat/unread"', false);
-        $response->assertSee('https://help.sharesub.com/', false);
+        $response->assertSee('https://help.syndicate.com/', false);
         $response->assertSee('/en/my-bank-account', false);
         $response->assertDontSee('No conversation', false);
         $response->assertDontSee('chat--noconv', false);
@@ -224,10 +224,10 @@ class ChatTest extends TestCase
         $response->assertSee('data-chat-thread', false);
         $response->assertSee('data-chat-form', false);
         $response->assertSee('href="/en/my-chat/subscription/'.$this->thread->id.'"', false);
-        // No sharesub-chat element in v1: the bundled app.js mounts
+        // No syndicate-chat element in v1: the bundled app.js mounts
         // the real component on that tag, and without keys it renders
         // every message as "false".
-        $response->assertDontSee('<sharesub-chat', false);
+        $response->assertDontSee('<syndicate-chat', false);
         $response->assertDontSee('private-key', false);
         $response->assertDontSee('public-key', false);
     }

@@ -21,7 +21,7 @@
                     @endif
                 </div>
                 <div class="col-12 col-md-3 text-md-right">
-                    <a class="btn-sharesub bleu" style="width: auto;" href="{{ route('admin.support.show', $thread['user']) }}">Open</a>
+                    <a class="btn-syndicate bleu" style="width: auto;" href="{{ route('admin.support.show', $thread['user']) }}">Open</a>
                 </div>
             </li>
         @empty

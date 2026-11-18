@@ -685,7 +685,7 @@
                     RemoveUser: () => za,
                     ReportAnIssue: () => Yi,
                     SavingCalculator: () => xa,
-                    SharesubChat: () => va,
+                    SyndicateChat: () => va,
                     SliderComponent: () => io,
                     UpdateVisibility: () => Va,
                     VerifyPhone: () => Pa,
@@ -5741,7 +5741,7 @@
                     }, [t._v("\n                        " + t._s(t.$t("dashboard.end.modal_reason_6")) + "\n                        ")])]), t._v(" "), 6 == t.type ? e("div", {
                         staticClass: "p3-regular mt-3 text-red"
                     }, [e("textarea", {
-                        staticClass: "textarea-sharesub",
+                        staticClass: "textarea-syndicate",
                         attrs: {
                             name: "cancelation_text",
                             placeholder: t.$t("dashboard.end.explain_placeholder")
@@ -5808,7 +5808,7 @@
                             value: t.type
                         }
                     }), t._v(" "), e("button", {
-                        staticClass: "btn-sharesub bleu",
+                        staticClass: "btn-syndicate bleu",
                         attrs: {
                             disabled: 1 == t.sending || 0 == t.type
                         }
@@ -5819,7 +5819,7 @@
                             value: t.placeholder,
                             expression: "placeholder"
                         }],
-                        staticClass: "input-sharesub",
+                        staticClass: "input-syndicate",
                         class: t.confirmationHint ? "is-invalid" : "",
                         attrs: {
                             type: "text",
@@ -5842,7 +5842,7 @@
                             }
                         }
                     }), t._v(" "), e("button", {
-                        staticClass: "btn btn-sharesub green",
+                        staticClass: "btn btn-syndicate green",
                         attrs: {
                             type: "button",
                             disabled: t.endDisabled
@@ -6124,7 +6124,7 @@
                                 number: !0
                             }
                         }],
-                        staticClass: "input-sharesub",
+                        staticClass: "input-syndicate",
                         attrs: {
                             type: "number",
                             name: "friends",
@@ -6223,7 +6223,7 @@
                             innerHTML: t._s(t.$t("subscription.period_adj_" + t.selectedTemplate.frequency))
                         }
                     }), t._v(" " + t._s(t.$t("subscription.create.total_recieve")))]), t._v(" "), e("button", {
-                        staticClass: "btn btn-sharesub green mx-auto",
+                        staticClass: "btn btn-syndicate green mx-auto",
                         class: {
                             disabled: t.sending
                         },
@@ -6276,7 +6276,7 @@
                             "stroke-linejoin": "round"
                         }
                     })]), t._v("\n                    " + t._s(t.$t("dashboard.issue.cancel")) + "\n                ")])])])]) : t._e(), t._v(" "), e("div", [e("button", {
-                        staticClass: "btn btn-sharesub green",
+                        staticClass: "btn btn-syndicate green",
                         class: {
                             disabled: !t.canMigrate
                         },
@@ -6387,7 +6387,7 @@
                             value: t.csrf
                         }
                     }), t._v(" "), e("button", {
-                        staticClass: "btn-sharesub bleu"
+                        staticClass: "btn-syndicate bleu"
                     }, [t._v("\n                            " + t._s(t.$t("dashboard.issue.close_issue")) + "\n                        ")])])])]) : e("div", [t.messageSent && !t.unreadMessage ? e("div", {
                         staticClass: "mt-3"
                     }, [e("p", {
@@ -6611,12 +6611,12 @@
                             value: t.type
                         }
                     }), t._v(" "), e("button", {
-                        staticClass: "btn-sharesub bleu",
+                        staticClass: "btn-syndicate bleu",
                         attrs: {
                             disabled: 1 == t.sending || 0 == t.canConfirmReport || 0 == t.messageSent || 1 == t.unreadMessage
                         }
                     }, [t._v("\n                            " + t._s(t.$t("dashboard.issue.open_dispute")) + "\n                        ")])])])])])]) : t._e(), t._v(" "), e("button", {
-                        staticClass: "btn btn-sharesub blue",
+                        staticClass: "btn btn-syndicate blue",
                         class: t.canReport ? "outline" : "disabled",
                         style: t.canReport ? "" : "pointer-events: none;",
                         attrs: {
@@ -6827,7 +6827,7 @@
                     }, t._l(t.filteredRoutes, (function(n, r) {
                         return e("li", {
                             key: r,
-                            staticClass: "sharesub-step-nav",
+                            staticClass: "syndicate-step-nav",
                             class: {
                                 current: r === t.currentStep, "cursor-pointer": r < t.currentStep
                             },
@@ -7564,14 +7564,14 @@
                     }, [0 === t.displayedCountries.length ? e("p", {
                         staticClass: "text-muted mt-2"
                     }, [t._v(t._s(t.$t("subscription.create.no_country_found")))]) : t._e(), t._v(" "), e("a", {
-                        staticClass: "btn btn-sharesub-outline mt-2",
+                        staticClass: "btn btn-syndicate-outline mt-2",
                         attrs: {
-                            href: "https://ask.sharesub.com/country-waitlist",
+                            href: "https://ask.syndicate.com/country-waitlist",
                             target: "_blank",
                             rel: "noopener"
                         }
                     }, [t._v(t._s(t.$t("subscription.create.country_waitlist")))])]) : t._e(), t._v(" "), t.country ? e("button", {
-                        staticClass: "btn btn-sharesub green mt-4",
+                        staticClass: "btn btn-syndicate green mt-4",
                         on: {
                             click: t.next
                         }
@@ -8761,7 +8761,7 @@
                             value: t.name,
                             expression: "name"
                         }],
-                        staticClass: "input-sharesub",
+                        staticClass: "input-syndicate",
                         attrs: {
                             placeholder: t.$t("subscription.create.name_placeholder"),
                             type: "text",
@@ -8788,7 +8788,7 @@
                             value: t.desc,
                             expression: "desc"
                         }],
-                        staticClass: "input-sharesub",
+                        staticClass: "input-syndicate",
                         attrs: {
                             placeholder: t.$t("subscription.create.description_placeholder"),
                             cols: "30",
@@ -8803,7 +8803,7 @@
                             }
                         }
                     })])]), t._v(" "), e("button", {
-                        staticClass: "btn-sharesub green px-5 mt-4 mb-5",
+                        staticClass: "btn-syndicate green px-5 mt-4 mb-5",
                         attrs: {
                             disabled: t.disabled
                         },
@@ -8998,7 +8998,7 @@
                             }
                         }
                     }, [t._v("\n                            " + t._s(t.$t("subscription.create.private_sub_cancel_button")) + "\n                            ")])]), t._v(" "), e("button", {
-                        staticClass: "btn-sharesub bleu",
+                        staticClass: "btn-syndicate bleu",
                         class: t.sending ? "disabled" : "",
                         on: {
                             click: t.setPrivate
@@ -9071,7 +9071,7 @@
                         setDefaultMarker: function(t) {
                             this.marker = this.Leaflet.marker([t.coords.latitude, t.coords.longitude], {
                                 draggable: !0,
-                                icon: sharesubIcon
+                                icon: syndicateIcon
                             }).addTo(this.map), this.marker.on("move", this.moveMarker), this.marker.on("dragend", this.dragEndMarker), this.$store.commit("setPosition", {
                                 lat: t.coords.latitude,
                                 long: t.coords.longitude
@@ -9132,7 +9132,7 @@
                     })])]), t._v(" "), e("p", {
                         staticClass: "mt-4 text-grey"
                     }, [t._v(t._s(t.$t("subscription.create.position_disclaimer")))]), t._v(" "), e("button", {
-                        staticClass: "btn btn-sharesub green",
+                        staticClass: "btn btn-syndicate green",
                         attrs: {
                             type: "submit",
                             disabled: t.sending
@@ -9239,7 +9239,7 @@
                             value: t.name,
                             expression: "name"
                         }],
-                        staticClass: "input-sharesub",
+                        staticClass: "input-syndicate",
                         attrs: {
                             placeholder: t.$t("subscription.create.name_placeholder"),
                             type: "text",
@@ -9273,7 +9273,7 @@
                             value: t.country,
                             expression: "country"
                         }],
-                        staticClass: "input-sharesub select-sharesub",
+                        staticClass: "input-syndicate select-syndicate",
                         on: {
                             change: function(e) {
                                 var n = Array.prototype.filter.call(e.target.options, (function(t) {
@@ -9305,7 +9305,7 @@
                             value: t.desc,
                             expression: "desc"
                         }],
-                        staticClass: "input-sharesub",
+                        staticClass: "input-syndicate",
                         attrs: {
                             placeholder: t.$t("subscription.create.description_placeholder"),
                             cols: "30",
@@ -9321,7 +9321,7 @@
                             }
                         }
                     })])]), t._v(" "), e("button", {
-                        staticClass: "btn-sharesub bleu px-5 mt-4 mb-5",
+                        staticClass: "btn-syndicate bleu px-5 mt-4 mb-5",
                         attrs: {
                             disabled: t.disabled
                         },
@@ -9804,7 +9804,7 @@
                                 trim: !0
                             }
                         }],
-                        staticClass: "input-sharesub",
+                        staticClass: "input-syndicate",
                         attrs: {
                             placeholder: t.$t("subscription.create.credentials.email_placeholder"),
                             type: "email"
@@ -9824,7 +9824,7 @@
                         staticClass: "neverbounce-status vue",
                         class: t.neverbounceClass
                     })])]), t._v(" "), e("button", {
-                        staticClass: "btn-sharesub green",
+                        staticClass: "btn-syndicate green",
                         attrs: {
                             type: "submit"
                         }
@@ -10143,7 +10143,7 @@
                                 number: !0
                             }
                         }],
-                        staticClass: "input-sharesub",
+                        staticClass: "input-syndicate",
                         attrs: {
                             placeholder: "15.99€",
                             type: "number"
@@ -10267,7 +10267,7 @@
                                 number: !0
                             }
                         }],
-                        staticClass: "input-sharesub",
+                        staticClass: "input-syndicate",
                         attrs: {
                             type: "number",
                             min: "1",
@@ -10383,7 +10383,7 @@
                                 number: !0
                             }
                         }],
-                        staticClass: "input-sharesub",
+                        staticClass: "input-syndicate",
                         attrs: {
                             type: "number",
                             min: "2",
@@ -10489,7 +10489,7 @@
                             }))
                         }
                     })])]) : t._e(), t._v(" "), e("button", {
-                        staticClass: "btn btn-sharesub green",
+                        staticClass: "btn btn-syndicate green",
                         attrs: {
                             type: "submit",
                             disabled: t.disabled
@@ -10527,7 +10527,7 @@
                             value: t.description,
                             expression: "description"
                         }],
-                        staticClass: "textarea-sharesub",
+                        staticClass: "textarea-syndicate",
                         attrs: {
                             cols: t.cols,
                             rows: t.rows,
@@ -11523,7 +11523,7 @@
                                         trim: !0
                                     }
                                 }],
-                                staticClass: "input-sharesub",
+                                staticClass: "input-syndicate",
                                 attrs: {
                                     type: "email",
                                     id: "credentials_email",
@@ -11560,7 +11560,7 @@
                                         trim: !0
                                     }
                                 }],
-                                staticClass: "input-sharesub",
+                                staticClass: "input-syndicate",
                                 attrs: {
                                     type: "text",
                                     id: "credentials_login",
@@ -11594,7 +11594,7 @@
                                         trim: !0
                                     }
                                 }],
-                                staticClass: "input-sharesub",
+                                staticClass: "input-syndicate",
                                 attrs: {
                                     type: "text",
                                     id: "credentials_password",
@@ -11628,7 +11628,7 @@
                                         trim: !0
                                     }
                                 }],
-                                staticClass: "input-sharesub",
+                                staticClass: "input-syndicate",
                                 attrs: {
                                     type: "text",
                                     id: "link_placeholder",
@@ -11661,7 +11661,7 @@
                                         trim: !0
                                     }
                                 }],
-                                staticClass: "input-sharesub",
+                                staticClass: "input-syndicate",
                                 attrs: {
                                     type: "text",
                                     id: "address_placeholder",
@@ -11792,7 +11792,7 @@
                                 domProps: {
                                     innerHTML: t._s(t.$t("subscription.create.agreement_label"))
                                 }
-                            }, [t._v("Je fournis des informations fiables et une vraie identité. J’accepte les "), e("span", [t._v("conditions générales d’utilisation")]), t._v(" de Sharesub et les "), e("span", [t._v("conditions d’utilisation")]), t._v(" de Stripe")])])])], 2), t._v(" "), e("form", {
+                            }, [t._v("Je fournis des informations fiables et une vraie identité. J’accepte les "), e("span", [t._v("conditions générales d’utilisation")]), t._v(" de Syndicate et les "), e("span", [t._v("conditions d’utilisation")]), t._v(" de Stripe")])])])], 2), t._v(" "), e("form", {
                                 attrs: {
                                     method: "POST"
                                 },
@@ -11944,7 +11944,7 @@
                                     value: t.sub.long
                                 }
                             }), t._v(" "), e("button", {
-                                staticClass: "btn btn-sharesub green",
+                                staticClass: "btn btn-syndicate green",
                                 attrs: {
                                     type: "submit",
                                     disabled: t.disabled
@@ -12802,7 +12802,7 @@
                     }, [t.canReportSms ? e("div", {
                         staticClass: "chat-sms-relance"
                     }, [e("button", {
-                        staticClass: "btn btn-sharesub send-sms",
+                        staticClass: "btn btn-syndicate send-sms",
                         on: {
                             click: function(e) {
                                 t.open = !0
@@ -12868,7 +12868,7 @@
                             value: t.csrf
                         }
                     }), t._v(" "), e("button", {
-                        staticClass: "btn-sharesub bleu",
+                        staticClass: "btn-syndicate bleu",
                         attrs: {
                             disabled: 1 == t.sending_sms
                         }
@@ -12901,7 +12901,7 @@
                             }
                         }
                     }), t._v(" "), e("button", {
-                        staticClass: "btn btn-sharesub blue",
+                        staticClass: "btn btn-syndicate blue",
                         attrs: {
                             type: "submit",
                             disabled: t.disabled
@@ -13475,7 +13475,7 @@
                     }, [t.hasOlderMessages ? e("div", {
                         staticClass: "w-100 text-center mt-3"
                     }, [e("button", {
-                        staticClass: "btn btn-sharesub blue mx-auto cursor-pointer",
+                        staticClass: "btn btn-syndicate blue mx-auto cursor-pointer",
                         on: {
                             click: t.loadOlderMessages
                         }
@@ -13681,7 +13681,7 @@
                         staticClass: "col-12 col-sm-auto order-1 order-sm-2"
                     }, [e("button", {
                         ref: "btn_moderate",
-                        staticClass: "btn btn-sharesub bleu",
+                        staticClass: "btn btn-syndicate bleu",
                         on: {
                             click: function(e) {
                                 return t.moderate()
@@ -13695,7 +13695,7 @@
                             }
                         }
                     }, [e("button", {
-                        staticClass: "btn btn-sharesub bleu",
+                        staticClass: "btn btn-syndicate bleu",
                         on: {
                             click: function(e) {
                                 t.currentMessage = null, t.flagDone = !1
@@ -13873,7 +13873,7 @@
                     }, [e("div", {
                         staticClass: "savings-title"
                     }, [t._v(t._s(t.$t("dashboard.leave.savings_title", {
-                        brand: t.brandName || "ShareSub"
+                        brand: t.brandName || "Syndicate"
                     })))]), t._v(" "), e("div", {
                         staticClass: "savings-amount"
                     }, [t._v(t._s(t.formattedAmount))]), t._v(" "), "real" === t.savingsMode ? e("div", {
@@ -13881,13 +13881,13 @@
                     }, [t._v("\n                                " + t._s(t.$t("dashboard.leave.savings_real_desc", {
                         date: t.joinedDate,
                         percent: t.savingsPercent,
-                        brand: t.brandName || "ShareSub"
+                        brand: t.brandName || "Syndicate"
                     })) + "\n                            ")]) : e("div", {
                         staticClass: "savings-desc"
                     }, [t._v("\n                                " + t._s(t.$t("dashboard.leave.savings_projection_desc", {
                         date: t.joinedDate,
                         percent: t.savingsPercent,
-                        brand: t.brandName || "ShareSub"
+                        brand: t.brandName || "Syndicate"
                     })) + "\n                            ")])])]) : t._e(), t._v(" "), e("div", {
                         staticClass: "p1-bold d-flex align-items-center m-4"
                     }, [t._v("\n                    " + t._s(t.$t("dashboard.leave.modal_title")) + "\n                    ")]), t._v(" "), e("div", {
@@ -14047,7 +14047,7 @@
                     }, [t._v("\n                        " + t._s(t.$t("dashboard.leave.modal_reason_5")) + "\n                        ")])]), t._v(" "), 5 == t.type ? e("div", {
                         staticClass: "p3-regular mt-3 text-red"
                     }, [e("textarea", {
-                        staticClass: "textarea-sharesub",
+                        staticClass: "textarea-syndicate",
                         attrs: {
                             name: "cancelation_text",
                             placeholder: t.$t("dashboard.leave.explain_placeholder")
@@ -14081,7 +14081,7 @@
                             }
                         }
                     }, [t._v("\n                        " + t._s(t.$t("dashboard.leave.keep_sub")) + "\n                        ")])]), t._v(" "), e("button", {
-                        staticClass: "btn-sharesub bleu",
+                        staticClass: "btn-syndicate bleu",
                         class: t.canLeave && t.type && !t.sending ? "" : "disabled",
                         attrs: {
                             disabled: 0 == t.canLeave || 1 == t.sending || 0 == t.type
@@ -14093,7 +14093,7 @@
                             value: t.placeholder,
                             expression: "placeholder"
                         }],
-                        staticClass: "input-sharesub",
+                        staticClass: "input-syndicate",
                         class: t.confirmationHint ? "is-invalid" : "",
                         attrs: {
                             type: "text",
@@ -14161,7 +14161,7 @@
                             click: t.clickLabel
                         }
                     })]), t._v(" "), e("button", {
-                        staticClass: "btn btn-sharesub blue",
+                        staticClass: "btn btn-syndicate blue",
                         class: t.canReport ? "outline" : "disabled",
                         style: t.canReport ? "" : "pointer-events: none;",
                         attrs: {
@@ -14624,7 +14624,7 @@
                         staticClass: "saving-simulator-quote-line"
                     }, [e("span", {
                         staticClass: "saving-simulator-quote-label"
-                    }, [t._v(t._s(t.$t("home.savings.price_sharesub")))]), t._v(" "), e("span", {
+                    }, [t._v(t._s(t.$t("home.savings.price_syndicate")))]), t._v(" "), e("span", {
                         staticClass: "saving-simulator-quote-value"
                     }, [t._v("\n                            " + t._s(t.formatPrice(t.perSeatJoinAnimated)) + t._s(t.frequency) + "\n                            "), e("small", {
                         staticClass: "saving-simulator-quote-note"
@@ -14635,7 +14635,7 @@
                     }, [t._v(t._s(t.$t("home.savings.savings_join")))]), t._v(" "), e("span", {
                         staticClass: "saving-simulator-quote-value"
                     }, [t._v(t._s(t.formatPrice(t.savingsAnimated)) + t._s(t.$t("subscription.period_adj_4")))])])], t._v(" "), e("a", {
-                        staticClass: "btn-sharesub green big saving-simulator-cta",
+                        staticClass: "btn-syndicate green big saving-simulator-cta",
                         attrs: {
                             href: t.primaryCtaUrl
                         },
@@ -15460,7 +15460,7 @@
                     })), 0)])]) : t._e()]), t._v(" "), e("div", {
                         staticClass: "dropdown lang-dropdown"
                     }, [e("a", {
-                        staticClass: "btn-sharesub dark dropdown-toggle",
+                        staticClass: "btn-syndicate dark dropdown-toggle",
                         attrs: {
                             href: "#",
                             role: "button",
@@ -15888,7 +15888,7 @@
                         }
                     },
                     mounted: function() {
-                        this.lastSms ? this.currentDelay = (new Date(this.lastSms).getTime() - (new Date).getTime()) / 1e3 + 60 * this.smsDelay : this.currentDelay = 0, "phone" == window.location.hash.substr(1) && (window.scrollTo(0, $("#phone").parents(".form-group").first().offset().top - $(".sharesub-navbar").innerHeight()), this.sendAndOpen()), this.canSendPoll()
+                        this.lastSms ? this.currentDelay = (new Date(this.lastSms).getTime() - (new Date).getTime()) / 1e3 + 60 * this.smsDelay : this.currentDelay = 0, "phone" == window.location.hash.substr(1) && (window.scrollTo(0, $("#phone").parents(".form-group").first().offset().top - $(".syndicate-navbar").innerHeight()), this.sendAndOpen()), this.canSendPoll()
                     },
                     computed: {
                         canSendNow: function() {
@@ -16048,7 +16048,7 @@
                             value: t.code,
                             expression: "code"
                         }],
-                        staticClass: "input-sharesub mb-3",
+                        staticClass: "input-syndicate mb-3",
                         attrs: {
                             placeholder: "xxxx",
                             name: "code"
@@ -16080,7 +16080,7 @@
                     }) : t._e()]), t._v(" "), e("div", {
                         staticClass: "row justify-content-around p2-bold mt-4 flex-column flex-sm-row"
                     }, [e("button", {
-                        staticClass: "btn-sharesub bleu",
+                        staticClass: "btn-syndicate bleu",
                         class: t.canVerify && !t.sending ? "" : "disabled",
                         attrs: {
                             disabled: 0 == t.canVerify || 1 == t.sending
@@ -16605,7 +16605,7 @@
                             value: t.placeholder,
                             expression: "placeholder"
                         }],
-                        staticClass: "input-sharesub",
+                        staticClass: "input-syndicate",
                         class: t.confirmationHint ? "is-invalid" : "",
                         attrs: {
                             type: "text",
@@ -16628,7 +16628,7 @@
                             }
                         }
                     }), t._v(" "), e("button", {
-                        staticClass: "btn btn-sharesub red",
+                        staticClass: "btn btn-syndicate red",
                         class: t.canDelete ? "outline" : "disabled",
                         style: t.canDelete ? "" : "pointer-events: none;",
                         attrs: {
@@ -16795,7 +16795,7 @@
                     }, [e("div", {
                         staticClass: "p3-regular mt-3"
                     }, [e("textarea", {
-                        staticClass: "textarea-sharesub",
+                        staticClass: "textarea-syndicate",
                         attrs: {
                             name: "removal_text",
                             placeholder: t.$t("dashboard.end.explain_placeholder")
@@ -16877,7 +16877,7 @@
                             "stroke-linejoin": "round"
                         }
                     })]), t._v("\n                            " + t._s(t.$t("dashboard.issue.cancel")) + "\n                        ")])]), t._v(" "), e("button", {
-                        staticClass: "btn-sharesub bleu",
+                        staticClass: "btn-syndicate bleu",
                         attrs: {
                             disabled: 1 == t.sending || !t.confirm_removal
                         }
@@ -16911,7 +16911,7 @@
                     var t = $("input[data-postal-code]");
                     t.length > 0 && t.each((function(t, e) {
                         var n = (e = $(e)).parents("form"),
-                            r = n.find(".btn-sharesub"),
+                            r = n.find(".btn-syndicate"),
                             i = n.find("select[name=country]");
                         0 == $(e).parent().find(".invalid-feedback").length && $(e).after('<div class="invalid-feedback" role="alert" style="display:none;"><strong></strong></div>');
                         var o = $(e).next(".invalid-feedback");
@@ -17040,10 +17040,10 @@
                                 i = function(t) {
                                     t && r.val(t), e.data("captchaDone", !0).data("captchaPending", !1), "function" == typeof n.requestSubmit ? n.requestSubmit() : n.submit()
                                 };
-                            return window.sharesubRecaptcha ? (window.sharesubRecaptcha.execute().then(i, (function(t) {
+                            return window.syndicateRecaptcha ? (window.syndicateRecaptcha.execute().then(i, (function(t) {
                                 console.log("recaptcha: jeton indisponible", t), i(null)
                             })), !1) : (i(null), !1)
-                        })), $("#sharesub-register-by-email").click((function(t) {
+                        })), $("#syndicate-register-by-email").click((function(t) {
                             t.preventDefault(), $(".subscription-final-form").removeClass("d-none"), $(".subscription-final-socials").hide()
                         })),
                         function() {
@@ -17127,7 +17127,7 @@
                         r && (a += "; path=".concat(r)), i && (a += "; domain=".concat(i)), o && (a += "; secure"), document.cookie = a
                     },
                     is = function(t) {
-                        $(".sharesub-navbar .chat-item").append(t), window.chatCoabUnread = parseInt($("<div>").html(t).text().trim(), 10) || 0, os()
+                        $(".syndicate-navbar .chat-item").append(t), window.chatCoabUnread = parseInt($("<div>").html(t).text().trim(), 10) || 0, os()
                     },
                     os = function() {
                         var t = (window.chatCoabUnread || 0) + (window.intercomUnread || 0),
@@ -17698,7 +17698,7 @@
                                     $(".filter").addClass("active").removeClass(["search", "browse"]).addClass(e), $(".filter-overlay").addClass("active")
                                 })), $("body").on("click", ".filter-header-close, .filter-overlay", (function(t) {
                                     t.preventDefault(), $(".filter").removeClass("active search browse"), $(".filter-overlay").removeClass("active")
-                                })), $("body").on("click", ".sharesub-navbar-toggler", (function(t) {
+                                })), $("body").on("click", ".syndicate-navbar-toggler", (function(t) {
                                     t.preventDefault(), $(".menu").toggleClass("active"), $("body").toggleClass("overflow-hidden")
                                 })), $("body").on("change", ".how-it-works-checkbox", (function(t) {
                                     t.preventDefault(), $(this).is(":checked") ? ($(".how-it-works.participate").hide(), $(".how-it-works.propose").show()) : ($(".how-it-works.participate").show(), $(".how-it-works.propose").hide())
@@ -18022,7 +18022,7 @@
                                 }))
                             }(), $(".splide.categories .splide__slide").length, $(".splide.public-subscriptions-templates .splide__slide").length, $(".splide.categories").width(),
                             function() {
-                                $(".public-subscriptions-wrapper .btn-sharesub").click((function(t) {
+                                $(".public-subscriptions-wrapper .btn-syndicate").click((function(t) {
                                     document.location.href = $(this).data("href")
                                 })), $(".public-subscriptions-wrapper .select-country").click((function(t) {
                                     t.preventDefault()
@@ -18150,7 +18150,7 @@
                                 }), document.location.href = $(this).attr("href")
                             })), e = function(t, e) {
                                 var n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                                $(t).parent().find(".neverbounce-status").removeClass("success"), $(t).parents("form").find(".btn-sharesub").attr("disabled", !1), window.validators.validateEmail(e) ? ($(t).parent().find(".neverbounce-status").addClass("loading"), $.ajax({
+                                $(t).parent().find(".neverbounce-status").removeClass("success"), $(t).parents("form").find(".btn-syndicate").attr("disabled", !1), window.validators.validateEmail(e) ? ($(t).parent().find(".neverbounce-status").addClass("loading"), $.ajax({
                                     type: "POST",
                                     url: $(t).data("neverbounce"),
                                     data: {
@@ -18168,7 +18168,7 @@
                                     },
                                     dataType: "json",
                                     timeout: 5e3
-                                })) : ($(t).parent().find(".invalid-feedback").show(), $(t).parents("form").find(".btn-sharesub").attr("disabled", !0))
+                                })) : ($(t).parent().find(".invalid-feedback").show(), $(t).parents("form").find(".btn-syndicate").attr("disabled", !0))
                             }, n = function() {
                                 var t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                                     n = $("input[data-neverbounce]");
@@ -18189,7 +18189,7 @@
                                 }))
                             }, r = function(t, e) {
                                 var n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                                $(t).parent().find(".neverbounce-status").removeClass("loading").removeClass("success"), $(t).parent().find(".invalid-feedback").hide(), e.verified && !e.status ? ($(t).parent().find(".invalid-feedback strong").html(e.message), $(t).parent().find(".invalid-feedback").show(), $(t).parents("form").find(".btn-sharesub").attr("disabled", !0)) : (e.verified && e.status || !e.verified) && ($(t).parent().find(".neverbounce-status").addClass("success"), ($(t).data("blocksubmit") || n) && $(t).parents("form").submit())
+                                $(t).parent().find(".neverbounce-status").removeClass("loading").removeClass("success"), $(t).parent().find(".invalid-feedback").hide(), e.verified && !e.status ? ($(t).parent().find(".invalid-feedback strong").html(e.message), $(t).parent().find(".invalid-feedback").show(), $(t).parents("form").find(".btn-syndicate").attr("disabled", !0)) : (e.verified && e.status || !e.verified) && ($(t).parent().find(".neverbounce-status").addClass("success"), ($(t).data("blocksubmit") || n) && $(t).parents("form").submit())
                             }, (i = $('form[id="waitingListForm"]')).length > 0 ? ($.get($(i).data("url"), {}, (function(t) {
                                 i.find(".result-success-form").removeClass("loading").html(t), n(!0)
                             })), i.submit((function(t) {
@@ -18216,7 +18216,7 @@
                             t.addEventListener("change", (function(t) {
                                 return o.hidden = !("new_card" === t.target.value)
                             }))
-                        })), $('[data-toggle="tooltip"]').tooltip(), document.querySelectorAll(".sharesub-input-file input").forEach((function(t) {
+                        })), $('[data-toggle="tooltip"]').tooltip(), document.querySelectorAll(".syndicate-input-file input").forEach((function(t) {
                             t.addEventListener("change", (function() {
                                 var t = this.files[0].name,
                                     e = document.querySelector("#".concat(this.id, "-file"));
@@ -18226,7 +18226,7 @@
                             t.addEventListener("click", (function() {
                                 document.querySelector("#".concat(this.getAttribute("data-target-remove"))).value = "", this.parentNode.classList.remove("d-flex"), this.parentNode.classList.add("d-none")
                             }))
-                        })), $(".chat-wrapper-form").length > 0 && $(".sharesub-footer, #app > .bottom").addClass("d-none d-lg-block")
+                        })), $(".chat-wrapper-form").length > 0 && $(".syndicate-footer, #app > .bottom").addClass("d-none d-lg-block")
                     }))
             },
             8290: (t, e, n) => {
@@ -21990,7 +21990,7 @@
                     i = n.n(r)()((function(t) {
                         return t[1]
                     }));
-                i.push([t.id, ".leave_modal{align-items:center;background-color:rgba(0,0,0,.7);box-sizing:border-box;color:#1a1a1a;display:flex;font-weight:400;height:100dvh;inset:0;justify-content:center;max-height:100dvh;overflow:hidden;padding:max(1rem,env(safe-area-inset-top,0px)) max(1rem,env(safe-area-inset-right,0px)) max(1rem,env(safe-area-inset-bottom,0px)) max(1rem,env(safe-area-inset-left,0px));position:fixed;width:100%;z-index:1025}.leave_modal_content{-webkit-overflow-scrolling:touch;background-color:#fff;border-radius:.25rem;flex:0 1 auto;margin:0;max-height:100%;max-width:600px;min-height:0;overflow-y:auto;padding:1.5rem 3rem;width:100%}.savings-card{align-items:center;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border-left:4px solid #43a047;border-radius:12px;display:flex;gap:1rem;padding:1.25rem 1.5rem}.savings-icon{flex-shrink:0;font-size:2.5rem;line-height:1}.savings-body{flex:1;min-width:0}.savings-title{color:#2e7d32;font-size:.85rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase}.savings-amount{color:#1b5e20;font-size:2rem;font-weight:700;line-height:1.1;margin-top:.25rem}.savings-desc{color:#2e7d32;font-size:.85rem;margin-top:.25rem}@media (max-width:767.98px){.leave_modal{padding:max(.75rem,env(safe-area-inset-top,0px)) max(.75rem,env(safe-area-inset-right,0px)) max(.75rem,env(safe-area-inset-bottom,0px)) max(.75rem,env(safe-area-inset-left,0px))}.leave_modal_content{padding:1.25rem 1.5rem}.leave_modal_content .mt-4{margin-top:1rem!important}.leave_modal_content .m-4{margin:1rem!important}.leave_modal_content .mt-3{margin-top:.65rem!important}.savings-card{border-radius:10px;gap:.75rem;padding:.85rem 1rem}.savings-icon{font-size:1.75rem}.savings-title{font-size:.75rem}.savings-amount{font-size:1.5rem}.savings-desc{font-size:.8rem;line-height:1.3}}@media (max-width:575.98px){.leave_modal{padding:max(.5rem,env(safe-area-inset-top,0px)) max(.5rem,env(safe-area-inset-right,0px)) max(.5rem,env(safe-area-inset-bottom,0px)) max(.5rem,env(safe-area-inset-left,0px))}.leave_modal_content{border-radius:.5rem;padding:1rem}.leave_modal_content .mt-4{margin-top:.75rem!important}.leave_modal_content .m-4{margin:.75rem!important}.leave_modal_content .mt-3{margin-top:.5rem!important}.leave_modal_content .textarea-sharesub{min-height:4.5rem}.savings-card{gap:.5rem;padding:.65rem .85rem}.savings-icon{font-size:1.5rem}.savings-amount{font-size:1.35rem}}", ""]);
+                i.push([t.id, ".leave_modal{align-items:center;background-color:rgba(0,0,0,.7);box-sizing:border-box;color:#1a1a1a;display:flex;font-weight:400;height:100dvh;inset:0;justify-content:center;max-height:100dvh;overflow:hidden;padding:max(1rem,env(safe-area-inset-top,0px)) max(1rem,env(safe-area-inset-right,0px)) max(1rem,env(safe-area-inset-bottom,0px)) max(1rem,env(safe-area-inset-left,0px));position:fixed;width:100%;z-index:1025}.leave_modal_content{-webkit-overflow-scrolling:touch;background-color:#fff;border-radius:.25rem;flex:0 1 auto;margin:0;max-height:100%;max-width:600px;min-height:0;overflow-y:auto;padding:1.5rem 3rem;width:100%}.savings-card{align-items:center;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border-left:4px solid #43a047;border-radius:12px;display:flex;gap:1rem;padding:1.25rem 1.5rem}.savings-icon{flex-shrink:0;font-size:2.5rem;line-height:1}.savings-body{flex:1;min-width:0}.savings-title{color:#2e7d32;font-size:.85rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase}.savings-amount{color:#1b5e20;font-size:2rem;font-weight:700;line-height:1.1;margin-top:.25rem}.savings-desc{color:#2e7d32;font-size:.85rem;margin-top:.25rem}@media (max-width:767.98px){.leave_modal{padding:max(.75rem,env(safe-area-inset-top,0px)) max(.75rem,env(safe-area-inset-right,0px)) max(.75rem,env(safe-area-inset-bottom,0px)) max(.75rem,env(safe-area-inset-left,0px))}.leave_modal_content{padding:1.25rem 1.5rem}.leave_modal_content .mt-4{margin-top:1rem!important}.leave_modal_content .m-4{margin:1rem!important}.leave_modal_content .mt-3{margin-top:.65rem!important}.savings-card{border-radius:10px;gap:.75rem;padding:.85rem 1rem}.savings-icon{font-size:1.75rem}.savings-title{font-size:.75rem}.savings-amount{font-size:1.5rem}.savings-desc{font-size:.8rem;line-height:1.3}}@media (max-width:575.98px){.leave_modal{padding:max(.5rem,env(safe-area-inset-top,0px)) max(.5rem,env(safe-area-inset-right,0px)) max(.5rem,env(safe-area-inset-bottom,0px)) max(.5rem,env(safe-area-inset-left,0px))}.leave_modal_content{border-radius:.5rem;padding:1rem}.leave_modal_content .mt-4{margin-top:.75rem!important}.leave_modal_content .m-4{margin:.75rem!important}.leave_modal_content .mt-3{margin-top:.5rem!important}.leave_modal_content .textarea-syndicate{min-height:4.5rem}.savings-card{gap:.5rem;padding:.65rem .85rem}.savings-icon{font-size:1.5rem}.savings-amount{font-size:1.35rem}}", ""]);
                 const o = i
             },
             6314: t => {
