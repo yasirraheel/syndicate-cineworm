@@ -131,7 +131,7 @@
 <path d="M12 9.5C12.6904 9.5 13.25 8.94036 13.25 8.25C13.25 7.55964 12.6904 7 12 7C11.3096 7 10.75 7.55964 10.75 8.25C10.75 8.94036 11.3096 9.5 12 9.5Z" fill="white"/>
 </svg>
 
-        <span>Contact Sharesub Support</span>
+        <span>Contact Syndicate Support</span>
     </a>
             </div>
             <nav class="dash-tabbar d-lg-none">
