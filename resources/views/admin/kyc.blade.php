@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Syndicate Admin - KYC review</title>
-    <link href="/css/app.css?id=d5e0988" rel="stylesheet">
+    <link href="/css/app.css?id=syndicate1" rel="stylesheet">
     <style>
         body { background: #f4f6fb; color: #112e45; }
         .admin-shell { min-height: 100vh; }

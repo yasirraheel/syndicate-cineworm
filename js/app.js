@@ -17581,7 +17581,7 @@
                 function ys() {
                     $("#birthdate").next(".invalid-feedback").html($("#birthdate").next(".invalid-feedback").data("text")).show(), $(".stripe-create button[type=submit]").removeClass("loading"), $(".stripe-create button[type=submit]").attr("disabled", !1)
                 }
-                axios.get("/js/localization.js").then((function(t) {
+                axios.get("/js/localization.js?v=syndicate-1").then((function(t) {
                         gs = t.data, i.default.use(tt);
                         var e = new tt({
                             locale: window.default_locale,

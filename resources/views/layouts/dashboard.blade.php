@@ -79,7 +79,7 @@
     window.is_chat_route = false
     window.pushKey = "";
 </script>
-<script src="/js/app.js?v=laravel-auth-1" defer></script>
+<script src="/js/app.js?v=laravel-auth-2" defer></script>
 @auth
 <script src="/js/support-chat.js" defer></script>
 @endauth

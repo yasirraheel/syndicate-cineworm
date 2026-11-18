@@ -55,7 +55,7 @@ const normalizeValue = (value, attr) => {
   else if (/^https?:\/\//i.test(localValue) || /^\/\//.test(localValue)) return attr === 'src' ? '' : '#offline';
 
   if (attr === 'src' && /\/js\/app\.js(?:\?|$)/i.test(localValue)) return '/js/app.js';
-  if (attr === 'href' && /\/css\/app\.css(?:\?|$)/i.test(localValue)) return '/css/app.css?id=d5e0988';
+  if (attr === 'href' && /\/css\/app\.css(?:\?|$)/i.test(localValue)) return '/css/app.css?id=syndicate1';
   if (/^\/(?:en|cms\/en)\/[^?#]+\.html(?:[?#]|$)/i.test(localValue)) return localValue;
 
   const mapped = mapPath(localValue);
