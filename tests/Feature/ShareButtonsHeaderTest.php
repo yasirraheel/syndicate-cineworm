@@ -49,7 +49,7 @@ class ShareButtonsHeaderTest extends TestCase
 
     private function navHtml(string $html): string
     {
-        preg_match('/<nav\b[^>]*sharesub-navbar[^>]*>.*?<\/nav>/s', $html, $match);
+        preg_match('/<nav\b[^>]*syndicate-navbar[^>]*>.*?<\/nav>/s', $html, $match);
 
         return $match[0] ?? '';
     }

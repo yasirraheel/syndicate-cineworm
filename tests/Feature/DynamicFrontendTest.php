@@ -173,7 +173,7 @@ class DynamicFrontendTest extends TestCase
         $this->assertStringContainsString('Spotify', $content);
         $this->assertStringContainsString('£4.95', $content);
         $this->assertStringContainsString('ZzShortDescription', $content);
-        $this->assertStringContainsString('<title>Share my Spotify subscription on Sharesub', $content);
+        $this->assertStringContainsString('<title>Share my Spotify subscription on Syndicate', $content);
     }
 
     public function test_amazon_brand_page_shows_the_database_price(): void

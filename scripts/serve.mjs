@@ -59,5 +59,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, host, () => {
-  console.log(`Sharesub offline template: http://${host === '0.0.0.0' ? 'localhost' : host}:${port}/`);
+  console.log(`Syndicate offline template: http://${host === '0.0.0.0' ? 'localhost' : host}:${port}/`);
 });

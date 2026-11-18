@@ -55,14 +55,14 @@
             </div>
             <div>
                 <div class="mt-3">
-                    <p>You have chosen the "Private" option: This means that your subscription will be visible only to you, and will not be displayed in the Sharesub lists.</p>
+                    <p>You have chosen the "Private" option: This means that your subscription will be visible only to you, and will not be displayed in the Syndicate lists.</p>
                     <p>No buyer will be able to access your subscription unless you send them the invitation link.</p>
                 </div>
                 <div class="row justify-content-around p2-bold mt-4 flex-column flex-sm-row">
                     <div class="text-blue d-flex align-items-center col-12 col-sm-auto order-2 order-sm-1 mt-3 mt-sm-0 justify-content-center justify-content-sm-start">
                         <div class="cursor-pointer" id="private-visibility-modal-cancel">Cancel</div>
                     </div>
-                    <button type="button" class="btn-sharesub bleu" id="private-visibility-modal-confirm">I confirm</button>
+                    <button type="button" class="btn-syndicate bleu" id="private-visibility-modal-confirm">I confirm</button>
                 </div>
             </div>
         </div>

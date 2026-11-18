@@ -932,7 +932,7 @@ class CreateSubscriptionController extends Controller
             'id' => (int) $brand->id,
             'name' => (string) $brand->name,
             'description_seo' => (string) ($brand->short_description ?? ''),
-            'title_seo' => 'Share my '.(string) $brand->name.' subscription on Sharesub',
+            'title_seo' => 'Share my '.(string) $brand->name.' subscription on Syndicate',
             'html_reinsurance' => null,
         ];
     }

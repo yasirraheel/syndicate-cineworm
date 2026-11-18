@@ -1,4 +1,4 @@
-<section class="card-sharesub p-4">
+<section class="card-syndicate p-4">
     @if (session('status'))
         <div class="alert alert-success" role="status">{{ session('status') }}</div>
     @endif
@@ -8,7 +8,7 @@
     <form method="POST" action="{{ route('admin.features.store') }}" enctype="multipart/form-data">
         @csrf
         @include('admin.features.form')
-        <button type="submit" class="btn-sharesub bleu mx-auto my-2 d-block">Save feature</button>
+        <button type="submit" class="btn-syndicate bleu mx-auto my-2 d-block">Save feature</button>
     </form>
     <div class="text-center mt-3"><a href="{{ route('admin.features.index') }}">Back to features</a></div>
 </section>

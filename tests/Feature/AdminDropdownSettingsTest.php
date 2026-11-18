@@ -26,8 +26,8 @@ class AdminDropdownSettingsTest extends TestCase
         $response = $this->get(route('admin.settings.edit'));
 
         $response->assertOk();
-        $response->assertSee('<select class="input-sharesub" id="settings-default_currency_code" name="settings[default_currency_code]">', false);
-        $response->assertDontSee('<input class="input-sharesub" id="settings-default_currency_code"', false);
+        $response->assertSee('<select class="input-syndicate" id="settings-default_currency_code" name="settings[default_currency_code]">', false);
+        $response->assertDontSee('<input class="input-syndicate" id="settings-default_currency_code"', false);
     }
 
     public function test_settings_currency_dropdown_lists_db_currencies(): void
@@ -113,10 +113,10 @@ class AdminDropdownSettingsTest extends TestCase
         $response = $this->get(route('admin.settings.edit'));
 
         $response->assertOk();
-        $response->assertSee('<select class="input-sharesub" id="settings-default_locale" name="settings[default_locale]">', false);
+        $response->assertSee('<select class="input-syndicate" id="settings-default_locale" name="settings[default_locale]">', false);
         $response->assertSee('<option value="fr"', false);
-        $response->assertSee('<select class="input-sharesub" id="settings-fallback_locale" name="settings[fallback_locale]">', false);
-        $response->assertSee('<select class="input-sharesub" id="settings-calculator_default_brand_slug" name="settings[calculator_default_brand_slug]">', false);
+        $response->assertSee('<select class="input-syndicate" id="settings-fallback_locale" name="settings[fallback_locale]">', false);
+        $response->assertSee('<select class="input-syndicate" id="settings-calculator_default_brand_slug" name="settings[calculator_default_brand_slug]">', false);
         $response->assertSee('<option value="netflix"', false);
     }
 
@@ -127,7 +127,7 @@ class AdminDropdownSettingsTest extends TestCase
         $response = $this->get(route('admin.countries.create'));
 
         $response->assertOk();
-        $response->assertSee('<select class="input-sharesub" id="currency" name="currency">', false);
+        $response->assertSee('<select class="input-syndicate" id="currency" name="currency">', false);
         foreach (Currency::ordered()->get() as $currency) {
             $response->assertSee('<option value="'.$currency->code.'"', false);
         }

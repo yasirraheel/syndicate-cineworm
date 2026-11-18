@@ -30,7 +30,7 @@ class BrandFaqSeeder extends Seeder
     private const FAQS = [
         [
             'question' => 'Is it compatible with Amazon?',
-            'answer' => 'Sharesub offers cost-sharing for all subscriptions that include a group plan. However, be sure to review the terms and conditions for sharing services, and avoid subscriptions from other countries: this may limit the available content or even block access to the account.',
+            'answer' => 'Syndicate offers cost-sharing for all subscriptions that include a group plan. However, be sure to review the terms and conditions for sharing services, and avoid subscriptions from other countries: this may limit the available content or even block access to the account.',
         ],
         [
             'question' => 'How are payments handled?',

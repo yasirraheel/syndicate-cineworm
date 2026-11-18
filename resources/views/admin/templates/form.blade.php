@@ -8,7 +8,7 @@
 <div class="row">
     <div class="col-12 col-md-6 form-group">
         <label for="brand_id">Brand</label>
-        <select class="input-sharesub" id="brand_id" name="brand_id" required>
+        <select class="input-syndicate" id="brand_id" name="brand_id" required>
             <option value="">Select a brand</option>
             @if ($selectedBrandId && ! $brands->contains('id', $selectedBrandId))
                 <option value="{{ $selectedBrandId }}" selected>Brand #{{ $selectedBrandId }} (no longer in brands)</option>
@@ -20,15 +20,15 @@
     </div>
     <div class="col-12 col-md-6 form-group">
         <label for="name">Name</label>
-        <input class="input-sharesub" id="name" name="name" value="{{ old('name', $template->name) }}" required>
+        <input class="input-syndicate" id="name" name="name" value="{{ old('name', $template->name) }}" required>
     </div>
     <div class="col-12 col-md-6 form-group">
         <label for="slug">Slug</label>
-        <input class="input-sharesub" id="slug" name="slug" value="{{ old('slug', $template->slug) }}" required>
+        <input class="input-syndicate" id="slug" name="slug" value="{{ old('slug', $template->slug) }}" required>
     </div>
     <div class="col-12 col-md-6 form-group">
         <label for="currency">Currency code</label>
-        <select class="input-sharesub" id="currency" name="currency" required>
+        <select class="input-syndicate" id="currency" name="currency" required>
             @if ($selectedCurrency && ! $currencies->contains('code', $selectedCurrency))
                 <option value="{{ $selectedCurrency }}" selected>{{ $selectedCurrency }} (stored value, not in currencies)</option>
             @endif
@@ -39,7 +39,7 @@
     </div>
     <div class="col-12 col-md-4 form-group">
         <label for="credentials_type">Credentials type</label>
-        <select class="input-sharesub" id="credentials_type" name="credentials_type">
+        <select class="input-syndicate" id="credentials_type" name="credentials_type">
             @foreach ($credentialTypes as $value => $label)
                 <option value="{{ $value }}" @selected($selectedCredentialType === (int) $value)>{{ $label }}</option>
             @endforeach
@@ -50,7 +50,7 @@
     </div>
     <div class="col-12 col-md-4 form-group">
         <label for="frequency">Billing frequency</label>
-        <select class="input-sharesub" id="frequency" name="frequency">
+        <select class="input-syndicate" id="frequency" name="frequency">
             @foreach ($frequencies as $value => $label)
                 <option value="{{ $value }}" @selected($selectedFrequency === (int) $value)>{{ $label }}</option>
             @endforeach
@@ -61,7 +61,7 @@
     </div>
     <div class="col-12 col-md-4 form-group">
         <label for="cost_sharing">Cost sharing</label>
-        <select class="input-sharesub" id="cost_sharing" name="cost_sharing">
+        <select class="input-syndicate" id="cost_sharing" name="cost_sharing">
             @foreach ($costSharingOptions as $value => $label)
                 <option value="{{ $value }}" @selected($selectedCostSharing === (int) $value)>{{ $label }}</option>
             @endforeach
@@ -72,27 +72,27 @@
     </div>
     <div class="col-12 col-md-4 form-group">
         <label for="price_with_fees">Price with fees</label>
-        <input class="input-sharesub" id="price_with_fees" name="price_with_fees" type="number" step="0.01" min="0" value="{{ old('price_with_fees', $template->price_with_fees) }}" required>
+        <input class="input-syndicate" id="price_with_fees" name="price_with_fees" type="number" step="0.01" min="0" value="{{ old('price_with_fees', $template->price_with_fees) }}" required>
     </div>
     <div class="col-12 col-md-4 form-group">
         <label for="retail_price">Retail price</label>
-        <input class="input-sharesub" id="retail_price" name="retail_price" type="number" step="0.01" min="0" value="{{ old('retail_price', $template->retail_price) }}">
+        <input class="input-syndicate" id="retail_price" name="retail_price" type="number" step="0.01" min="0" value="{{ old('retail_price', $template->retail_price) }}">
     </div>
     <div class="col-12 col-md-4 form-group">
         <label for="sort_order">Sort order</label>
-        <input class="input-sharesub" id="sort_order" name="sort_order" type="number" value="{{ old('sort_order', $template->sort_order ?? 0) }}">
+        <input class="input-syndicate" id="sort_order" name="sort_order" type="number" value="{{ old('sort_order', $template->sort_order ?? 0) }}">
     </div>
     <div class="col-12 col-md-4 form-group">
         <label for="seats">Seats</label>
-        <input class="input-sharesub" id="seats" name="seats" type="number" min="0" value="{{ old('seats', $template->seats) }}">
+        <input class="input-syndicate" id="seats" name="seats" type="number" min="0" value="{{ old('seats', $template->seats) }}">
     </div>
     <div class="col-12 col-md-4 form-group">
         <label for="shareable_seats">Shareable seats</label>
-        <input class="input-sharesub" id="shareable_seats" name="shareable_seats" type="number" min="0" value="{{ old('shareable_seats', $template->shareable_seats) }}">
+        <input class="input-syndicate" id="shareable_seats" name="shareable_seats" type="number" min="0" value="{{ old('shareable_seats', $template->shareable_seats) }}">
     </div>
     <div class="col-12 col-md-4 form-group">
         <label for="available_seats">Available seats</label>
-        <input class="input-sharesub" id="available_seats" name="available_seats" type="number" min="0" value="{{ old('available_seats', $template->available_seats) }}">
+        <input class="input-syndicate" id="available_seats" name="available_seats" type="number" min="0" value="{{ old('available_seats', $template->available_seats) }}">
     </div>
     <div class="col-12 form-group">
         <label for="description">Description</label>
@@ -103,7 +103,7 @@
             }
             $textareaRows = min(24, max(6, $textareaRows + 1));
         @endphp
-        <textarea style="height: auto;" class="input-sharesub" id="description" name="description" rows="{{ $textareaRows }}">{{ old('description', $template->description) }}</textarea>
+        <textarea style="height: auto;" class="input-syndicate" id="description" name="description" rows="{{ $textareaRows }}">{{ old('description', $template->description) }}</textarea>
     </div>
     <div class="col-12 form-group">
         <label for="description_seo">Description SEO</label>
@@ -114,11 +114,11 @@
             }
             $textareaRows = min(24, max(6, $textareaRows + 1));
         @endphp
-        <textarea style="height: auto;" class="input-sharesub" id="description_seo" name="description_seo" rows="{{ $textareaRows }}">{{ old('description_seo', $template->description_seo) }}</textarea>
+        <textarea style="height: auto;" class="input-syndicate" id="description_seo" name="description_seo" rows="{{ $textareaRows }}">{{ old('description_seo', $template->description_seo) }}</textarea>
     </div>
     <div class="col-12 form-group">
         <label for="title_seo">Title SEO</label>
-        <input class="input-sharesub" id="title_seo" name="title_seo" value="{{ old('title_seo', $template->title_seo) }}">
+        <input class="input-syndicate" id="title_seo" name="title_seo" value="{{ old('title_seo', $template->title_seo) }}">
     </div>
     <div class="col-12 form-group">
         <label for="helper_create">Helper text for sharing</label>
@@ -129,7 +129,7 @@
             }
             $textareaRows = min(24, max(6, $textareaRows + 1));
         @endphp
-        <textarea style="height: auto;" class="input-sharesub" id="helper_create" name="helper_create" rows="{{ $textareaRows }}">{{ old('helper_create', $template->helper_create) }}</textarea>
+        <textarea style="height: auto;" class="input-syndicate" id="helper_create" name="helper_create" rows="{{ $textareaRows }}">{{ old('helper_create', $template->helper_create) }}</textarea>
     </div>
     <div class="col-12 form-group">
         <label for="helper_join">Helper text for joining</label>
@@ -140,13 +140,13 @@
             }
             $textareaRows = min(24, max(6, $textareaRows + 1));
         @endphp
-        <textarea style="height: auto;" class="input-sharesub" id="helper_join" name="helper_join" rows="{{ $textareaRows }}">{{ old('helper_join', $template->helper_join) }}</textarea>
+        <textarea style="height: auto;" class="input-syndicate" id="helper_join" name="helper_join" rows="{{ $textareaRows }}">{{ old('helper_join', $template->helper_join) }}</textarea>
     </div>
     <div class="col-12 col-md-6 form-group">
         <div class="filter-toggle justify-content-start">
             <div class="filter-toggle-wrapper">
-                <input type="checkbox" id="is_active" name="is_active" value="1" class="checkbox-sharesub" @checked(old('is_active', $template->is_active))>
-                <label for="is_active" class="label-sharesub">Toggle</label>
+                <input type="checkbox" id="is_active" name="is_active" value="1" class="checkbox-syndicate" @checked(old('is_active', $template->is_active))>
+                <label for="is_active" class="label-syndicate">Toggle</label>
             </div>
             <div class="filter-toggle-text">Active</div>
         </div>

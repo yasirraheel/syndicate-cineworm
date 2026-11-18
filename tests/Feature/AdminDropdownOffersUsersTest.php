@@ -266,8 +266,8 @@ class AdminDropdownOffersUsersTest extends TestCase
         $response->assertSee('value="fr"', false);
         $response->assertSee('value="user" selected', false);
         $response->assertSee('value="admin"', false);
-        $response->assertDontSee('<input class="input-sharesub" id="country"', false);
-        $response->assertDontSee('<input class="input-sharesub" id="language"', false);
+        $response->assertDontSee('<input class="input-syndicate" id="country"', false);
+        $response->assertDontSee('<input class="input-syndicate" id="language"', false);
     }
 
     public function test_user_update_from_dropdowns_persists_role_country_and_language(): void

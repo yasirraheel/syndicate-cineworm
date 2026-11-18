@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="px-xs-0">
-        <div class="card-sharesub pt-none">
+        <div class="card-syndicate pt-none">
             <div class="row justify-content-center mb-3 mx--2">
                 <a href="/en/my-account" class="col-6 col-md-4 p-2 tab-navigation">
                     <div>
@@ -25,11 +25,11 @@
                     <div class="col col-md-6 offset-md-3">
                         @if ($stripeOnboardingUrl)
                             {{-- With real Stripe keys this opens the per-user Stripe Connect onboarding URL built by the controller. --}}
-                            <a class="btn-sharesub bleu" href="{{ $stripeOnboardingUrl }}">Start the verification</a>
+                            <a class="btn-syndicate bleu" href="{{ $stripeOnboardingUrl }}">Start the verification</a>
                             <p>Or continue with the <a href="/en/my-account/identity">local identity flow</a>.</p>
                         @else
                             {{-- Recorded deviation: the original links out to a per-user Stripe Connect onboarding URL. With real Stripe keys the button above uses that URL; without them this links to our existing local identity flow instead. --}}
-                            <a class="btn-sharesub bleu" href="/en/my-account/identity">Start the verification</a>
+                            <a class="btn-syndicate bleu" href="/en/my-account/identity">Start the verification</a>
                             @if ($stripeSecretReady)
                                 <p>Stripe onboarding could not be started, so verification continues with the local identity flow.</p>
                             @else

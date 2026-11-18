@@ -53,7 +53,7 @@ class CmsPageController extends Controller
         $html = file_get_contents($file);
         $html = $this->normalizeLinks($html);
         $html = $this->fixSpeculationRules($html);
-        $html = $this->replaceShareSubscriptionLinks($html);
+        $html = $this->replaceSyndicatescriptionLinks($html);
         $html = $this->replaceMyAccountLink($html);
 
         return response($html)
@@ -69,7 +69,7 @@ class CmsPageController extends Controller
      * at /en/register. Only anchors whose visible text is a share CTA
      * are rewritten, so no other CMS link is touched.
      */
-    protected function replaceShareSubscriptionLinks(string $html): string
+    protected function replaceSyndicatescriptionLinks(string $html): string
     {
         $labels = [
             'Share a Subscription',
@@ -147,7 +147,7 @@ class CmsPageController extends Controller
         $html = file_get_contents($file);
         $html = $this->normalizeLinks($html);
         $html = $this->fixSpeculationRules($html);
-        $html = $this->replaceShareSubscriptionLinks($html);
+        $html = $this->replaceSyndicatescriptionLinks($html);
 
         if ($indexPage !== null) {
             $html = $this->replaceTitleTag($html, (string) $indexPage->title);
@@ -188,7 +188,7 @@ class CmsPageController extends Controller
         $html = file_get_contents($file);
         $html = $this->normalizeLinks($html);
         $html = $this->fixSpeculationRules($html);
-        $html = $this->replaceShareSubscriptionLinks($html);
+        $html = $this->replaceSyndicatescriptionLinks($html);
         $html = $this->replaceMyAccountLink($html);
         $html = $this->replaceTitleTag($html, (string) $page->title);
         $html = preg_replace_callback(

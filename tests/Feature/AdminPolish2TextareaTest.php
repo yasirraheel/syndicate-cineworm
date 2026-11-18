@@ -61,11 +61,11 @@ class AdminPolish2TextareaTest extends TestCase
         // No admin textarea on the page is left at the old fixed small size.
         $this->assertStringNotContainsString('rows="3"', $content);
         $this->assertStringNotContainsString('rows="2"', $content);
-        // Rows alone cannot grow the box: the captured .input-sharesub
+        // Rows alone cannot grow the box: the captured .input-syndicate
         // rule fixes height at 56px, so every textarea lets its rows
         // decide the height with an inline height of auto.
-        $this->assertStringContainsString('<textarea style="height: auto;" class="input-sharesub" id="settings-waiting_help_3_text"', $content);
-        $this->assertStringContainsString('<textarea style="height: auto;" class="input-sharesub" id="settings-seo_house_description"', $content);
+        $this->assertStringContainsString('<textarea style="height: auto;" class="input-syndicate" id="settings-waiting_help_3_text"', $content);
+        $this->assertStringContainsString('<textarea style="height: auto;" class="input-syndicate" id="settings-seo_house_description"', $content);
     }
 
     public function test_settings_ckeditor_fields_keep_rich_text_editor_class_and_partial(): void
@@ -82,7 +82,7 @@ class AdminPolish2TextareaTest extends TestCase
         $rows = $this->rowsFor($content, 'settings-share_title_html');
         $this->assertNotNull($rows);
         $this->assertGreaterThanOrEqual(6, $rows);
-        $this->assertStringContainsString('class="input-sharesub rich-text-editor"', $content);
+        $this->assertStringContainsString('class="input-syndicate rich-text-editor"', $content);
     }
 
     public function test_saving_a_long_settings_value_still_works(): void
@@ -129,7 +129,7 @@ class AdminPolish2TextareaTest extends TestCase
         $content = $create->getContent();
         $this->assertSame(6, $this->rowsFor($content, 'excerpt'));
         $this->assertSame(12, $this->rowsFor($content, 'body_html'));
-        $this->assertStringContainsString('class="input-sharesub rich-text-editor"', $content);
+        $this->assertStringContainsString('class="input-syndicate rich-text-editor"', $content);
 
         $page = Page::create([
             'slug' => 'textarea-test-page',

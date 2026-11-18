@@ -10,7 +10,7 @@
  *
  * The panel is built by this script and appended to document.body,
  * outside the #app element the bundled app.js mounts Vue on, so the
- * Vue mount never removes it. The captured "Contact Sharesub Support"
+ * Vue mount never removes it. The captured "Contact Syndicate Support"
  * links (data-open-support) open the panel too, through a delegated
  * click handler on the document.
  *
@@ -60,7 +60,7 @@
     var root = document.createElement('div');
     root.setAttribute('data-support-chat-root', '');
     root.innerHTML =
-        '<button type="button" data-support-chat-toggle class="btn-sharesub blue" aria-label="Chat with admin support" aria-expanded="false"'
+        '<button type="button" data-support-chat-toggle class="btn-syndicate blue" aria-label="Chat with admin support" aria-expanded="false"'
         + ' style="position:fixed;right:20px;bottom:20px;z-index:1050;border-radius:50%;width:56px;height:56px;padding:0;display:flex;align-items:center;justify-content:center;">'
         + '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5C6.20101 1.5 1.5 6.20101 1.5 12C1.5 17.799 6.20101 22.5 12 22.5Z" fill="currentColor"/><path d="M11 11H13V16.5H11V11Z" fill="white"/><path d="M12 9.5C12.6904 9.5 13.25 8.94036 13.25 8.25C13.25 7.55964 12.6904 7 12 7C11.3096 7 10.75 7.55964 10.75 8.25C10.75 8.94036 11.3096 9.5 12 9.5Z" fill="white"/></svg>'
         + '<span data-support-chat-badge hidden style="position:absolute;top:-4px;right:-4px;min-width:20px;height:20px;border-radius:10px;background:#e5484d;color:#fff;font-size:11px;line-height:20px;text-align:center;padding:0 5px;"></span>'
@@ -72,7 +72,7 @@
         + '<div class="chat-messages"><div class="chat-messages-list" data-support-chat-messages></div></div>'
         + '<div class="chat-wrapper-form"><form data-support-chat-form>'
         + '<textarea name="message" rows="1" placeholder="Write a message" aria-label="Write a message"></textarea>'
-        + '<button type="submit" class="btn btn-sharesub blue" aria-label="Send">'
+        + '<button type="submit" class="btn btn-syndicate blue" aria-label="Send">'
         + '<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 11.586C8.60954 11.9765 8.60953 12.6096 9 13C9.39046 13.3905 10.0235 13.3905 10.414 13L15.7069 7.70714C16.0974 7.31661 16.0974 6.68345 15.7069 6.29292L10.414 1.00003C10.0235 0.609564 9.39047 0.609564 9 1.00003C8.60953 1.39049 8.60954 2.02356 9 2.41403L12.586 6.00003H1C0.447715 6.00003 0 6.44774 0 7.00003C0 7.55231 0.447715 8.00003 1 8.00003H12.586L9 11.586Z" fill="currentColor"/></svg>'
         + '</button></form></div></div>';
     document.body.appendChild(root);

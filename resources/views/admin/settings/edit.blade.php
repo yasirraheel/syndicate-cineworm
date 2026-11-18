@@ -1,4 +1,4 @@
-<section class="card-sharesub p-4">
+<section class="card-syndicate p-4">
     <h3 class="dashboard-progress-title">Site settings</h3>
     @if (session('status'))
         <div class="alert alert-success" role="status">{{ session('status') }}</div>
@@ -21,10 +21,10 @@
                             }
                             $textareaRows = min(24, max(6, $textareaRows + 1));
                         @endphp
-                        <textarea style="height: auto;" class="input-sharesub{{ str_ends_with($key, '_html') ? ' rich-text-editor' : '' }}" id="settings-{{ $key }}" name="settings[{{ $key }}]" rows="{{ $textareaRows }}">{{ old('settings.'.$key, $settings[$key] ?? '') }}</textarea>
+                        <textarea style="height: auto;" class="input-syndicate{{ str_ends_with($key, '_html') ? ' rich-text-editor' : '' }}" id="settings-{{ $key }}" name="settings[{{ $key }}]" rows="{{ $textareaRows }}">{{ old('settings.'.$key, $settings[$key] ?? '') }}</textarea>
                     @elseif ($meta['type'] === 'currency')
                         @php $currentCurrency = old('settings.'.$key, $settings[$key] ?? ''); @endphp
-                        <select class="input-sharesub" id="settings-{{ $key }}" name="settings[{{ $key }}]">
+                        <select class="input-syndicate" id="settings-{{ $key }}" name="settings[{{ $key }}]">
                             @if (! $currencies->contains('code', $currentCurrency))
                                 <option value="{{ $currentCurrency }}" selected>{{ $currentCurrency }}</option>
                             @endif
@@ -34,7 +34,7 @@
                         </select>
                     @elseif ($meta['type'] === 'locale')
                         @php $currentLocale = old('settings.'.$key, $settings[$key] ?? ''); @endphp
-                        <select class="input-sharesub" id="settings-{{ $key }}" name="settings[{{ $key }}]">
+                        <select class="input-syndicate" id="settings-{{ $key }}" name="settings[{{ $key }}]">
                             @if (! collect($locales)->contains('code', $currentLocale))
                                 <option value="{{ $currentLocale }}" selected>{{ $currentLocale }}</option>
                             @endif
@@ -44,7 +44,7 @@
                         </select>
                     @elseif ($meta['type'] === 'brand_slug')
                         @php $currentSlug = old('settings.'.$key, $settings[$key] ?? ''); @endphp
-                        <select class="input-sharesub" id="settings-{{ $key }}" name="settings[{{ $key }}]">
+                        <select class="input-syndicate" id="settings-{{ $key }}" name="settings[{{ $key }}]">
                             @if (! $brands->contains('slug', $currentSlug))
                                 <option value="{{ $currentSlug }}" selected>{{ $currentSlug }}</option>
                             @endif
@@ -53,12 +53,12 @@
                             @endforeach
                         </select>
                     @else
-                        <input class="input-sharesub" id="settings-{{ $key }}" name="settings[{{ $key }}]" value="{{ old('settings.'.$key, $settings[$key] ?? '') }}">
+                        <input class="input-syndicate" id="settings-{{ $key }}" name="settings[{{ $key }}]" value="{{ old('settings.'.$key, $settings[$key] ?? '') }}">
                     @endif
                 </div>
             @endforeach
         </div>
-        <button type="submit" class="btn-sharesub bleu mx-auto my-2 d-block">Save settings</button>
+        <button type="submit" class="btn-syndicate bleu mx-auto my-2 d-block">Save settings</button>
     </form>
     @include('admin.partials.rich-text-editor')
 </section>

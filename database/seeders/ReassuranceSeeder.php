@@ -27,7 +27,7 @@ class ReassuranceSeeder extends Seeder
         ],
         [
             'title' => 'Verified Members',
-            'text' => 'Sharesub verifies subscriptions and members by reviewing supporting documents.',
+            'text' => 'Syndicate verifies subscriptions and members by reviewing supporting documents.',
         ],
         [
             'title' => 'Clear Rules',

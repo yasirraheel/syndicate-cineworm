@@ -2,7 +2,7 @@
     <div class="d-flex justify-content-between align-items-center">
         <h3 class="dashboard-progress-title mb-0">{{ $group->title }}</h3>
         <div class="d-flex">
-            <a class="btn-sharesub bleu" style="width: auto;" href="{{ route('admin.footer-links.create', $group) }}">Add footer link</a>
+            <a class="btn-syndicate bleu" style="width: auto;" href="{{ route('admin.footer-links.create', $group) }}">Add footer link</a>
             <a class="btn btn-light btn-sm ml-2" href="{{ route('admin.footer-groups.edit', $group) }}">Edit group</a>
         </div>
     </div>

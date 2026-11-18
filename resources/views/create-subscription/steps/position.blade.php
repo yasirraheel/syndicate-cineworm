@@ -13,6 +13,6 @@
         </div>
     </div>
     <div class="mt-3">
-        <button type="submit" class="btn btn-sharesub green">Continue</button>
+        <button type="submit" class="btn btn-syndicate green">Continue</button>
     </div>
 </form>

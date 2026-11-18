@@ -137,7 +137,7 @@ class RawPages2DashboardSharedTest extends TestCase
         $this->assertStringContainsString('Finalize your profile', $content);
         $this->assertStringContainsString('dashboard-profile-steps', $content);
         // CTA Share button points at the wizard, not #offline.
-        $this->assertStringContainsString('<a href="/en/create-subscription" class="btn-sharesub dark big">Share</a>', $content);
+        $this->assertStringContainsString('<a href="/en/create-subscription" class="btn-syndicate dark big">Share</a>', $content);
         // Stats keep the captured zeros for a fresh user.
         $this->assertStringContainsString('<span class="stat-value">€0</span>', $content);
     }
@@ -187,7 +187,7 @@ class RawPages2DashboardSharedTest extends TestCase
             ->assertOk()->getContent();
 
         $this->assertStringContainsString('<a href="/en/my-bank-account" class="dash-sheet-link "', $content);
-        $this->assertStringContainsString('href="https://help.sharesub.com/"', $content);
+        $this->assertStringContainsString('href="https://help.syndicate.com/"', $content);
         $this->assertStringContainsString('<a href="/en/dashboard" class="dash-tabbar-item active">', $content);
     }
 

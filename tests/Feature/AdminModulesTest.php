@@ -127,13 +127,13 @@ class AdminModulesTest extends TestCase
                 'hero_highlight' => 'Share',
                 'hero_text' => 'the cost of your',
                 'hero_underline' => 'subscriptions',
-                'footer_note' => 'Sharesub helps you manage payments.',
+                'footer_note' => 'Syndicate helps you manage payments.',
             ],
         ]);
 
         $response->assertRedirect(route('admin.settings.edit'));
         $this->assertDatabaseHas('site_settings', ['key' => 'hero_highlight', 'value' => 'Share']);
-        $this->assertDatabaseHas('site_settings', ['key' => 'footer_note', 'value' => 'Sharesub helps you manage payments.']);
+        $this->assertDatabaseHas('site_settings', ['key' => 'footer_note', 'value' => 'Syndicate helps you manage payments.']);
         $this->assertSame('Share', SiteSetting::where('key', 'hero_highlight')->first()->value);
     }
 
@@ -155,15 +155,15 @@ class AdminModulesTest extends TestCase
 
         $link = $group->footerLinks()->firstOrFail();
         $this->put(route('admin.footer-links.update', [$group, $link]), [
-            'label' => 'About CutCost',
+            'label' => 'About Syndicate',
             'url' => '/en/about',
             'sort_order' => 0,
             'is_active' => '1',
         ])->assertRedirect(route('admin.footer-links.edit', [$group, $link]));
-        $this->assertDatabaseHas('footer_links', ['label' => 'About CutCost']);
+        $this->assertDatabaseHas('footer_links', ['label' => 'About Syndicate']);
 
         $this->delete(route('admin.footer-links.destroy', [$group, $link]))
             ->assertRedirect(route('admin.footer-groups.show', $group));
-        $this->assertDatabaseMissing('footer_links', ['label' => 'About CutCost']);
+        $this->assertDatabaseMissing('footer_links', ['label' => 'About Syndicate']);
     }
 }

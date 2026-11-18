@@ -307,7 +307,7 @@ HTML;
                 <img src="/img/dashboard/share/proposer.svg" class="icon" alt="">
                 <h2 class="title">KYC reviews</h2>
                 <p class="content">Review identity documents submitted by users and approve or reject them.</p>
-                <a href="/en/admin/kyc" class="btn-sharesub dark big">Open KYC reviews</a>
+                <a href="/en/admin/kyc" class="btn-syndicate dark big">Open KYC reviews</a>
             </div>
         </div>
         <div class="col-12 col-md-6">
@@ -315,7 +315,7 @@ HTML;
                 <img src="/img/dashboard/share/participer.svg" class="icon" alt="">
                 <h2 class="title">Subscription activity</h2>
                 <p class="content">Review the shared and joined subscription areas from the admin panel.</p>
-                <a href="/en/admin/shared-subscriptions" class="btn-sharesub dark big">Open subscriptions</a>
+                <a href="/en/admin/shared-subscriptions" class="btn-syndicate dark big">Open subscriptions</a>
             </div>
         </div>
     </div>

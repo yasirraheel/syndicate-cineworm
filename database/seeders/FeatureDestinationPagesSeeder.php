@@ -50,7 +50,7 @@ class FeatureDestinationPagesSeeder extends Seeder
         [
             'slug' => 'secure-data',
             'title' => 'Secure data',
-            'body' => 'If you need to share confidential data such as IDs, passwords, license numbers or other information, Sharesub is the right solution to protect this data. Your exchanges are transmitted and stored with strong encryption (AES 256) to ensure your privacy.',
+            'body' => 'If you need to share confidential data such as IDs, passwords, license numbers or other information, Syndicate is the right solution to protect this data. Your exchanges are transmitted and stored with strong encryption (AES 256) to ensure your privacy.',
         ],
     ];
 

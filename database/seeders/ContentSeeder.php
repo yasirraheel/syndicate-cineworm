@@ -44,7 +44,7 @@ use Illuminate\Support\Str;
  *   resolves the slug to a brand id at render time.
  * - The waiting page has no third help item with body text in the
  *   capture: the dash sheet holds Messages (with a subtitle) and
- *   Contact Sharesub Support (no subtitle), and the menu holds Help
+ *   Contact Syndicate Support (no subtitle), and the menu holds Help
  *   Center (no subtitle). Only waiting_help_1 has both a title and a
  *   text; waiting_help_2_text and waiting_help_3_text are not seeded.
  * - Footer social URLs are seeded empty: the captured footer social
@@ -402,14 +402,14 @@ class ContentSeeder extends Seeder
 
         $values = [];
         $patterns = [
-            'nav_share_label' => '/<a class="btn-sharesub green"[^>]*>\s*([^<]+?)\s*<\/a>/',
+            'nav_share_label' => '/<a class="btn-syndicate green"[^>]*>\s*([^<]+?)\s*<\/a>/',
             'nav_subscriptions_label' => '/<a class="p1-semibold lg:p2-regular" href="\/en\/subscriptions\.html">\s*([^<]+?)\s*<\/a>/',
             'nav_blog_label' => '/<a class="p1-semibold lg:p2-regular" href="\/cms\/en\/index\.html">\s*([^<]+?)\s*<\/a>/',
             'nav_register_label' => '/<a class="p1-semibold lg:p2-regular" href="\/en\/register\.html">\s*([^<]+?)\s*<\/a>/',
             'nav_login_label' => '/<a class="p1-semibold lg:p2-regular" href="\/en\/userlogin\.html">\s*([^<]+?)\s*<\/a>/',
             'nav_menu_label' => '/<button class="navbar-toggler[^>]*>\s*([^<]+?)\s*<img/',
-            'nav_propose_label' => '/<a href="\/en\/register\.html" class="btn btn-sharesub green">\s*([^<]+?)\s*<\/a>/',
-            'nav_browse_label' => '/<a href="\/en\/subscriptions\.html" class="btn btn-sharesub blue">\s*([^<]+?)\s*<\/a>/',
+            'nav_propose_label' => '/<a href="\/en\/register\.html" class="btn btn-syndicate green">\s*([^<]+?)\s*<\/a>/',
+            'nav_browse_label' => '/<a href="\/en\/subscriptions\.html" class="btn btn-syndicate blue">\s*([^<]+?)\s*<\/a>/',
             'nav_help_label' => '/<a href="#offline" target="_blank">\s*([^<]+?)\s*<\/a>/',
         ];
 
@@ -796,7 +796,7 @@ class ContentSeeder extends Seeder
         }
 
         $xpath = new DOMXPath($index);
-        $titles = $xpath->query('//footer['.$this->token('sharesub-footer').']//div['.$this->token('footer-link-title').']');
+        $titles = $xpath->query('//footer['.$this->token('syndicate-footer').']//div['.$this->token('footer-link-title').']');
 
         if ($titles === false) {
             return;

@@ -1,6 +1,6 @@
-# Sharesub Offline Website Template
+# Syndicate Offline Website Template
 
-This repository is a cleaned, reusable static template based on the supplied Sharesub page captures. It contains the website pages and the local CSS, JavaScript, image, SVG, font, favicon, and blog assets needed to preview the captured experience without loading remote page resources.
+This repository is a cleaned, reusable static template based on the supplied Syndicate page captures. It contains the website pages and the local CSS, JavaScript, image, SVG, font, favicon, and blog assets needed to preview the captured experience without loading remote page resources.
 
 ## What is included
 
@@ -62,7 +62,7 @@ The pages use root-relative paths such as `/css/app.css`, `/js/app.js`, and `/cm
 ## Project structure
 
 ```text
-Sharesub/
+Syndicate/
 ├── en/                         Main English website pages
 ├── cms/en/                     Blog, legal, team, and protection pages
 ├── css/                        Local stylesheets
@@ -86,14 +86,14 @@ The source footer links are preserved rather than deleted. Some destinations—s
 
 ## Reusing this template
 
-1. Copy the `Sharesub` folder into a project.
+1. Copy the `Syndicate` folder into a project.
 2. Keep the same root-relative folder structure, or update the paths in the HTML files if the template is mounted below a subdirectory.
 3. Replace page content and images while keeping the shared `css`, `js`, `fonts`, and `cms/wp-content` assets.
 4. Use the local server during development and deploy the folder to any static hosting service when ready.
 
 ## Important notes
 
-- This is a frontend-only static capture. Forms and account actions are visual UI only and do not connect to a real Sharesub account.
+- This is a frontend-only static capture. Forms and account actions are visual UI only and do not connect to a real Syndicate account.
 - Dynamic catalogue prices, authentication, payments, analytics, chat, consent services, and third-party tracking are not implemented.
 - The captured brand content and assets remain subject to their original owner’s terms. Use this repository for authorized design, testing, and template work.
 

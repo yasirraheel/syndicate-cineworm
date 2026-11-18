@@ -5,7 +5,7 @@ the member row on the right, then the thread. --}}
 {{-- DELIBERATE DEVIATION (spec G12/G13): the rendered thread is
 JS-rendered and its source was not in the capture set, so v1 renders
 it with a local component that reads the latest-messages endpoint.
-The captured <sharesub-chat> element is NOT rendered here on
+The captured <syndicate-chat> element is NOT rendered here on
 purpose: the bundled public/js/app.js globally registers that exact
 component, and it decrypts each message body with an RSA private key
 (JSEncrypt). No key material is invented or copied into this build,
@@ -13,7 +13,7 @@ so with no keys the real component renders every message as "false"
 (verified live). The endpoint URLs therefore live on the plain thread
 container below as data attributes, in the same names as the captured
 element, so the real component can be restored once the encryption
-decision lands. TODO: when keys exist, render <sharesub-chat> with
+decision lands. TODO: when keys exist, render <syndicate-chat> with
 the key attributes and drop this local component; re-check bubble
 layout, timestamps, read ticks and the composer against it. The
 composer placeholder, the send arrow and the empty-thread text below
@@ -64,7 +64,7 @@ are assumptions, not captured copy. --}}
         <div class="chat-wrapper-form">
             <form data-chat-form>
                 <textarea name="message" rows="1" placeholder="Write a message" aria-label="Write a message"></textarea>
-                <button type="submit" class="btn btn-sharesub blue" aria-label="Send">
+                <button type="submit" class="btn btn-syndicate blue" aria-label="Send">
                     <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 11.586C8.60954 11.9765 8.60953 12.6096 9 13C9.39046 13.3905 10.0235 13.3905 10.414 13L15.7069 7.70714C16.0974 7.31661 16.0974 6.68345 15.7069 6.29292L10.414 1.00003C10.0235 0.609564 9.39047 0.609564 9 1.00003C8.60953 1.39049 8.60954 2.02356 9 2.41403L12.586 6.00003H1C0.447715 6.00003 0 6.44774 0 7.00003C0 7.55231 0.447715 8.00003 1 8.00003H12.586L9 11.586Z" fill="currentColor"/></svg>
                 </button>
             </form>

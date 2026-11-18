@@ -140,7 +140,7 @@ class TemplatesTest extends TestCase
         // a real apostrophe, not a leftover capture escape.
         $helper = (string) $templates->firstWhere('slug', 'amazon-prime')->helper_create;
         $this->assertStringContainsString(
-            'https://www.sharesub.com/cms/en/share-your-amazon-prime-account-with-a-loved-one/',
+            'https://www.syndicate.com/cms/en/share-your-amazon-prime-account-with-a-loved-one/',
             $helper
         );
         $this->assertStringContainsString("\u{2019}", $helper);

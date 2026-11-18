@@ -47,7 +47,7 @@ class AdminDropdownRemainingTest extends TestCase
         $response = $this->actingAs($this->admin())->get(route('admin.brand-faqs.edit', $faq));
 
         $response->assertOk();
-        $response->assertSee('<select class="input-sharesub" id="brand_id" name="brand_id"', false);
+        $response->assertSee('<select class="input-syndicate" id="brand_id" name="brand_id"', false);
         $response->assertSee('<option value="'.$brand->id.'" selected>Amazon</option>', false);
     }
 
@@ -79,7 +79,7 @@ class AdminDropdownRemainingTest extends TestCase
         $response = $this->actingAs($this->admin())->get(route('admin.how-it-works.create'));
 
         $response->assertOk();
-        $response->assertSee('<select class="input-sharesub" id="audience" name="audience">', false);
+        $response->assertSee('<select class="input-syndicate" id="audience" name="audience">', false);
         $response->assertSee('<option value="share" selected>I want to share</option>', false);
         $response->assertSee('<option value="seat"', false);
         $response->assertSee('I want a seat', false);
@@ -103,7 +103,7 @@ class AdminDropdownRemainingTest extends TestCase
         $response = $this->actingAs($this->admin())->get(route('admin.pages.create'));
 
         $response->assertOk();
-        $response->assertSee('<select class="input-sharesub" id="type" name="type" required>', false);
+        $response->assertSee('<select class="input-syndicate" id="type" name="type" required>', false);
         $response->assertSee('<option value="page" selected>Page</option>', false);
         $response->assertSee('<option value="post"', false);
         $response->assertSee('>Post</option>', false);

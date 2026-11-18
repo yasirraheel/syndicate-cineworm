@@ -56,7 +56,7 @@ class DocumentsController extends Controller
         }
 
         return view('money.documents', [
-            'title' => 'Identity and Verification - Sharesub',
+            'title' => 'Identity and Verification - Syndicate',
             'pageTitle' => 'Identity and Verification',
             'activeNav' => 'documents',
             'activeGroup' => null,

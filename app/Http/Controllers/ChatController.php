@@ -38,7 +38,7 @@ use Symfony\Component\HttpFoundation\Response;
  * that field. Real encryption is an open follow-up needing a key
  * decision. No key material is ever rendered on these pages.
  *
- * The messages view deliberately does NOT render a <sharesub-chat>
+ * The messages view deliberately does NOT render a <syndicate-chat>
  * element in v1: the bundled public/js/app.js globally registers
  * that Vue component, and it RSA-decrypts every message body with a
  * private key. With no keys it renders every message as "false", and
@@ -543,7 +543,7 @@ class ChatController extends CapturedPageController
     {
         $html = str_replace(
             '<a href="#offline" target="_blank" rel="noopener" class="dash-sheet-link" data-open-support>',
-            '<a href="https://help.sharesub.com/" target="_blank" rel="noopener" class="dash-sheet-link" data-open-support>',
+            '<a href="https://help.syndicate.com/" target="_blank" rel="noopener" class="dash-sheet-link" data-open-support>',
             $html,
         );
 

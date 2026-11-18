@@ -40,7 +40,7 @@ trait RendersSiteChrome
             if ($page !== null && in_array($page, ['en/index.html', 'en/subscriptions.html', 'en/subscriptions/house.html'], true)) {
                 $html = $this->replaceFooterLinks($html);
             }
-            $html = $this->replaceShareSubscriptionLinks($html);
+            $html = $this->replaceSyndicatescriptionLinks($html);
             $html = $this->injectSupportChatWidget($html);
             $html = $this->replaceCreateAccountButtons($html);
             $html = $this->removeDeadRecaptchaInputs($html);
@@ -54,7 +54,7 @@ trait RendersSiteChrome
     /**
      * Strip the hidden g-recaptcha-response inputs from rendered pages.
      * reCAPTCHA is not wired up in this replica: no page loads the
-     * Google script, nothing ever sets window.sharesubRecaptcha, and
+     * Google script, nothing ever sets window.syndicateRecaptcha, and
      * the server never validates the token. The captured app.js guards
      * every form carrying that input: on submit it prevents the native
      * submit and re-submits from its token callback. Without reCAPTCHA
@@ -80,7 +80,7 @@ trait RendersSiteChrome
      * pages are left exactly as captured. Both href shapes are handled:
      * /en/register.html on captured pages and /en/register on CMS pages.
      */
-    protected function replaceShareSubscriptionLinks(string $html): string
+    protected function replaceSyndicatescriptionLinks(string $html): string
     {
         $labels = [
             'Share my subscription',
@@ -103,7 +103,7 @@ trait RendersSiteChrome
                 $text = trim((string) preg_replace('/\s+/', ' ', strip_tags($inner[1])));
 
                 $isShareCardButton = $text === 'Share'
-                    && str_contains($anchor, 'btn-sharesub dark big');
+                    && str_contains($anchor, 'btn-syndicate dark big');
 
                 if (! in_array($text, $labels, true) && ! $isShareCardButton) {
                     return $anchor;
@@ -158,7 +158,7 @@ trait RendersSiteChrome
         $loggedIn = Auth::check();
 
         return preg_replace_callback(
-            '/<a\b(?=[^>]*\bclass="[^"]*\bbtn-sharesub\b[^"]*")[^>]*href="(?:#offline|\/en\/register(?:\.html)?)"[^>]*>(?:(?!<\/a>).)*?Create my account\s*<\/a>/is',
+            '/<a\b(?=[^>]*\bclass="[^"]*\bbtn-syndicate\b[^"]*")[^>]*href="(?:#offline|\/en\/register(?:\.html)?)"[^>]*>(?:(?!<\/a>).)*?Create my account\s*<\/a>/is',
             static function (array $match) use ($loggedIn): string {
                 if ($loggedIn) {
                     return '';
@@ -251,13 +251,13 @@ trait RendersSiteChrome
     protected function replaceNavLabels(string $html): string
     {
         $labels = [
-            'nav_share_label' => '/(<a class="btn-sharesub green" href="\/en\/register\.html">)[^<]*(<\/a>)/',
+            'nav_share_label' => '/(<a class="btn-syndicate green" href="\/en\/register\.html">)[^<]*(<\/a>)/',
             'nav_subscriptions_label' => '/(<a class="p1-semibold lg:p2-regular" href="\/en\/subscriptions\.html">)[^<]*(<\/a>)/',
             'nav_blog_label' => '/(<a class="p1-semibold lg:p2-regular" href="\/cms\/en\/index\.html">)[^<]*(<\/a>)/',
             'nav_register_label' => '/(<a class="p1-semibold lg:p2-regular" href="\/en\/register\.html">)[^<]*(<\/a>)/',
             'nav_login_label' => '/(<a class="p1-semibold lg:p2-regular" href="\/en\/userlogin\.html">)[^<]*(<\/a>)/',
-            'nav_propose_label' => '/(<a href="\/en\/register\.html" class="btn btn-sharesub green">)[^<]*(<\/a>)/',
-            'nav_browse_label' => '/(<a href="\/en\/subscriptions\.html" class="btn btn-sharesub blue">)[^<]*(<\/a>)/',
+            'nav_propose_label' => '/(<a href="\/en\/register\.html" class="btn btn-syndicate green">)[^<]*(<\/a>)/',
+            'nav_browse_label' => '/(<a href="\/en\/subscriptions\.html" class="btn btn-syndicate blue">)[^<]*(<\/a>)/',
             'nav_help_label' => '/(<a href="#offline" target="_blank">)[^<]*(<\/a>)/',
         ];
 

@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <div class="card-sharesub card-sharesub--roomy">
+    <div class="card-syndicate card-syndicate--roomy">
         @if (session('status'))
             <div class="alert alert-success mb-3" role="status">{{ session('status') }}</div>
         @endif
@@ -39,7 +39,7 @@
         </ul>
         <h3 class="p1-bold mb-2">Add a bank account</h3>
         <p class="p2-regular text-grey-alt mb-3">
-            Sharesub recommends Revolut for receiving your winnings: it is currently the fastest bank for receiving your transfers. Get €20 free by following this <a href="#offline" target="_blank" rel="noopener">partner link</a>.
+            Syndicate recommends Revolut for receiving your winnings: it is currently the fastest bank for receiving your transfers. Get €20 free by following this <a href="#offline" target="_blank" rel="noopener">partner link</a>.
         </p>
         {{-- The IBAN field is a Stripe IBAN Element mount point, not a plain input, so no raw IBAN is ever typed into or posted from this page. The Element mounts only when a real Stripe publishable key is configured; the hidden stripe_token is filled by Stripe.js from the confirmed SetupIntent, never typed by the user. --}}
         <form method="POST" class="stripe-iban" id="iban-form" action="/en/my-bank-account/save">
@@ -51,7 +51,7 @@
                     <div class="col-12 col-md-2">
                         <div class="form-group">
                             <label for="iban_currency">Currency</label>
-                            <select class="input-sharesub" id="iban_currency" name="currency">
+                            <select class="input-syndicate" id="iban_currency" name="currency">
                                 <option value="gbp" selected>GBP £</option>
                                 <option value="eur">EUR €</option>
                             </select>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <button id="iban-button" class="btn-sharesub bleu">Save</button>
+            <button id="iban-button" class="btn-syndicate bleu">Save</button>
         </form>
     </div>
 @endsection

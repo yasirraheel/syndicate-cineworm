@@ -145,7 +145,7 @@ class ContentPhase2Test extends TestCase
         $response->assertStatus(200);
         $response->assertSee('ZzTagline');
         $response->assertSee('ZzCopyright 2030');
-        $response->assertDontSee('© 2026 Sharesub');
+        $response->assertDontSee('© 2026 Syndicate');
     }
 
     public function test_json_ld_faq_matches_db_faqs(): void

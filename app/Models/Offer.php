@@ -91,7 +91,7 @@ class Offer extends Model
     }
 
     /**
-     * Offer review states. The original Sharesub captures show no
+     * Offer review states. The original Syndicate captures show no
      * approval step for a shared subscription (review wording in the
      * captures appears only for identity documents), so the review
      * workflow follows the user's own words and the app's existing

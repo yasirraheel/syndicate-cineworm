@@ -36,7 +36,7 @@
                 </a>
                 <ul class="subscription-progress-nav">
                     @foreach ($sidebarSteps as $sidebarKey => $sidebarLabel)
-                        <li class="sharesub-step-nav{{ $sidebarKey === $displayStep ? ' current' : '' }}{{ $displayIndex !== false && $loop->index < $displayIndex ? ' cursor-pointer' : '' }}"@if ($displayIndex !== false && $loop->index < $displayIndex) onclick="window.location.href='{{ route('user.create-subscription', ['step' => $sidebarKey]) }}'"@endif>
+                        <li class="syndicate-step-nav{{ $sidebarKey === $displayStep ? ' current' : '' }}{{ $displayIndex !== false && $loop->index < $displayIndex ? ' cursor-pointer' : '' }}"@if ($displayIndex !== false && $loop->index < $displayIndex) onclick="window.location.href='{{ route('user.create-subscription', ['step' => $sidebarKey]) }}'"@endif>
                             @if ($sidebarKey === $displayStep)
                                 <img src="{{ asset('img/subscription/next.svg') }}" loading="lazy">
                             @elseif ($displayIndex !== false && $loop->index < $displayIndex)

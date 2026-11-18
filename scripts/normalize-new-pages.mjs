@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-const root = path.resolve('Sharesub');
+const root = path.resolve('Syndicate');
 const pages = [
   'en/dashboard.html',
   'en/my-shared-subscriptions.html',
@@ -50,7 +50,7 @@ const normalizeValue = (value, attr) => {
   if (/^(?:data:|#|mailto:|tel:|javascript:)/i.test(value)) return value;
 
   let localValue = value;
-  const sameSite = localValue.match(/^https?:\/\/www\.sharesub\.com(\/[^?#]*)?([?#].*)?$/i);
+  const sameSite = localValue.match(/^https?:\/\/www\.syndicate\.com(\/[^?#]*)?([?#].*)?$/i);
   if (sameSite) localValue = `${sameSite[1] || '/'}${sameSite[2] || ''}`;
   else if (/^https?:\/\//i.test(localValue) || /^\/\//.test(localValue)) return attr === 'src' ? '' : '#offline';
 
@@ -85,7 +85,7 @@ for (const relative of pages) {
   // Restore the captured dashboard navigation links that were saved as placeholders.
   html = html.replace(/<a\b[^>]*href=["']#offline["'][^>]*>[\s\S]*?<\/a>/gi, (anchor) => {
     const label = anchor.replace(/<[^>]+>/g, ' ').replace(/&[^;]+;/g, ' ').replace(/\s+/g, ' ').trim();
-    const destination = /aria-label=["']CutCost/i.test(anchor) ? '/en/index.html'
+    const destination = /aria-label=["']Syndicate/i.test(anchor) ? '/en/index.html'
       : /aria-label=["']Items to Resolve/i.test(anchor) ? '/en/dashboard.html'
       : /Shared subscriptions/i.test(label) ? '/en/my-shared-subscriptions'
       : /Joined subscriptions|See my expenses/i.test(label) ? '/en/joined-subscriptions'

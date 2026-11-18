@@ -504,7 +504,7 @@ class CreateSubscriptionTest extends TestCase
 
         $response->assertOk();
         $response->assertSee('My Video Plan');
-        $response->assertSee('/en/create-subscription" class="btn btn-sharesub green mb-2 mb-sm-0', false);
+        $response->assertSee('/en/create-subscription" class="btn btn-syndicate green mb-2 mb-sm-0', false);
         $response->assertSee('£1.99 / month');
     }
 
@@ -596,8 +596,8 @@ class CreateSubscriptionTest extends TestCase
         $response = $this->get('/en/subscriptions');
 
         $response->assertOk();
-        $response->assertSee('href="/en/create-subscription" class="btn btn-sharesub green', false);
-        $response->assertDontSee('href="/en/register.html" class="btn btn-sharesub green', false);
+        $response->assertSee('href="/en/create-subscription" class="btn btn-syndicate green', false);
+        $response->assertDontSee('href="/en/register.html" class="btn btn-syndicate green', false);
 
         $home = $this->get('/en');
         $home->assertOk();

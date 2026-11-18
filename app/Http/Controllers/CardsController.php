@@ -52,7 +52,7 @@ class CardsController extends Controller
         }
 
         return view('money.cards', [
-            'title' => 'My payment methods - Sharesub',
+            'title' => 'My payment methods - Syndicate',
             'pageTitle' => 'My payment methods',
             'activeNav' => 'cards',
             'activeGroup' => 'payments',

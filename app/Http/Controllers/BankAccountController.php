@@ -44,7 +44,7 @@ class BankAccountController extends Controller
         }
 
         return view('money.bank', [
-            'title' => 'My Bank Account - Sharesub',
+            'title' => 'My Bank Account - Syndicate',
             'pageTitle' => 'My Bank Account',
             'activeNav' => 'bank',
             'activeGroup' => 'payments',

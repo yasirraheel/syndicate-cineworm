@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CutCost Admin - KYC review</title>
+    <title>Syndicate Admin - KYC review</title>
     <link href="/css/app.css?id=d5e0988" rel="stylesheet">
     <style>
         body { background: #f4f6fb; color: #112e45; }
@@ -33,7 +33,7 @@
 <div class="admin-shell">
     <header class="admin-header">
         <div class="container-fluid" style="max-width: 1200px; margin: 0 auto;">
-            <img class="admin-logo" src="/img/cutcost-logo-white.svg" alt="CutCost">
+            <img class="admin-logo" src="/img/syndicate-logo-white.svg" alt="Syndicate">
             <h1 style="color:#fff; margin:26px 0 0;">KYC review</h1>
         </div>
     </header>

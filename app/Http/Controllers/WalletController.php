@@ -88,7 +88,7 @@ class WalletController extends Controller
         })->all();
 
         return view('money.wallet', [
-            'title' => 'Wallet - Sharesub',
+            'title' => 'Wallet - Syndicate',
             'pageTitle' => 'Wallet',
             'activeNav' => 'wallet',
             'activeGroup' => 'payments',

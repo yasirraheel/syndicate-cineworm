@@ -48,7 +48,7 @@ class TemplateSeeder extends Seeder
 
     /**
      * The 8 Amazon templates from the captured get-templates API
-     * response (Raw Pages zip (3), www.sharesub.com/en/get-templates.html).
+     * response (Raw Pages zip (3), www.syndicate.com/en/get-templates.html).
      * Prices are the United Kingdom (country_id 237, GBP 826) rows,
      * which is what the wizard shows for the default UK flow; they
      * match Nabila's screenshots exactly (users max and prices).
@@ -69,8 +69,8 @@ class TemplateSeeder extends Seeder
             'retail_price' => 6.99,
             'description' => 'Amazon Prime is a subscription membership to Amazon that offers customers premium services for a yearly or monthly fee. Amazon Prime provides discounts on shipping, Twitch Prime, Amazon Drive and thirty minutes early access to Lightning Deals for a yearly subscription fee. However, a shared amazon subscription does NOT give access to Amazon Prime Video.',
             'description_seo' => 'Amazon Prime is a subscription membership to Amazon that offers customers premium services for a yearly or monthly fee. Amazon Prime provides discounts on shipping, Twitch Prime, Amazon Drive and thirty minutes early access to Lightning Deals for a yearly subscription fee. However, a shared amazon subscription does NOT give access to Amazon Prime Video.',
-            'title_seo' => 'Share an Amazon Prime account - Sharesub',
-            'helper_create' => 'Vous avez besoin de l’adresse mail de votre co-abonné pour lui partager Amazon Prime. You can check out <a href="https://www.sharesub.com/cms/en/share-your-amazon-prime-account-with-a-loved-one/">our dedicated tutorial</a>.',
+            'title_seo' => 'Share an Amazon Prime account - Syndicate',
+            'helper_create' => 'Vous avez besoin de l’adresse mail de votre co-abonné pour lui partager Amazon Prime. You can check out <a href="https://www.syndicate.com/cms/en/share-your-amazon-prime-account-with-a-loved-one/">our dedicated tutorial</a>.',
             'helper_join' => 'The owner needs your email address to send you an invitation. Send it in the chat (blue message icon above).',
         ],
         [
@@ -101,8 +101,8 @@ class TemplateSeeder extends Seeder
             'retail_price' => 8.99,
             'description' => 'Amazon Prime Video is a digital video-on-demand platform that lets you watch many popular movies and series, including Amazon Original series. These include: The Boys, The Summer I Turned Pretty, etc. One of the cheapest players in the SVOD market, especially considering the quality of the services offered.',
             'description_seo' => 'Amazon Prime Video is a digital video-on-demand platform that lets you watch many popular movies and series, including Amazon Original series. These include: The Boys, The Summer I Turned Pretty, etc. One of the cheapest players in the SVOD market, especially considering the quality of the services offered.',
-            'title_seo' => 'Share an Amazon Prime Video account - Sharesub',
-            'helper_create' => 'Enter the email address and password to log in to Amazon Prime Video in the fields below. This information will be communicated to your co-subscriber once he has paid for the subscription, so that he does not have to wait. So you won\'t have to do anything anymore. Also specify whether they must create a profile (you must guarantee one profile per person). Important precaution: to avoid Amazon purchases with your account, activate the PIN code and purchase protection! See this article: <a href="https://www.sharesub.com/cms/fr/securiser-son-subscription-amazon-prime-video/">Secure your Amazon share</a> (you can do this after finalizing this sharing)',
+            'title_seo' => 'Share an Amazon Prime Video account - Syndicate',
+            'helper_create' => 'Enter the email address and password to log in to Amazon Prime Video in the fields below. This information will be communicated to your co-subscriber once he has paid for the subscription, so that he does not have to wait. So you won\'t have to do anything anymore. Also specify whether they must create a profile (you must guarantee one profile per person). Important precaution: to avoid Amazon purchases with your account, activate the PIN code and purchase protection! See this article: <a href="https://www.syndicate.com/cms/fr/securiser-son-subscription-amazon-prime-video/">Secure your Amazon share</a> (you can do this after finalizing this sharing)',
             'helper_join' => 'The user has provided you with the email and password for the account. Use them to log into <a href="https://primevideo.com/" target="_blank">primevideo.com</a> and create a profile with your first name so the owner knows it\'s you. If you don\'t have a free space, ask the organizer which one to rename in the chat (blue chat icon above).',
         ],
         [
@@ -117,7 +117,7 @@ class TemplateSeeder extends Seeder
             'retail_price' => 7.99,
             'description' => 'Listen to an unlimited selection of Audible Original audiobooks, creations & podcasts and children\'s stories. Each month, choose the audio book that suits you from over 500,000 titles, including over 15,000 in French! With Audible Studios, you\'ll also find exclusive audiobooks only available at Audible, and books in 38 different languages. The latest novels, classics, coaching books or language methods... Listen to a book while jogging, let our narrators and actors tell you a bedtime story, or keep your mind occupied while doing housework!',
             'description_seo' => 'Listen to an unlimited selection of Audible Original audiobooks, creations & podcasts and children\'s stories. Each month, choose the audio book that suits you from over 500,000 titles, including over 15,000 in French! With Audible Studios, you\'ll also find exclusive audiobooks only available at Audible, and books in 38 different languages. The latest novels, classics, coaching books or language methods... Listen to a book while jogging, let our narrators and actors tell you a bedtime story, or keep your mind occupied while doing housework!',
-            'title_seo' => 'Share my Audible account on Sharesub',
+            'title_seo' => 'Share my Audible account on Syndicate',
             'helper_create' => 'Enter your Audible login details in the fields below. This information will be sent to your co-subscriber once they have paid for the subscription, so they don\'t have to wait. So there\'s nothing more for you to do.',
             'helper_join' => 'The user has given you the email address and password for the account.',
         ],
@@ -133,7 +133,7 @@ class TemplateSeeder extends Seeder
             'retail_price' => 10.98,
             'description' => 'Amazon Prime Video ad-free offers unlimited access to a vast library of award-winning films, TV series and original programmes. Immerse yourself in a world of uninterrupted entertainment, with impeccable streaming quality and the ability to download your favourite content for the ultimate offline experience. Enjoy total immersion in your favourite stories, with no commercial interruptions, and live every moment to the full.',
             'description_seo' => 'Amazon Prime Video ad-free offers unlimited access to a vast library of award-winning films, TV series and original programmes. Immerse yourself in a world of uninterrupted entertainment, with impeccable streaming quality and the ability to download your favourite content for the ultimate offline experience. Enjoy total immersion in your favourite stories, with no commercial interruptions, and live every moment to the full.',
-            'title_seo' => 'Share your ad-free Amazon Prime Video subscription on Sharesub',
+            'title_seo' => 'Share your ad-free Amazon Prime Video subscription on Syndicate',
             'helper_create' => '',
             'helper_join' => '',
         ],
@@ -149,8 +149,8 @@ class TemplateSeeder extends Seeder
             'retail_price' => 15.98,
             'description' => 'Watch more with less! The Amazon Prime Video + Paramount+ bundle combines the libraries of both services in a single subscription.',
             'description_seo' => 'Watch more with less! The Amazon Prime Video + Paramount+ bundle combines the libraries of both services in a single subscription.',
-            'title_seo' => 'Share your Amazon Prime + Paramount Plus account on Sharesub',
-            'helper_create' => 'We recommend <a href="https://www.sharesub.com/cms/fr/comment-partager-son-abonnement-prime-video/">the sharing method detailed in this article</a>. Alternatively, enter the email address and password to log in to Amazon Prime Video in the fields below. This information will be sent to your co-subscriber once they\'ve paid for the subscription, so they don\'t have to wait. This way, you won\'t have to do anything else. Also specify whether they need to create a profile (you must guarantee one profile per person). A few precautions to take: remember to activate double authentication and don\'t leave a payment card on record. Remember to check <a href="https://www.sharesub.com/cms/fr/partager-ses-abonnements-de-maniere-securisee/">our article</a> explaining how to share subscriptions securely.',
+            'title_seo' => 'Share your Amazon Prime + Paramount Plus account on Syndicate',
+            'helper_create' => 'We recommend <a href="https://www.syndicate.com/cms/fr/comment-partager-son-abonnement-prime-video/">the sharing method detailed in this article</a>. Alternatively, enter the email address and password to log in to Amazon Prime Video in the fields below. This information will be sent to your co-subscriber once they\'ve paid for the subscription, so they don\'t have to wait. This way, you won\'t have to do anything else. Also specify whether they need to create a profile (you must guarantee one profile per person). A few precautions to take: remember to activate double authentication and don\'t leave a payment card on record. Remember to check <a href="https://www.syndicate.com/cms/fr/partager-ses-abonnements-de-maniere-securisee/">our article</a> explaining how to share subscriptions securely.',
             'helper_join' => 'The user has given you the email address and password for the account. Use them to log on to netflix.comhttps://primevideo.com/ and create a profile with your first name so that the owner knows it\'s you. If you don\'t have a free place, ask the organiser which one to rename in the chat room (blue message icon above).',
         ],
         [
@@ -181,7 +181,7 @@ class TemplateSeeder extends Seeder
             'retail_price' => 12.76,
             'description' => 'The Paramount+ Pass on Amazon Prime Video offers privileged access to a large catalogue of iconic films and series from Paramount Studios, as well as captivating original productions. From major franchises such as Star Trek, Halo and Yellowstone, to drama series from Showtime, cult comedies from Comedy Central and children\'s programming from Nickelodeon, this pass is packed with content to suit all tastes. Whether you\'re a fan of fast-paced thrillers, family sagas, ambitious science fiction or children\'s entertainment, Paramount+ immerses you in a rich, varied and exciting universe, which you can discover directly from your Prime Video interface.',
             'description_seo' => 'The Paramount+ Pass on Amazon Prime Video offers privileged access to a large catalogue of iconic films and series from Paramount Studios, as well as captivating original productions. From major franchises such as Star Trek, Halo and Yellowstone, to drama series from Showtime, cult comedies from Comedy Central and children\'s programming from Nickelodeon, this pass is packed with content to suit all tastes. Whether you\'re a fan of fast-paced thrillers, family sagas, ambitious science fiction or children\'s entertainment, Paramount+ immerses you in a rich, varied and exciting universe, which you can discover directly from your Prime Video interface.',
-            'title_seo' => 'Share your Amazon Prime Video Pass Paramount Plus subscription on Sharesub',
+            'title_seo' => 'Share your Amazon Prime Video Pass Paramount Plus subscription on Syndicate',
             'helper_create' => '',
             'helper_join' => '',
         ],

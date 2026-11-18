@@ -49,7 +49,7 @@ class SiteChromeTest extends TestCase
 
     private function navHtml(string $html): string
     {
-        preg_match('/<nav\b[^>]*sharesub-navbar[^>]*>.*?<\/nav>/s', $html, $match);
+        preg_match('/<nav\b[^>]*syndicate-navbar[^>]*>.*?<\/nav>/s', $html, $match);
 
         return $match[0] ?? '';
     }
@@ -107,8 +107,8 @@ class SiteChromeTest extends TestCase
         // The original create page is just the wizard: no site header or
         // footer (verified in the captured create-subscription.html, which
         // has no header/footer markup at all).
-        $this->assertStringNotContainsString('sharesub-navbar', $wizard);
-        $this->assertStringNotContainsString('sharesub-footer', $wizard);
+        $this->assertStringNotContainsString('syndicate-navbar', $wizard);
+        $this->assertStringNotContainsString('syndicate-footer', $wizard);
         $this->assertStringContainsString('navbar-create-sub', $wizard);
         $this->assertStringContainsString('Create your shared subscription', $wizard);
     }
@@ -146,7 +146,7 @@ class SiteChromeTest extends TestCase
     {
         $html = $this->get('/cms/en')->assertOk()->getContent();
 
-        $this->assertStringNotContainsString('sharesub-navbar', $html);
-        $this->assertStringNotContainsString('sharesub-footer', $html);
+        $this->assertStringNotContainsString('syndicate-navbar', $html);
+        $this->assertStringNotContainsString('syndicate-footer', $html);
     }
 }

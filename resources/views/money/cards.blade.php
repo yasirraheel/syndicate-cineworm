@@ -13,7 +13,7 @@
             'mastercard' => 'Mastercard/Eurocard',
         ];
     @endphp
-    <div class="card-sharesub card-sharesub--roomy">
+    <div class="card-syndicate card-syndicate--roomy">
         @if (session('status'))
             <div class="alert alert-success mb-3" role="status">{{ session('status') }}</div>
         @endif
@@ -25,7 +25,7 @@
                 {{-- With real Stripe keys this is the live Card Element. It is a Stripe hosted field, not a plain input, so no raw card data is ever typed into or posted from this page. --}}
                 <div id="card-element"></div>
                 <div class="p3-regular text-dark-red mt-2" id="card-errors" role="alert"></div>
-                <button type="button" id="card-button" class="btn-sharesub bleu mt-3">Confirm card</button>
+                <button type="button" id="card-button" class="btn-syndicate bleu mt-3">Confirm card</button>
                 <div class="alert alert-success mt-3" id="card-success" role="status" style="display: none"></div>
             @else
                 <div class="alert alert-info mb-3" role="status">Adding a payment method needs a Stripe connection, which is not set up yet. No card details are collected on this page. @if ($stripePublishableReady) The publishable key is set, but a real Stripe secret key is needed to add a card with Stripe. @else Real Stripe keys are needed to add a card with Stripe. @endif</div>
@@ -70,7 +70,7 @@
                                     <form action="/en/my-cards/set-default" method="post" class="mb-3 mb-sm-0">
                                         @csrf
                                         <input type="hidden" name="card" value="{{ $card->id }}" />
-                                        <button type="submit" class="btn-sharesub bleu mx-auto d-block">Make main</button>
+                                        <button type="submit" class="btn-syndicate bleu mx-auto d-block">Make main</button>
                                     </form>
                                     <form action="/en/my-cards/delete" method="post">
                                         @csrf
@@ -91,7 +91,7 @@
         @endif
         <div class="line-sep my-5"></div>
         <div class="text-center">
-            <a href="/en/my-cards?create_card=1" class="btn-sharesub bleu mx-auto d-inline-block">Add a payment method</a>
+            <a href="/en/my-cards?create_card=1" class="btn-syndicate bleu mx-auto d-inline-block">Add a payment method</a>
         </div>
     </div>
 @endsection

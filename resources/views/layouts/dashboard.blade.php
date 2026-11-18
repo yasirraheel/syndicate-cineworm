@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $title ?? 'Sharesub' }}</title>
-    <meta name="description" content="Sharesub allows you to share the costs of your subscriptions with friends. Create your subscription now and collect money easily.">
+    <title>{{ $title ?? 'Syndicate' }}</title>
+    <meta name="description" content="Syndicate allows you to share the costs of your subscriptions with friends. Create your subscription now and collect money easily.">
     <link href="/css/app.css" rel="stylesheet">
     <style>
         input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; display: none; margin: 0; }

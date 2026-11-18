@@ -198,7 +198,7 @@ class ContentSeedingTest extends TestCase
         $this->assertSame('Share', SiteSetting::query()->where('key', 'share_card_title')->first()->value);
         $this->assertSame('Browse subscriptions', SiteSetting::query()->where('key', 'subscribe_card_button_label')->first()->value);
         $this->assertSame('Enjoy exclusive advantages', SiteSetting::query()->where('key', 'features_title')->first()->value);
-        $this->assertStringStartsWith('Sharesub helps you manage payments', SiteSetting::query()->where('key', 'footer_note')->first()->value);
+        $this->assertStringStartsWith('Syndicate helps you manage payments', SiteSetting::query()->where('key', 'footer_note')->first()->value);
     }
 
     public function test_faqs_testimonials_steps_features_and_press_are_seeded(): void

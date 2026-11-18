@@ -79,16 +79,16 @@
             <div class="row p2-regular">
                 <div class="col-12 col-xl-6 mb-4">
                     <span class="mb-2">Give it a short name</span>
-                    <input type="text" name="name" id="custom-template-name" value="{{ old('name', $offer->name) }}" maxlength="80" placeholder="ex. Subscription to New York Times" class="input-sharesub" required>
+                    <input type="text" name="name" id="custom-template-name" value="{{ old('name', $offer->name) }}" maxlength="80" placeholder="ex. Subscription to New York Times" class="input-syndicate" required>
                 </div>
             </div>
             <div class="row p2-regular">
                 <div class="col">
                     <span class="mb-2 mt-4">Description of the service to explain the offer you share</span>
-                    <textarea name="description" cols="30" rows="4" placeholder="ex. I have an additional subscription available on my plan to this amazing newspaper, and I’m willing to share it with you. I will provide the necessary information for you to join once registered." class="input-sharesub">{{ old('description', $offer->description) }}</textarea>
+                    <textarea name="description" cols="30" rows="4" placeholder="ex. I have an additional subscription available on my plan to this amazing newspaper, and I’m willing to share it with you. I will provide the necessary information for you to join once registered." class="input-syndicate">{{ old('description', $offer->description) }}</textarea>
                 </div>
             </div>
-            <button type="submit" class="btn-sharesub green px-5 mt-4 mb-5" id="custom-template-continue" {{ old('name', $offer->name) ? '' : 'disabled' }}>Continue</button>
+            <button type="submit" class="btn-syndicate green px-5 mt-4 mb-5" id="custom-template-continue" {{ old('name', $offer->name) ? '' : 'disabled' }}>Continue</button>
         </form>
         <script>
             (function () {

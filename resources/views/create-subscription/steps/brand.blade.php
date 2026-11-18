@@ -40,7 +40,7 @@
                 </label>
             </div>
             <div class="col-12 col-md-6">
-                <label class="subscription-brand-item custom" onclick="window.open('/cms/en/suggest-a-new-sharesub-service/', '_blank').focus()">
+                <label class="subscription-brand-item custom" onclick="window.open('/cms/en/suggest-a-new-syndicate-service/', '_blank').focus()">
                     <div><div class="p2-bold">Suggest a service</div></div>
                 </label>
             </div>

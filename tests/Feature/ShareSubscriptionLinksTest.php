@@ -8,7 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class ShareSubscriptionLinksTest extends TestCase
+class SyndicatescriptionLinksTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -61,7 +61,7 @@ class ShareSubscriptionLinksTest extends TestCase
             $href = $anchor[1];
             $text = trim((string) preg_replace('/\s+/', ' ', strip_tags($anchor[2])));
             $isShareCardButton = $text === 'Share'
-                && str_contains($anchor[0], 'btn-sharesub dark big');
+                && str_contains($anchor[0], 'btn-syndicate dark big');
 
             if (! in_array($text, $labels, true) && ! $isShareCardButton) {
                 continue;

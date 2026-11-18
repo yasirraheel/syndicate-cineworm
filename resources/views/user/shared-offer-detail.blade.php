@@ -130,17 +130,17 @@
                             </div>
                         </div>
                         <div class="secured-description-wrapper" data-type="0">
-                            <textarea rows="4" class="textarea-sharesub" name="individual_secured_description" placeholder="Hello! Thanks for joining my subscription. Here are the instructions for getting started with the service:">{{ $securedShared }}</textarea>
+                            <textarea rows="4" class="textarea-syndicate" name="individual_secured_description" placeholder="Hello! Thanks for joining my subscription. Here are the instructions for getting started with the service:">{{ $securedShared }}</textarea>
                         </div>
                         <div style="display: none;" class="secured-description-wrapper" data-type="1">
                             @foreach ($securedIndividual as $text)
-                                <textarea rows="4" class="textarea-sharesub" name="shared_secured_description[]" placeholder="Hello! Thanks for joining my subscription. Here are the instructions for getting started with the service:">{{ $text }}</textarea>
+                                <textarea rows="4" class="textarea-syndicate" name="shared_secured_description[]" placeholder="Hello! Thanks for joining my subscription. Here are the instructions for getting started with the service:">{{ $text }}</textarea>
                             @endforeach
                         </div>
                         <div class="credentials-form-locked">
-                            <svg class="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0002 14.1667C10.4422 14.1667 10.8661 13.9911 11.1787 13.6785C11.4912 13.366 11.6668 12.942 11.6668 12.5C11.6668 12.058 11.4912 11.6341 11.1787 11.3215C10.8661 11.0089 10.4422 10.8333 10.0002 10.8333C9.55813 10.8333 9.13421 11.0089 8.82165 11.3215C8.50909 11.6341 8.33349 12.058 8.33349 12.5C8.33349 12.942 8.50909 13.366 8.82165 13.6785C9.13421 13.9911 9.55813 14.1667 10.0002 14.1667ZM15.0002 6.66667C15.4422 6.66667 15.8661 6.84226 16.1787 7.15482C16.4912 7.46739 16.6668 7.89131 16.6668 8.33334V16.6667C16.6668 17.1087 16.4912 17.5326 16.1787 17.8452C15.8661 18.1577 15.4422 18.3333 15.0002 18.3333H5.00016C4.55813 18.3333 4.13421 18.1577 3.82165 17.8452C3.50909 17.5326 3.3335 17.1087 3.3335 16.6667V8.33334C3.3335 7.89131 3.50909 7.46739 3.82165 7.15482C4.13421 6.84226 4.55813 6.66667 5.00016 6.66667H5.8335V5C5.8335 3.89493 6.27248 2.83513 7.05388 2.05372C7.83529 1.27232 8.89509 0.833336 10.0002 0.833336C10.5473 0.833336 11.0892 0.94111 11.5947 1.1505C12.1002 1.3599 12.5595 1.66681 12.9464 2.05372C13.3333 2.44064 13.6403 2.89996 13.8497 3.40549C14.0591 3.91101 14.1668 4.45283 14.1668 5V6.66667H15.0002ZM10.0002 2.5C9.33712 2.5 8.70124 2.76339 8.23239 3.23224C7.76355 3.70108 7.50016 4.33696 7.50016 5V6.66667H12.5002V5C12.5002 4.33696 12.2368 3.70108 11.7679 3.23224C11.2991 2.76339 10.6632 2.5 10.0002 2.5Z" fill="currentColor"/></svg> Your login credentials and this message are stored in encrypted form on a secure server. This information will be visible only to you, your subscribers, and Sharesub customer service, if necessary.
+                            <svg class="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0002 14.1667C10.4422 14.1667 10.8661 13.9911 11.1787 13.6785C11.4912 13.366 11.6668 12.942 11.6668 12.5C11.6668 12.058 11.4912 11.6341 11.1787 11.3215C10.8661 11.0089 10.4422 10.8333 10.0002 10.8333C9.55813 10.8333 9.13421 11.0089 8.82165 11.3215C8.50909 11.6341 8.33349 12.058 8.33349 12.5C8.33349 12.942 8.50909 13.366 8.82165 13.6785C9.13421 13.9911 9.55813 14.1667 10.0002 14.1667ZM15.0002 6.66667C15.4422 6.66667 15.8661 6.84226 16.1787 7.15482C16.4912 7.46739 16.6668 7.89131 16.6668 8.33334V16.6667C16.6668 17.1087 16.4912 17.5326 16.1787 17.8452C15.8661 18.1577 15.4422 18.3333 15.0002 18.3333H5.00016C4.55813 18.3333 4.13421 18.1577 3.82165 17.8452C3.50909 17.5326 3.3335 17.1087 3.3335 16.6667V8.33334C3.3335 7.89131 3.50909 7.46739 3.82165 7.15482C4.13421 6.84226 4.55813 6.66667 5.00016 6.66667H5.8335V5C5.8335 3.89493 6.27248 2.83513 7.05388 2.05372C7.83529 1.27232 8.89509 0.833336 10.0002 0.833336C10.5473 0.833336 11.0892 0.94111 11.5947 1.1505C12.1002 1.3599 12.5595 1.66681 12.9464 2.05372C13.3333 2.44064 13.6403 2.89996 13.8497 3.40549C14.0591 3.91101 14.1668 4.45283 14.1668 5V6.66667H15.0002ZM10.0002 2.5C9.33712 2.5 8.70124 2.76339 8.23239 3.23224C7.76355 3.70108 7.50016 4.33696 7.50016 5V6.66667H12.5002V5C12.5002 4.33696 12.2368 3.70108 11.7679 3.23224C11.2991 2.76339 10.6632 2.5 10.0002 2.5Z" fill="currentColor"/></svg> Your login credentials and this message are stored in encrypted form on a secure server. This information will be visible only to you, your subscribers, and Syndicate customer service, if necessary.
                             If you need to provide a password, make sure it is unique and not used on any of your other accounts. </div>
-                        <button type="submit" class="btn btn-sharesub green">Save</button>
+                        <button type="submit" class="btn btn-syndicate green">Save</button>
                     </form>
                 </div>
             </div>
@@ -170,7 +170,7 @@
                                         @else
                                             <form action="{{ $detailUrl }}/mark-email-invite-sent/{{ $member->id }}" method="POST" class="d-inline">
                                                 @csrf
-                                                <button type="submit" class="btn-sharesub green small ml-2 click-load">Mark as sent</button>
+                                                <button type="submit" class="btn-syndicate green small ml-2 click-load">Mark as sent</button>
                                             </form>
                                         @endif
                                     </div>
@@ -235,7 +235,7 @@
             <div class="gestion d-none" id="handler-tab">
                 <div class="gestion-migrate-title mb-3">Modify your subscription price plan</div>
                 <div class="gestion-migrate-description">
-                    <p>Want to change your offer{{ $brandName ? ' '.$brandName : '' }}? Sharesub allows you to modify your shared subscription so that your subscribers' refunds can be adjusted.</p>
+                    <p>Want to change your offer{{ $brandName ? ' '.$brandName : '' }}? Syndicate allows you to modify your shared subscription so that your subscribers' refunds can be adjusted.</p>
                     <p>Here's how it works:</p>
                     <ul>
                         <li>Changes can be made no more than once per quarter</li>
@@ -258,7 +258,7 @@
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-sharesub green">Save</button>
+                        <button type="submit" class="btn btn-syndicate green">Save</button>
                     </form>
                 @endif
                 <div class="gestion-warning-title mb-3">Cancel the subscription to {{ $name }}</div>
@@ -274,7 +274,7 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-sharesub red">Cancel the subscription</button>
+                    <button type="submit" class="btn btn-syndicate red">Cancel the subscription</button>
                 </form>
             </div>
         </div>

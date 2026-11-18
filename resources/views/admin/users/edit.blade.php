@@ -1,4 +1,4 @@
-<section class="card-sharesub p-4">
+<section class="card-syndicate p-4">
     @if (session('status'))
         <div class="alert alert-success" role="status">{{ session('status') }}</div>
     @endif
@@ -11,24 +11,24 @@
             <div class="row">
                 <div class="col-12 col-md-6 form-group">
                     <label for="first_name">First name</label>
-                    <input class="input-sharesub" id="first_name" name="first_name" value="{{ old('first_name', $user->first_name) }}" required>
+                    <input class="input-syndicate" id="first_name" name="first_name" value="{{ old('first_name', $user->first_name) }}" required>
                 </div>
                 <div class="col-12 col-md-6 form-group">
                     <label for="last_name">Last name</label>
-                    <input class="input-sharesub" id="last_name" name="last_name" value="{{ old('last_name', $user->last_name) }}" required>
+                    <input class="input-syndicate" id="last_name" name="last_name" value="{{ old('last_name', $user->last_name) }}" required>
                 </div>
                 <div class="col-12 col-md-6 form-group">
                     <label for="username">Username</label>
-                    <input class="input-sharesub" id="username" name="username" value="{{ old('username', $user->username) }}">
+                    <input class="input-syndicate" id="username" name="username" value="{{ old('username', $user->username) }}">
                 </div>
                 <div class="col-12 col-md-6 form-group">
                     <label for="email">Email</label>
-                    <input class="input-sharesub" id="email" name="email" type="email" value="{{ old('email', $user->email) }}" required>
+                    <input class="input-syndicate" id="email" name="email" type="email" value="{{ old('email', $user->email) }}" required>
                 </div>
                 <div class="col-12 col-md-6 form-group">
                     <label for="role">Role</label>
                     @php $selectedRole = (string) old('role', $user->role); @endphp
-                    <select class="input-sharesub" id="role" name="role" required>
+                    <select class="input-syndicate" id="role" name="role" required>
                         @foreach ($roles as $roleValue => $roleLabel)
                             <option value="{{ $roleValue }}" @selected($selectedRole === $roleValue)>{{ $roleLabel }}</option>
                         @endforeach
@@ -39,16 +39,16 @@
                 </div>
                 <div class="col-12 col-md-6 form-group">
                     <label for="birthdate">Birthdate</label>
-                    <input class="input-sharesub" id="birthdate" name="birthdate" type="date" value="{{ old('birthdate', optional($user->birthdate)->format('Y-m-d')) }}">
+                    <input class="input-syndicate" id="birthdate" name="birthdate" type="date" value="{{ old('birthdate', optional($user->birthdate)->format('Y-m-d')) }}">
                 </div>
                 <div class="col-12 col-md-6 form-group">
                     <label for="password">New password <span class="text-muted">(optional)</span></label>
-                    <input class="input-sharesub" id="password" name="password" type="password" minlength="8" autocomplete="new-password">
+                    <input class="input-syndicate" id="password" name="password" type="password" minlength="8" autocomplete="new-password">
                 </div>
                 <div class="col-12 col-md-6 form-group">
                     <label for="language">Language</label>
                     @php $selectedLanguage = (string) old('language', $user->language ?: 'en'); @endphp
-                    <select class="input-sharesub" id="language" name="language" required>
+                    <select class="input-syndicate" id="language" name="language" required>
                         @foreach ($languages as $languageCode)
                             <option value="{{ $languageCode }}" @selected($selectedLanguage === $languageCode)>{{ $languageCode }}</option>
                         @endforeach
@@ -59,16 +59,16 @@
                 </div>
                 <div class="col-12 col-md-6 form-group">
                     <label for="phone">Phone</label>
-                    <input class="input-sharesub" id="phone" name="phone" value="{{ old('phone', $user->phone) }}">
+                    <input class="input-syndicate" id="phone" name="phone" value="{{ old('phone', $user->phone) }}">
                 </div>
                 <div class="col-12 col-md-6 form-group">
                     <label for="intl_phone">International phone</label>
-                    <input class="input-sharesub" id="intl_phone" name="intl_phone" value="{{ old('intl_phone', $user->intl_phone) }}">
+                    <input class="input-syndicate" id="intl_phone" name="intl_phone" value="{{ old('intl_phone', $user->intl_phone) }}">
                 </div>
                 <div class="col-12 col-md-6 form-group">
                     <label for="country">Country</label>
                     @php $selectedCountry = (string) old('country', $user->country); @endphp
-                    <select class="input-sharesub" id="country" name="country">
+                    <select class="input-syndicate" id="country" name="country">
                         <option value="">Select a country</option>
                         @foreach ($countries as $countryOption)
                             <option value="{{ $countryOption->code }}" @selected($selectedCountry === $countryOption->code)>{{ $countryOption->name }}</option>
@@ -80,35 +80,35 @@
                 </div>
                 <div class="col-12 col-md-6 form-group">
                     <label for="referral_code">Referral code</label>
-                    <input class="input-sharesub" id="referral_code" name="referral_code" value="{{ old('referral_code', $user->referral_code) }}">
+                    <input class="input-syndicate" id="referral_code" name="referral_code" value="{{ old('referral_code', $user->referral_code) }}">
                 </div>
                 <div class="col-12 form-group">
                     <label for="address1">Address</label>
-                    <input class="input-sharesub" id="address1" name="address1" value="{{ old('address1', $user->address1) }}">
+                    <input class="input-syndicate" id="address1" name="address1" value="{{ old('address1', $user->address1) }}">
                 </div>
                 <div class="col-12 form-group">
                     <label for="address2">Address line 2</label>
-                    <input class="input-sharesub" id="address2" name="address2" value="{{ old('address2', $user->address2) }}">
+                    <input class="input-syndicate" id="address2" name="address2" value="{{ old('address2', $user->address2) }}">
                 </div>
                 <div class="col-12 col-md-4 form-group">
                     <label for="city">City</label>
-                    <input class="input-sharesub" id="city" name="city" value="{{ old('city', $user->city) }}">
+                    <input class="input-syndicate" id="city" name="city" value="{{ old('city', $user->city) }}">
                 </div>
                 <div class="col-12 col-md-4 form-group">
                     <label for="state">State</label>
-                    <input class="input-sharesub" id="state" name="state" value="{{ old('state', $user->state) }}">
+                    <input class="input-syndicate" id="state" name="state" value="{{ old('state', $user->state) }}">
                 </div>
                 <div class="col-12 col-md-4 form-group">
                     <label for="zip">Postal code</label>
-                    <input class="input-sharesub" id="zip" name="zip" value="{{ old('zip', $user->zip) }}">
+                    <input class="input-syndicate" id="zip" name="zip" value="{{ old('zip', $user->zip) }}">
                 </div>
             </div>
 
             <div class="form-group mt-3">
                 <div class="filter-toggle justify-content-start">
                     <div class="filter-toggle-wrapper">
-                        <input type="checkbox" id="payout_low_amount" name="payout_low_amount" value="1" class="checkbox-sharesub" @checked(old('payout_low_amount', $user->payout_low_amount))>
-                        <label for="payout_low_amount" class="label-sharesub">Toggle</label>
+                        <input type="checkbox" id="payout_low_amount" name="payout_low_amount" value="1" class="checkbox-syndicate" @checked(old('payout_low_amount', $user->payout_low_amount))>
+                        <label for="payout_low_amount" class="label-syndicate">Toggle</label>
                     </div>
                     <div class="filter-toggle-text">Allow transfers below the free threshold</div>
                 </div>
@@ -116,12 +116,12 @@
             <div class="form-group">
                 <div class="filter-toggle justify-content-start">
                     <div class="filter-toggle-wrapper">
-                        <input type="checkbox" id="payout_convert_currency" name="payout_convert_currency" value="1" class="checkbox-sharesub" @checked(old('payout_convert_currency', $user->payout_convert_currency))>
-                        <label for="payout_convert_currency" class="label-sharesub">Toggle</label>
+                        <input type="checkbox" id="payout_convert_currency" name="payout_convert_currency" value="1" class="checkbox-syndicate" @checked(old('payout_convert_currency', $user->payout_convert_currency))>
+                        <label for="payout_convert_currency" class="label-syndicate">Toggle</label>
                     </div>
                     <div class="filter-toggle-text">Automatically convert transfer currency</div>
                 </div>
             </div>
-            <button type="submit" class="btn-sharesub bleu mx-auto my-2 d-block">Save user</button>
+            <button type="submit" class="btn-syndicate bleu mx-auto my-2 d-block">Save user</button>
     </form>
 </section>
