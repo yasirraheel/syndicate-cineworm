@@ -17746,7 +17746,7 @@
                                         })), document.querySelector("input[data-phone]").addEventListener("countrychange", (function() {
                                             console.log("country change"), r()
                                         }))
-                                    })), $("form.stripe-create").length > 0) {
+                                    })), $("form.stripe-create").length > 0 && !document.querySelector('form.stripe-create[action="/en/my-account.html"]')) {
                                     var t = function() {
                                             var t = ds(ls().mark((function t(n) {
                                                 var r, i, o, a, s, c, u;
@@ -38305,52 +38305,9 @@
     i = r.O(i)
 })();
 
-// Local-only demo authentication for the static template.
+// Navigation helpers retained from the supplied capture. Authentication and
+// access control are handled by Laravel sessions and middleware now.
 (() => {
-    const authKey = "sharesub.local.demo.authenticated";
-    const protectedPaths = new Set([
-        "/en/dashboard.html",
-        "/en/my-shared-subscriptions.html",
-        "/en/joined-subscriptions.html",
-        "/en/waiting-list.html",
-        "/en/my-wallet.html",
-        "/en/my-cards.html",
-        "/en/my-account.html",
-        "/en/my-settings.html",
-        "/en/my-chat/subscriptions.html",
-        "/en/dashboard",
-        "/en/my-shared-subscriptions",
-        "/en/joined-subscriptions",
-        "/en/waiting-list",
-        "/en/my-wallet",
-        "/en/my-cards",
-        "/en/my-account",
-        "/en/my-settings",
-        "/en/my-chat/subscriptions"
-    ]);
-    const localRoutes = new Map([
-        ["/en", "/en/index.html"],
-        ["/en/", "/en/index.html"],
-        ["/en/subscriptions", "/en/subscriptions.html"],
-        ["/en/register", "/en/register.html"],
-        ["/en/userlogin", "/en/userlogin.html"],
-        ["/en/userlogin.html", "/en/userlogin.html"],
-        ["/en/dashboard", "/en/dashboard"],
-        ["/en/my-shared-subscriptions", "/en/my-shared-subscriptions"],
-        ["/en/joined-subscriptions", "/en/joined-subscriptions"],
-        ["/en/waiting-list", "/en/waiting-list.html"],
-        ["/en/my-wallet", "/en/my-wallet.html"],
-        ["/en/my-cards", "/en/my-cards.html"],
-        ["/en/my-account", "/en/my-account.html"],
-        ["/en/my-settings", "/en/my-settings.html"],
-        ["/en/my-chat/subscriptions", "/en/my-chat/subscriptions"]
-    ]);
-    const isAuthenticated = () => localStorage.getItem(authKey) === "1";
-    const setAuthenticated = () => localStorage.setItem(authKey, "1");
-    const clearAuthenticated = () => localStorage.removeItem(authKey);
-    const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
-    const safeReturn = (value) => value && value.startsWith("/en/") ? value : "/en/dashboard";
-
     // The supplied dashboard captures had the desktop sidebar's Chat label
     // carrying the Dashboard href. Repair that specific navigation item
     // locally without changing the captured page layout or content.
@@ -38358,22 +38315,6 @@
         const label = link.querySelector(".navi_dash-text")?.textContent.trim();
         if (label === "Chat") link.href = "/en/my-chat/subscriptions";
     });
-
-    // Captured login/register forms also have the original reCAPTCHA submit
-    // listener attached. Intercept the local demo forms during capture so
-    // that no network submit or page reload can happen in offline mode.
-    document.addEventListener("submit", (event) => {
-        const form = event.target;
-        if (!form?.matches?.("#loginForm, #registerForm")) return;
-        event.preventDefault();
-        event.stopImmediatePropagation();
-        if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-        }
-        setAuthenticated();
-        window.location.replace(safeReturn(new URLSearchParams(window.location.search).get("return")));
-    }, true);
 
     const closeMobileSheets = () => {
         document.querySelectorAll(".dash-sheet.open").forEach((sheet) => sheet.classList.remove("open"));
@@ -38402,65 +38343,4 @@
         if (event.target.closest?.(".dash-sheet a")) closeMobileSheets();
     });
 
-    if (protectedPaths.has(currentPath) && !isAuthenticated()) {
-        const returnTo = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-        window.location.replace(`/en/userlogin?return=${encodeURIComponent(returnTo)}`);
-        return;
-    }
-
-    if (currentPath === "/en/userlogin.html" || currentPath === "/en/userlogin") {
-        const params = new URLSearchParams(window.location.search);
-        if (params.get("logout") === "1") {
-            clearAuthenticated();
-            window.location.replace("/en/");
-            return;
-        }
-        const loginForm = document.querySelector("#loginForm, form[action*='userlogin']");
-        loginForm?.addEventListener("submit", (event) => {
-            event.preventDefault();
-            setAuthenticated();
-            window.location.replace(safeReturn(new URLSearchParams(window.location.search).get("return")));
-        });
-    }
-
-    if (currentPath === "/en/register.html" || currentPath === "/en/register") {
-        const registerForm = document.querySelector("#registerForm, form[action*='register']");
-        registerForm?.addEventListener("submit", (event) => {
-            event.preventDefault();
-            setAuthenticated();
-            window.location.replace(safeReturn(new URLSearchParams(window.location.search).get("return")));
-        });
-    }
-
-    document.querySelectorAll("#logout-form").forEach((form) => form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        clearAuthenticated();
-        window.location.replace("/en/");
-    }));
-
-    document.addEventListener("click", (event) => {
-        const link = event.target.closest?.("a[href]");
-        if (!link) return;
-        const url = new URL(link.href, window.location.href);
-        const path = url.pathname.replace(/\/$/, "") || "/";
-        const isSharesubLink = url.hostname === window.location.hostname || /(^|\.)sharesub\.com$/i.test(url.hostname);
-
-        if (!isSharesubLink) return;
-        if (path === "/en/logout" || (path === "/en/userlogin.html" && url.searchParams.get("logout") === "1")) {
-            event.preventDefault();
-            clearAuthenticated();
-            window.location.replace("/en/");
-            return;
-        }
-        if ((path === "/en/userlogin" || path === "/en/userlogin.html") && url.hostname !== window.location.hostname) {
-            event.preventDefault();
-            window.location.assign(`${localRoutes.get(path) || "/en/userlogin"}${url.search}${url.hash}`);
-            return;
-        }
-        const localPath = localRoutes.get(path);
-        if (localPath && url.hostname !== window.location.hostname) {
-            event.preventDefault();
-            window.location.assign(`${localPath}${url.search}${url.hash}`);
-        }
-    });
 })();
