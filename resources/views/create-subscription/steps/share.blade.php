@@ -44,7 +44,7 @@
                     <div class="subscription-share-places">
                         <div class="subscription-share-places-title">Monthly subscription price</div>
                         <div class="subscription-share-places-input">
-                            <input type="number" name="total_price" id="total-price" class="input-sharesub" placeholder="15.99€" step="any" min="0" value="{{ old('total_price', $offer->total_price) }}">
+                            <input type="number" name="total_price" id="total-price" class="input-syndicate" placeholder="15.99€" step="any" min="0" value="{{ old('total_price', $offer->total_price) }}">
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                         <button type="button" id="friends-minus" class="{{ $friends > 1 ? 'text-green' : 'text-grey' }}">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15.9997" cy="16" r="14.6667" fill="currentColor" /><rect x="6.66602" y="14.6667" width="18.6667" height="2.66667" rx="1.33333" fill="white" /></svg>
                         </button>
-                        <input type="number" name="friends" id="friends" class="input-sharesub" min="1" max="{{ $maxUsers }}" value="{{ $friends }}">
+                        <input type="number" name="friends" id="friends" class="input-syndicate" min="1" max="{{ $maxUsers }}" value="{{ $friends }}">
                         <button type="button" id="friends-plus" class="{{ $friends < $maxUsers ? 'text-green' : 'text-grey' }}">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15.9997" cy="16" r="14.6667" fill="currentColor" /><rect x="6.66602" y="14.6667" width="18.6667" height="2.66667" rx="1.33333" fill="white" /><rect x="17.333" y="6.66669" width="18.6667" height="2.66667" rx="1.33333" transform="rotate(90 17.333 6.66669)" fill="white" /></svg>
                         </button>
@@ -71,7 +71,7 @@
                             <button type="button" id="total-seats-minus" class="text-green">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15.9997" cy="16" r="14.6667" fill="currentColor" /><rect x="6.66602" y="14.6667" width="18.6667" height="2.66667" rx="1.33333" fill="white" /></svg>
                             </button>
-                            <input type="number" name="total_seats" id="total-seats" class="input-sharesub" min="2" max="{{ $maxUsers }}" value="{{ $totalSeats }}">
+                            <input type="number" name="total_seats" id="total-seats" class="input-syndicate" min="2" max="{{ $maxUsers }}" value="{{ $totalSeats }}">
                             <button type="button" id="total-seats-plus" class="text-green">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15.9997" cy="16" r="14.6667" fill="currentColor" /><rect x="6.66602" y="14.6667" width="18.6667" height="2.66667" rx="1.33333" fill="white" /><rect x="17.333" y="6.66669" width="18.6667" height="2.66667" rx="1.33333" transform="rotate(90 17.333 6.66669)" fill="white" /></svg>
                             </button>
@@ -86,7 +86,7 @@
             <div class="subscription-share-savings-row"><span>Your net cost after sharing</span> <strong id="net-cost">{{ $money($shareMath['netCost']) }}</strong><strong>{{ $period }}</strong></div>
             <div class="subscription-share-savings-badge"><span>💰</span> <span>You save <strong id="annual-saving-amount">{{ $money($shareMath['annualSaving']) }}</strong> per year thanks to sharing</span></div>
         </div>
-        <button type="submit" class="btn btn-sharesub green" id="share-continue"{{ $shareDisabled ? ' disabled' : '' }}>Continue</button>
+        <button type="submit" class="btn btn-syndicate green" id="share-continue"{{ $shareDisabled ? ' disabled' : '' }}>Continue</button>
     </form>
 </div>
 

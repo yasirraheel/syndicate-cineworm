@@ -790,7 +790,7 @@ class CapturedPageController extends Controller
         try {
             $html = $this->readPage('en/index.html');
 
-            if (! preg_match('/<nav\b[^>]*class="[^"]*sharesub-navbar[^"]*"[^>]*>.*?<\/nav>/s', $html, $match)) {
+            if (! preg_match('/<nav\b[^>]*class="[^"]*syndicate-navbar[^"]*"[^>]*>.*?<\/nav>/s', $html, $match)) {
                 return '';
             }
 
@@ -1326,7 +1326,7 @@ class CapturedPageController extends Controller
                 ]],
             ],
             'description_seo' => (string) ($brand->short_description ?? ''),
-            'title_seo' => 'Share my '.(string) $brand->name.' subscription on Sharesub',
+            'title_seo' => 'Share my '.(string) $brand->name.' subscription on Syndicate',
         ];
     }
 
@@ -1719,7 +1719,7 @@ class CapturedPageController extends Controller
 
         if ($buttonLabel !== null) {
             $html = preg_replace_callback(
-                '/(<div class="share-card '.$card.'">.*?<a [^>]*class="btn-sharesub dark big">)[^<]*(<\/a>)/s',
+                '/(<div class="share-card '.$card.'">.*?<a [^>]*class="btn-syndicate dark big">)[^<]*(<\/a>)/s',
                 static fn (array $matches): string => $matches[1].e($buttonLabel).$matches[2],
                 $html,
                 1,
@@ -2010,7 +2010,7 @@ class CapturedPageController extends Controller
                     // wizard, so requiring #offline here would leave the
                     // button label unreplaced on exactly those buttons.
                     $section = preg_replace_callback(
-                        '/(<a href="[^"]*" class="btn-sharesub green big"[^>]*>.*?<img[^>]*>)\s*[^<]+(<\/a>)/s',
+                        '/(<a href="[^"]*" class="btn-syndicate green big"[^>]*>.*?<img[^>]*>)\s*[^<]+(<\/a>)/s',
                         static fn (array $inner): string => $inner[1]."\n                    ".$label.$inner[2],
                         $section,
                         1,
@@ -2563,7 +2563,7 @@ class CapturedPageController extends Controller
     /**
      * Point the dashboard dead links at the real destinations from
      * the real capture (dashboard mismatch spec, section 1.8): the
-     * mobile sheet Connected Bank Account and Contact Sharesub
+     * mobile sheet Connected Bank Account and Contact Syndicate
      * Support links, the tab bar Follow-up link, and the CTA Share
      * button while the onboarding blocks are shown. Each checklist
      * Complete button goes to the flow its own item names (Join goes
@@ -2576,8 +2576,8 @@ class CapturedPageController extends Controller
     protected function fixDashboardDeadLinks(string $html): string
     {
         $html = str_replace(
-            '<a href="#offline" class="btn-sharesub dark big">Share</a>',
-            '<a href="/en/create-subscription" class="btn-sharesub dark big">Share</a>',
+            '<a href="#offline" class="btn-syndicate dark big">Share</a>',
+            '<a href="/en/create-subscription" class="btn-syndicate dark big">Share</a>',
             $html,
         );
 
@@ -2590,7 +2590,7 @@ class CapturedPageController extends Controller
 
         $html = str_replace(
             '<a href="#offline" target="_blank" rel="noopener" class="dash-sheet-link" data-open-support>',
-            '<a href="https://help.sharesub.com/" target="_blank" rel="noopener" class="dash-sheet-link" data-open-support>',
+            '<a href="https://help.syndicate.com/" target="_blank" rel="noopener" class="dash-sheet-link" data-open-support>',
             $html,
         );
 
@@ -2729,8 +2729,8 @@ class CapturedPageController extends Controller
     protected function replaceCreateSubscriptionLink(string $html): string
     {
         return str_replace(
-            '<a href="/en/register.html" class="btn btn-sharesub green mb-2 mb-sm-0">',
-            '<a href="/en/create-subscription" class="btn btn-sharesub green mb-2 mb-sm-0">',
+            '<a href="/en/register.html" class="btn btn-syndicate green mb-2 mb-sm-0">',
+            '<a href="/en/create-subscription" class="btn btn-syndicate green mb-2 mb-sm-0">',
             $html,
         );
     }
@@ -2776,7 +2776,7 @@ class CapturedPageController extends Controller
     protected function replaceDashboardProposeLink(string $html): string
     {
         return preg_replace(
-            '/(<a href=")\/en\/register\.html(" class="btn btn-sharesub green">)/',
+            '/(<a href=")\/en\/register\.html(" class="btn btn-syndicate green">)/',
             '$1/en/create-subscription$2',
             $html,
             1,
@@ -3003,7 +3003,7 @@ class CapturedPageController extends Controller
     protected function replaceProposeSubscriptionLinks(string $html): string
     {
         return preg_replace(
-            '/(<a href=")\/en\/register\.html(" class="btn btn-sharesub green[^"]*">)/',
+            '/(<a href=")\/en\/register\.html(" class="btn btn-syndicate green[^"]*">)/',
             '$1/en/create-subscription$2',
             $html,
         ) ?? $html;
@@ -3425,7 +3425,7 @@ class CapturedPageController extends Controller
 
     /**
      * The waiting page help entries live in the mobile dash sheet and
-     * the menu: Messages with its subtitle, Contact Sharesub Support and
+     * the menu: Messages with its subtitle, Contact Syndicate Support and
      * Help Center, neither of which has body text in the capture.
      */
     protected function replaceWaitingHelp(string $html): string
@@ -3540,7 +3540,7 @@ class CapturedPageController extends Controller
         $brandsSeeded = $this->tableHasRows('brands');
         $seen = [];
         $html = preg_replace_callback(
-            '/<div class="category-card">\s*<h2 class="category-card-title">\s*(<svg.*?<\/svg>)?\s*<span>([^<]+)<\/span>\s*<\/h2>\s*<div class="category-card-wrapper">\s*<p class="category-card-description">.*?<\/p>\s*<ul class="category-card-items">.*?<\/ul>\s*<a href="[^"]*" class="btn btn-sharesub blue">See all<\/a>\s*<\/div>\s*<\/div>/s',
+            '/<div class="category-card">\s*<h2 class="category-card-title">\s*(<svg.*?<\/svg>)?\s*<span>([^<]+)<\/span>\s*<\/h2>\s*<div class="category-card-wrapper">\s*<p class="category-card-description">.*?<\/p>\s*<ul class="category-card-items">.*?<\/ul>\s*<a href="[^"]*" class="btn btn-syndicate blue">See all<\/a>\s*<\/div>\s*<\/div>/s',
             function (array $matches) use ($byName, &$seen, $brandsSeeded): string {
                 $name = html_entity_decode(trim($matches[2]), ENT_QUOTES, 'UTF-8');
                 $key = strtolower($name);
@@ -3579,7 +3579,7 @@ class CapturedPageController extends Controller
                 $seeAllLabel = $this->dynamicSetting('catalogue_see_all_label');
                 if ($seeAllLabel !== null) {
                     $block = preg_replace_callback(
-                        '/(<a href="[^"]*" class="btn btn-sharesub blue">)[^<]*(<\/a>)/',
+                        '/(<a href="[^"]*" class="btn btn-syndicate blue">)[^<]*(<\/a>)/',
                         static fn (array $inner): string => $inner[1].e($seeAllLabel).$inner[2],
                         $block,
                         1,
@@ -3641,7 +3641,7 @@ class CapturedPageController extends Controller
                 .'<div class="category-card-wrapper">'."\n"
                 .(! empty($category->description) ? '<p class="category-card-description">'.e((string) $category->description).'</p>'."\n" : '')
                 .'<ul class="category-card-items">'."\n".$items.'</ul>'."\n"
-                .'<a href="'.$seeAll.'" class="btn btn-sharesub blue">'.e($seeAllLabel).'</a>'."\n"
+                .'<a href="'.$seeAll.'" class="btn btn-syndicate blue">'.e($seeAllLabel).'</a>'."\n"
                 .'</div>'."\n"
                 .'</div>'."\n";
         }
@@ -3762,7 +3762,7 @@ class CapturedPageController extends Controller
 
         $html = preg_replace_callback(
             '/(<title>)([^<]*)(<\/title>)/s',
-            static fn (array $matches): string => $matches[1].'Share my '.e($name).' subscription on Sharesub'.$matches[3],
+            static fn (array $matches): string => $matches[1].'Share my '.e($name).' subscription on Syndicate'.$matches[3],
             $html,
             1,
         ) ?? $html;
@@ -3966,7 +3966,7 @@ class CapturedPageController extends Controller
             .'</div>'."\n"
             .'</div>'."\n"
             .'<div class="join-action-content">'."\n"
-            .'<span class="cursor-pointer btn-sharesub blue">'."\n"
+            .'<span class="cursor-pointer btn-syndicate blue">'."\n"
             .'Subscribe'."\n"
             .'</span>'."\n"
             .'</div>'."\n"
@@ -4068,7 +4068,7 @@ class CapturedPageController extends Controller
         );
         if ($status === KycSubmission::STATUS_APPROVED) {
             $html = preg_replace(
-                '/(<div class="sharesub-flash sharesub-flash--warning" role="alert")/',
+                '/(<div class="syndicate-flash syndicate-flash--warning" role="alert")/',
                 '$1 style="display:none"',
                 $html,
                 1,
@@ -4111,9 +4111,9 @@ class CapturedPageController extends Controller
             .'<input type="hidden" name="_token" value="'.csrf_token().'">'
             .$html
             .'<p class="mb-3">Upload the front and back of your CNIC. Accepted files: JPG, PNG or PDF, maximum 5 MB each.</p>'
-            .'<div class="form-group"><label for="cnic_front">CNIC front</label><input type="file" name="cnic_front" id="cnic_front" class="input-sharesub" accept="image/jpeg,image/png,application/pdf" required></div>'
-            .'<div class="form-group"><label for="cnic_back">CNIC back</label><input type="file" name="cnic_back" id="cnic_back" class="input-sharesub" accept="image/jpeg,image/png,application/pdf" required></div>'
-            .'<button type="submit" class="btn-sharesub bleu mx-auto my-2 d-block">Submit for review</button>'
+            .'<div class="form-group"><label for="cnic_front">CNIC front</label><input type="file" name="cnic_front" id="cnic_front" class="input-syndicate" accept="image/jpeg,image/png,application/pdf" required></div>'
+            .'<div class="form-group"><label for="cnic_back">CNIC back</label><input type="file" name="cnic_back" id="cnic_back" class="input-syndicate" accept="image/jpeg,image/png,application/pdf" required></div>'
+            .'<button type="submit" class="btn-syndicate bleu mx-auto my-2 d-block">Submit for review</button>'
             .'</form>';
     }
 
@@ -4177,8 +4177,8 @@ class CapturedPageController extends Controller
             .'<p>To delete your account, you must have cancelled all subscriptions and stopped all sharing. Deletion is definitive and entails loss of access to your data and the impossibility of obtaining refunds or transfers</p>'
             .'<p>To permanently delete your account, type "Delete" and confirm:</p>'
             .'<div class="form-row align-items-center">'
-            .'<div class="col"><input type="text" name="confirmation" class="input-sharesub" placeholder="Delete" required></div>'
-            .'<div class="col-auto"><button type="submit" class="btn-sharesub red outline delete-account-button">Delete my account</button></div>'
+            .'<div class="col"><input type="text" name="confirmation" class="input-syndicate" placeholder="Delete" required></div>'
+            .'<div class="col-auto"><button type="submit" class="btn-syndicate red outline delete-account-button">Delete my account</button></div>'
             .'</div>'
             .'</form>';
         $html = preg_replace(
@@ -4251,7 +4251,7 @@ class CapturedPageController extends Controller
                 $html .= '<form method="POST" action="/en/my-settings/device/revoke" class="ml-2">'
                     .'<input type="hidden" name="_token" value="'.csrf_token().'">'
                     .'<input type="hidden" name="session_id" value="'.e((string) $device->id).'">'
-                    .'<button type="submit" class="btn-sharesub red outline small">Revoke</button>'
+                    .'<button type="submit" class="btn-syndicate red outline small">Revoke</button>'
                     .'</form>';
             }
             $html .= '</div>';
@@ -4282,7 +4282,7 @@ class CapturedPageController extends Controller
             $escapedKey = preg_quote($key, '/');
             $encodedValue = json_encode($value, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);
             $html = preg_replace_callback(
-                '/(window\.sharesubVars\[\''.$escapedKey.'\'\]\s*=\s*)\'[^\']*\'/i',
+                '/(window\.syndicateVars\[\''.$escapedKey.'\'\]\s*=\s*)\'[^\']*\'/i',
                 static fn (array $match): string => $match[1].$encodedValue,
                 $html,
             ) ?? $html;
@@ -4405,7 +4405,7 @@ class CapturedPageController extends Controller
 
         $shareButton = <<<'HTML'
 <li class="nav-item">
-    <a class="btn-sharesub green" href="/en/create-subscription">Share my subscription</a>
+    <a class="btn-syndicate green" href="/en/create-subscription">Share my subscription</a>
 </li>
 HTML;
         $isAdmin = Auth::user()?->isAdmin();
@@ -4468,7 +4468,7 @@ HTML;
         ) ?? $items;
 
         $items = preg_replace(
-            '/<li class="nav-item">\s*<a href="\/en\/dashboard\.html" class="sharesub-navbar-alert[^"]*"[^>]*>.*?<\/a>\s*<\/li>/s',
+            '/<li class="nav-item">\s*<a href="\/en\/dashboard\.html" class="syndicate-navbar-alert[^"]*"[^>]*>.*?<\/a>\s*<\/li>/s',
             '',
             $items,
         ) ?? $items;

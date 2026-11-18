@@ -101,7 +101,7 @@ class OffersTest extends TestCase
         $this->assertSame(1, Offer::where('seller_name', 'socheatalim')->first()->seats_available);
         $this->assertNull(Offer::where('seller_name', 'socheatalim')->first()->seats_total);
         $this->assertSame(
-            'Discover the Amazon subscription sharing on Sharesub, and join a group for £1.85/month. The best way to get Amazon at a low price.',
+            'Discover the Amazon subscription sharing on Syndicate, and join a group for £1.85/month. The best way to get Amazon at a low price.',
             Brand::where('slug', 'amazon')->first()->tagline,
         );
     }
