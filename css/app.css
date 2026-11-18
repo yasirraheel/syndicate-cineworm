@@ -10141,7 +10141,7 @@ a.text-dark:hover {
 }
 
 .p1-bold,
-.sharesub-step-nav.current {
+.syndicate-step-nav.current {
     font-size: 18px;
     font-weight: 700
 }
@@ -12393,7 +12393,7 @@ img[class^=floating-] {
     width: 100%
 }
 
-.btn-sharesub {
+.btn-syndicate {
     align-items: center;
     border: 1px solid transparent;
     border-radius: 27px;
@@ -12409,39 +12409,39 @@ img[class^=floating-] {
 }
 
 @supports not (gap:1em) {
-    .btn-sharesub>*+* {
+    .btn-syndicate>*+* {
         margin-left: 8px
     }
 }
 
-.btn-sharesub:active,
-.btn-sharesub:focus,
-.btn-sharesub:hover {
+.btn-syndicate:active,
+.btn-syndicate:focus,
+.btn-syndicate:hover {
     color: #fff;
     outline: none;
     text-decoration: none
 }
 
-.btn-sharesub.big {
+.btn-syndicate.big {
     height: 56px
 }
 
-.btn-sharesub.small {
+.btn-syndicate.small {
     font-size: 13px;
     min-height: auto;
     padding: 4px 14px
 }
 
-.btn-sharesub.loading {
+.btn-syndicate.loading {
     color: transparent;
     position: relative
 }
 
-.btn-sharesub.loading:hover {
+.btn-syndicate.loading:hover {
     color: transparent
 }
 
-.btn-sharesub.loading:after {
+.btn-syndicate.loading:after {
     animation: spinAround .5s linear infinite;
     border-color: transparent transparent #fff #fff;
     border-radius: 1em;
@@ -12456,125 +12456,125 @@ img[class^=floating-] {
     width: 1.25em
 }
 
-.btn-sharesub.bleu,
-.btn-sharesub.blue {
+.btn-syndicate.bleu,
+.btn-syndicate.blue {
     background: #016df4
 }
 
-.btn-sharesub.bleu:hover,
-.btn-sharesub.blue:hover {
+.btn-syndicate.bleu:hover,
+.btn-syndicate.blue:hover {
     background: #02459c
 }
 
-.btn-sharesub.bleu:active,
-.btn-sharesub.blue:active {
+.btn-syndicate.bleu:active,
+.btn-syndicate.blue:active {
     background: #01459c
 }
 
-.btn-sharesub.bleu.disabled,
-.btn-sharesub.bleu:disabled:not(.loading),
-.btn-sharesub.blue.disabled,
-.btn-sharesub.blue:disabled:not(.loading) {
+.btn-syndicate.bleu.disabled,
+.btn-syndicate.bleu:disabled:not(.loading),
+.btn-syndicate.blue.disabled,
+.btn-syndicate.blue:disabled:not(.loading) {
     background: #b3c7e1;
     cursor: not-allowed
 }
 
-.btn-sharesub.bleu.outline,
-.btn-sharesub.blue.outline {
+.btn-syndicate.bleu.outline,
+.btn-syndicate.blue.outline {
     background: transparent;
     border-color: #016df4;
     color: #016df4
 }
 
-.btn-sharesub.bleu.outline:hover,
-.btn-sharesub.blue.outline:hover {
+.btn-syndicate.bleu.outline:hover,
+.btn-syndicate.blue.outline:hover {
     text-decoration: underline
 }
 
-.btn-sharesub.green,
-.btn-sharesub.vert {
+.btn-syndicate.green,
+.btn-syndicate.vert {
     background: #00e497;
     color: #112e45
 }
 
-.btn-sharesub.green:active,
-.btn-sharesub.green:focus,
-.btn-sharesub.green:hover,
-.btn-sharesub.vert:active,
-.btn-sharesub.vert:focus,
-.btn-sharesub.vert:hover {
+.btn-syndicate.green:active,
+.btn-syndicate.green:focus,
+.btn-syndicate.green:hover,
+.btn-syndicate.vert:active,
+.btn-syndicate.vert:focus,
+.btn-syndicate.vert:hover {
     color: #112e45
 }
 
-.btn-sharesub.green:hover,
-.btn-sharesub.vert:hover {
+.btn-syndicate.green:hover,
+.btn-syndicate.vert:hover {
     background: #32e9ac
 }
 
-.btn-sharesub.green:active,
-.btn-sharesub.vert:active {
+.btn-syndicate.green:active,
+.btn-syndicate.vert:active {
     background: #008a5b
 }
 
-.btn-sharesub.green.disabled,
-.btn-sharesub.green:disabled:not(.loading),
-.btn-sharesub.vert.disabled,
-.btn-sharesub.vert:disabled:not(.loading) {
+.btn-syndicate.green.disabled,
+.btn-syndicate.green:disabled:not(.loading),
+.btn-syndicate.vert.disabled,
+.btn-syndicate.vert:disabled:not(.loading) {
     background: #b3dcce;
     cursor: not-allowed
 }
 
-.btn-sharesub.green.loading:after,
-.btn-sharesub.vert.loading:after {
+.btn-syndicate.green.loading:after,
+.btn-syndicate.vert.loading:after {
     border-color: transparent transparent #112e45 #112e45
 }
 
-.btn-sharesub.red,
-.btn-sharesub.rouge {
+.btn-syndicate.red,
+.btn-syndicate.rouge {
     background: #f86d70
 }
 
-.btn-sharesub.red:active,
-.btn-sharesub.red:hover,
-.btn-sharesub.rouge:active,
-.btn-sharesub.rouge:hover {
+.btn-syndicate.red:active,
+.btn-syndicate.red:hover,
+.btn-syndicate.rouge:active,
+.btn-syndicate.rouge:hover {
     background: #e82e21
 }
 
-.btn-sharesub.red.disabled,
-.btn-sharesub.red:disabled:not(.loading),
-.btn-sharesub.rouge.disabled,
-.btn-sharesub.rouge:disabled:not(.loading) {
+.btn-syndicate.red.disabled,
+.btn-syndicate.red:disabled:not(.loading),
+.btn-syndicate.rouge.disabled,
+.btn-syndicate.rouge:disabled:not(.loading) {
     background: #ffd9dd;
     cursor: not-allowed
 }
 
-.btn-sharesub.red.outline,
-.btn-sharesub.rouge.outline {
+.btn-syndicate.red.outline,
+.btn-syndicate.rouge.outline {
     background: transparent;
     border-color: #f86d70;
     color: #f86d70
 }
 
-.btn-sharesub.red.outline:hover,
-.btn-sharesub.rouge.outline:hover {
+.btn-syndicate.red.outline:hover,
+.btn-syndicate.rouge.outline:hover {
     text-decoration: underline
 }
 
-.btn-sharesub.dark {
+.btn-syndicate.dark {
     background: #112e45
 }
 
-.btn-sharesub.dark:hover {
+.btn-syndicate.dark:hover {
     background: #41586b
 }
 
-.btn-sharesub.dark:active {
+.btn-syndicate.dark:active {
     background: #092035
 }
 
-.btn-sharesub.dark.disabled,
-.btn-sharesub.dark:disabled:not(.loading) {
+.btn-syndicate.dark.disabled,
+.btn-syndicate.dark:disabled:not(.loading) {
     background: #b6bcc2;
     cursor: not-allowed
 }
@@ -12601,7 +12601,7 @@ img[class^=floating-] {
     color: #f86d70
 }
 
-.input-sharesub {
+.input-syndicate {
     background: #fff;
     border: 1px solid #d6e8ff;
     border-radius: 4px;
@@ -12618,34 +12618,34 @@ img[class^=floating-] {
     width: 100%
 }
 
-.input-sharesub:active,
-.input-sharesub:focus {
+.input-syndicate:active,
+.input-syndicate:focus {
     outline-color: #016df4
 }
 
-.input-sharesub.is-invalid {
+.input-syndicate.is-invalid {
     border-color: #f86d70
 }
 
-.input-sharesub.select-sharesub {
+.input-syndicate.select-syndicate {
     padding: 18px 20px
 }
 
-.input-sharesub.form-control {
+.input-syndicate.form-control {
     height: calc(1.5em + 1.5rem + 8px)
 }
 
-.input-sharesub[disabled] {
+.input-syndicate[disabled] {
     color: #828282
 }
 
-.input-sharesub[readonly] {
+.input-syndicate[readonly] {
     background-color: #bdbdbd;
     color: #828282;
     outline-color: #828282
 }
 
-.textarea-sharesub {
+.textarea-syndicate {
     background: #fff;
     border: 1px solid #d6e8ff;
     border-radius: 4px;
@@ -12662,12 +12662,12 @@ img[class^=floating-] {
     width: 100%
 }
 
-.textarea-sharesub:active,
-.textarea-sharesub:focus {
+.textarea-syndicate:active,
+.textarea-syndicate:focus {
     outline-color: #016df4
 }
 
-.textarea-sharesub.is-invalid {
+.textarea-syndicate.is-invalid {
     border-color: #f86d70
 }
 
@@ -12681,7 +12681,7 @@ input[type=radio] {
     min-width: 13px
 }
 
-.sharesub-choices .ui-elements {
+.syndicate-choices .ui-elements {
     cursor: pointer;
     height: 100%;
     position: relative;
@@ -12689,15 +12689,15 @@ input[type=radio] {
     width: 100%
 }
 
-.sharesub-choices .ui-elements label {
+.syndicate-choices .ui-elements label {
     cursor: pointer
 }
 
-.sharesub-choices.sharesub-radio {
+.syndicate-choices.syndicate-radio {
     margin-bottom: 30px
 }
 
-.sharesub-choices.sharesub-radio .ui-elements {
+.syndicate-choices.syndicate-radio .ui-elements {
     background: #fff;
     border: 1px solid #d9e8ff;
     border-radius: 4px;
@@ -12706,46 +12706,46 @@ input[type=radio] {
     padding: 16px
 }
 
-.sharesub-choices.sharesub-radio .ui-elements.checked {
+.syndicate-choices.syndicate-radio .ui-elements.checked {
     background: #016df4;
     border: 1px solid #016df4;
     color: #fff
 }
 
-.sharesub-choices.sharesub-radio.with-icons {
+.syndicate-choices.syndicate-radio.with-icons {
     min-height: 50px;
     text-align: center
 }
 
-.sharesub-choices.sharesub-radio.with-icons label {
+.syndicate-choices.syndicate-radio.with-icons label {
     font-weight: 700
 }
 
-.sharesub-choices.with-check .ui-elements {
+.syndicate-choices.with-check .ui-elements {
     padding-left: 56px
 }
 
-.sharesub-choices.with-check .ui-elements label {
+.syndicate-choices.with-check .ui-elements label {
     font-weight: 700
 }
 
-.sharesub-choices.with-check .ui-elements:before {
+.syndicate-choices.with-check .ui-elements:before {
     content: "☐";
     left: 22px;
     position: absolute;
     top: 16px
 }
 
-.sharesub-choices.with-check .ui-elements.checked {
+.syndicate-choices.with-check .ui-elements.checked {
     background: #fff;
     color: #28272b
 }
 
-.sharesub-choices.with-check .ui-elements.checked:before {
+.syndicate-choices.with-check .ui-elements.checked:before {
     content: "☑"
 }
 
-.sharesub-choices.with-helper .ui-elements span {
+.syndicate-choices.with-helper .ui-elements span {
     color: #828282;
     display: block;
     font-size: 14px;
@@ -12753,35 +12753,35 @@ input[type=radio] {
     line-height: 18px
 }
 
-.sharesub-choices.sharesub-checkbox .ui-elements label {
+.syndicate-choices.syndicate-checkbox .ui-elements label {
     margin-left: 20px
 }
 
-.sharesub-choices.sharesub-checkbox .ui-elements:before {
+.syndicate-choices.syndicate-checkbox .ui-elements:before {
     content: "☐";
     left: 0;
     position: absolute;
     top: 1px
 }
 
-.sharesub-choices.sharesub-checkbox .ui-elements.checked:before {
+.syndicate-choices.syndicate-checkbox .ui-elements.checked:before {
     content: "☑"
 }
 
-.input-radio-sharesub {
+.input-radio-syndicate {
     display: none
 }
 
-.input-radio-sharesub:checked+div,
-.input-radio-sharesub:focus+div {
+.input-radio-syndicate:checked+div,
+.input-radio-syndicate:focus+div {
     border-color: #016df4
 }
 
-.input-radio-sharesub:checked+div:before {
+.input-radio-syndicate:checked+div:before {
     background-color: #016df4
 }
 
-.input-radio-sharesub:checked+div:after {
+.input-radio-syndicate:checked+div:after {
     border: 2px solid #fff;
     border-left: none;
     border-top: none;
@@ -12794,12 +12794,12 @@ input[type=radio] {
     width: 8px
 }
 
-.input-radio-sharesub:not(:disabled)+div:hover {
+.input-radio-syndicate:not(:disabled)+div:hover {
     border-color: #016df4;
     box-shadow: 0 4px 80px rgba(0, 66, 148, .1)
 }
 
-.input-radio-sharesub+div {
+.input-radio-syndicate+div {
     background-color: #fff;
     border: 1px solid #c6ddff;
     border-radius: 4px;
@@ -12812,7 +12812,7 @@ input[type=radio] {
     width: 100%
 }
 
-.input-radio-sharesub+div:before {
+.input-radio-syndicate+div:before {
     border: 1.5px solid #016df4;
     border-radius: 9999px;
     content: "";
@@ -12823,24 +12823,24 @@ input[type=radio] {
     width: 20px
 }
 
-.sharesub-step {
+.syndicate-step {
     display: none
 }
 
-.sharesub-step.current {
+.syndicate-step.current {
     display: block
 }
 
-.sharesub-step-nav {
+.syndicate-step-nav {
     margin-bottom: 10px;
     margin-top: 10px
 }
 
-.sharesub-step-nav.done {
+.syndicate-step-nav.done {
     cursor: pointer
 }
 
-.sharesub-step-nav.done:before {
+.syndicate-step-nav.done:before {
     content: "☑"
 }
 
@@ -12865,7 +12865,7 @@ span.icon.icon-wallet svg {
     width: 70%
 }
 
-.sharesub-toasts {
+.syndicate-toasts {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -12878,15 +12878,15 @@ span.icon.icon-wallet svg {
 }
 
 @media (min-width:768px) {
-    .sharesub-toasts {
+    .syndicate-toasts {
         right: 24px;
         top: 92px
     }
 }
 
-.sharesub-toast {
+.syndicate-toast {
     align-items: center;
-    animation: sharesub-toast-in .3s ease both, sharesub-toast-out .4s ease 4s forwards;
+    animation: syndicate-toast-in .3s ease both, syndicate-toast-out .4s ease 4s forwards;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(17, 46, 69, .14), 0 10px 28px rgba(17, 46, 69, .18);
@@ -12902,11 +12902,11 @@ span.icon.icon-wallet svg {
     width: 360px
 }
 
-.sharesub-toast:hover {
+.syndicate-toast:hover {
     animation-play-state: paused
 }
 
-.sharesub-toast-icon {
+.syndicate-toast-icon {
     align-items: center;
     background: rgba(0, 228, 151, .18);
     border-radius: 50%;
@@ -12918,12 +12918,12 @@ span.icon.icon-wallet svg {
     width: 28px
 }
 
-.sharesub-toast-text {
+.syndicate-toast-text {
     flex: 1;
     min-width: 0
 }
 
-.sharesub-toast-close {
+.syndicate-toast-close {
     background: none;
     border: none;
     color: #b3c7e1;
@@ -12934,11 +12934,11 @@ span.icon.icon-wallet svg {
     padding: 0 2px
 }
 
-.sharesub-toast-close:hover {
+.syndicate-toast-close:hover {
     color: #112e45
 }
 
-@keyframes sharesub-toast-in {
+@keyframes syndicate-toast-in {
     0% {
         opacity: 0;
         transform: translateX(16px)
@@ -12949,7 +12949,7 @@ span.icon.icon-wallet svg {
     }
 }
 
-@keyframes sharesub-toast-out {
+@keyframes syndicate-toast-out {
     to {
         opacity: 0;
         transform: translateX(16px);
@@ -12958,12 +12958,12 @@ span.icon.icon-wallet svg {
 }
 
 @media (prefers-reduced-motion:reduce) {
-    .sharesub-toast {
+    .syndicate-toast {
         animation: none
     }
 }
 
-.sharesub-flash {
+.syndicate-flash {
     align-items: flex-start;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(17, 46, 69, .14), 0 10px 28px rgba(17, 46, 69, .18);
@@ -12975,19 +12975,19 @@ span.icon.icon-wallet svg {
     width: 360px
 }
 
-.sharesub-flash--warning {
+.syndicate-flash--warning {
     background: #fee9af;
     color: #112e45
 }
 
-.sharesub-flash-icon {
+.syndicate-flash-icon {
     color: #a27702;
     display: flex;
     flex: none;
     margin-top: 1px
 }
 
-.sharesub-flash-body {
+.syndicate-flash-body {
     flex: 1;
     font-size: 14px;
     font-weight: 600;
@@ -12995,11 +12995,11 @@ span.icon.icon-wallet svg {
     min-width: 0
 }
 
-.sharesub-flash-body>*+* {
+.syndicate-flash-body>*+* {
     margin-top: 3px
 }
 
-.sharesub-flash-close {
+.syndicate-flash-close {
     background: none;
     border: none;
     color: rgba(17, 46, 69, .5);
@@ -13010,7 +13010,7 @@ span.icon.icon-wallet svg {
     padding: 0 2px
 }
 
-.sharesub-flash-close:hover {
+.syndicate-flash-close:hover {
     color: #112e45
 }
 
@@ -13098,7 +13098,7 @@ span.icon.icon-wallet svg {
     width: 9px
 }
 
-.sharesub-navbar-alert {
+.syndicate-navbar-alert {
     align-items: center;
     border-radius: 50%;
     display: none;
@@ -13108,7 +13108,7 @@ span.icon.icon-wallet svg {
     width: 38px
 }
 
-.sharesub-navbar-alert-count {
+.syndicate-navbar-alert-count {
     align-items: center;
     background: #fdca40;
     border: 2px solid #112e45;
@@ -13127,41 +13127,41 @@ span.icon.icon-wallet svg {
     top: -3px
 }
 
-.sharesub-navbar .sharesub-navbar-alert svg {
+.syndicate-navbar .syndicate-navbar-alert svg {
     height: 18px;
     width: 18px
 }
 
-.sharesub-navbar-alert--mobile {
+.syndicate-navbar-alert--mobile {
     margin-left: auto;
     margin-right: 12px
 }
 
-body.has-account-notices #navbarNav .nav-item a.sharesub-navbar-alert,
-body.has-account-notices .sharesub-navbar .sharesub-navbar-alert {
+body.has-account-notices #navbarNav .nav-item a.syndicate-navbar-alert,
+body.has-account-notices .syndicate-navbar .syndicate-navbar-alert {
     background: rgba(253, 202, 64, .16);
     color: #fdca40
 }
 
 @media (min-width:992px) {
-    body.has-account-notices .sharesub-navbar-alert--desktop {
+    body.has-account-notices .syndicate-navbar-alert--desktop {
         display: flex
     }
 }
 
 @media (max-width:991.98px) {
-    body.has-account-notices .sharesub-navbar-alert--mobile {
+    body.has-account-notices .syndicate-navbar-alert--mobile {
         display: flex
     }
 }
 
-body.has-account-notices-critical #navbarNav .nav-item a.sharesub-navbar-alert,
-body.has-account-notices-critical .sharesub-navbar .sharesub-navbar-alert {
+body.has-account-notices-critical #navbarNav .nav-item a.syndicate-navbar-alert,
+body.has-account-notices-critical .syndicate-navbar .syndicate-navbar-alert {
     background: rgba(248, 109, 112, .16);
     color: #f86d70
 }
 
-body.has-account-notices-critical .sharesub-navbar-alert-count {
+body.has-account-notices-critical .syndicate-navbar-alert-count {
     background: #d62839;
     color: #fff
 }
@@ -13272,7 +13272,7 @@ body.has-account-notices-critical .sharesub-navbar-alert-count {
     }
 }
 
-.sharesub-navbar {
+.syndicate-navbar {
     background: #112e45;
     height: 64px;
     padding-left: 16px;
@@ -13283,18 +13283,18 @@ body.has-account-notices-critical .sharesub-navbar-alert-count {
     z-index: 1020
 }
 
-.sharesub-navbar .logo,
-.sharesub-navbar>a svg {
+.syndicate-navbar .logo,
+.syndicate-navbar>a svg {
     height: 25px;
     width: auto
 }
 
 @media (min-width:768px) {
-    .sharesub-navbar .logo,
-    .sharesub-navbar>a svg {
+    .syndicate-navbar .logo,
+    .syndicate-navbar>a svg {
         height: 35px
     }
-    .sharesub-navbar {
+    .syndicate-navbar {
         height: 80px;
         padding-left: max(16px, (100% - 712px)/2);
         padding-right: max(16px, (100% - 712px)/2)
@@ -13302,27 +13302,27 @@ body.has-account-notices-critical .sharesub-navbar-alert-count {
 }
 
 @media (min-width:992px) {
-    .sharesub-navbar {
+    .syndicate-navbar {
         padding-left: max(16px, (100% - 928px)/2);
         padding-right: max(16px, (100% - 928px)/2)
     }
 }
 
 @media (min-width:1200px) {
-    .sharesub-navbar {
+    .syndicate-navbar {
         padding-left: max(16px, (100% - 1168px)/2);
         padding-right: max(16px, (100% - 1168px)/2)
     }
 }
 
 @media (min-width:768px) {
-    #app:has(.dashboard-container) .sharesub-navbar {
+    #app:has(.dashboard-container) .syndicate-navbar {
         padding-left: max(16px, (100% - 1280px)/2 + 15px);
         padding-right: max(16px, (100% - 1280px)/2 + 15px)
     }
 }
 
-.sharesub-navbar-toggler {
+.syndicate-navbar-toggler {
     align-items: center;
     border: none;
     color: #fff;
@@ -13337,7 +13337,7 @@ body.has-account-notices-critical .sharesub-navbar-alert-count {
 }
 
 @supports not (gap:1em) {
-    .sharesub-navbar-toggler>*+* {
+    .syndicate-navbar-toggler>*+* {
         margin-left: 10px
     }
 }
@@ -13420,7 +13420,7 @@ body.has-account-notices-critical .sharesub-navbar-alert-count {
     color: #016df4
 }
 
-#navbarNav .nav-item a.btn-sharesub.green {
+#navbarNav .nav-item a.btn-syndicate.green {
     color: #112e45
 }
 
@@ -13453,7 +13453,7 @@ body.has-account-notices-critical .sharesub-navbar-alert-count {
     padding-top: .5rem
 }
 
-.sharesub-navbar .chat-item .menu-links-item-notif {
+.syndicate-navbar .chat-item .menu-links-item-notif {
     align-items: center;
     background: #d62839;
     border-radius: 999px;
@@ -13492,7 +13492,7 @@ body.has-account-notices-critical .sharesub-navbar-alert-count {
     }
 }
 
-.menu .btn-sharesub,
+.menu .btn-syndicate,
 .menu .menu-blog>a,
 .menu .menu-links-item {
     align-items: center;
@@ -13570,81 +13570,81 @@ body.has-account-notices-critical .sharesub-navbar-alert-count {
     }
 }
 
-body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .hero-dasboard {
+body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .hero-dasboard {
     margin-top: -64px;
     padding-top: 104px
 }
 
 @media (min-width:768px) {
-    body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .hero-dasboard {
+    body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .hero-dasboard {
         margin-top: -80px;
         padding-top: 144px
     }
 }
 
-body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .category-header {
+body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .category-header {
     margin-top: -64px;
     padding-top: 104px
 }
 
 @media (min-width:768px) {
-    body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .category-header {
+    body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .category-header {
         margin-top: -80px;
         padding-top: 128px
     }
 }
 
-body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .brand-header {
+body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .brand-header {
     margin-top: -64px;
     padding-top: 104px
 }
 
 @media (min-width:768px) {
-    body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .brand-header {
+    body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .brand-header {
         margin-top: -80px;
         padding-top: 128px
     }
 }
 
-body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .model-header {
+body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .model-header {
     margin-top: -64px;
     padding-top: 80px
 }
 
 @media (min-width:768px) {
-    body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .model-header {
+    body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .model-header {
         margin-top: -80px;
         padding-top: 112px
     }
 }
 
-body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .dashboard {
+body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .dashboard {
     margin-top: -64px;
     padding-top: 88px
 }
 
 @media (min-width:768px) {
-    body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .dashboard {
+    body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .dashboard {
         margin-top: -80px;
         padding-top: 104px
     }
 }
 
-body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .sharesub-navbar {
+body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .syndicate-navbar {
     background: transparent;
     transition: background-color .25s ease, box-shadow .25s ease
 }
 
-body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .sharesub-navbar.is-scrolled {
+body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)) .syndicate-navbar.is-scrolled {
     background: #112e45;
     box-shadow: 0 8px 24px rgba(0, 0, 0, .18)
 }
 
-body.page-hero-nav:not(:has(main>.sharesub-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)):has(.menu.active) .sharesub-navbar {
+body.page-hero-nav:not(:has(main>.syndicate-alert)):not(:has(main>.pending-payments-alert)):not(:has(main>.suggest-language-container)):has(.menu.active) .syndicate-navbar {
     background: #112e45
 }
 
-footer.sharesub-footer {
+footer.syndicate-footer {
     background: #112e45;
     color: #fff;
     font-size: 14px;
@@ -13655,46 +13655,46 @@ footer.sharesub-footer {
 }
 
 @media (min-width:992px) {
-    footer.sharesub-footer {
+    footer.syndicate-footer {
         padding: 48px 0
     }
 }
 
-footer.sharesub-footer .container {
+footer.syndicate-footer .container {
     padding: 0 16px
 }
 
 @media (min-width:768px) {
-    footer.sharesub-footer .container {
+    footer.syndicate-footer .container {
         padding: 0
     }
 }
 
-footer.sharesub-footer .footer-link {
+footer.syndicate-footer .footer-link {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px
 }
 
-footer.sharesub-footer .footer-link-title {
+footer.syndicate-footer .footer-link-title {
     font-size: 16px;
     font-weight: 700;
     line-height: 19px
 }
 
-footer.sharesub-footer a {
+footer.syndicate-footer a {
     color: #fff
 }
 
-footer.sharesub-footer .logo {
+footer.syndicate-footer .logo {
     height: 40px
 }
 
-footer.sharesub-footer .footer-social {
+footer.syndicate-footer .footer-social {
     gap: 12px
 }
 
-footer.sharesub-footer .footer-social img {
+footer.syndicate-footer .footer-social img {
     display: block
 }
 
@@ -14275,7 +14275,7 @@ footer.sharesub-footer .footer-social img {
     flex-direction: column
 }
 
-.hero-search-wrapper>.btn-sharesub {
+.hero-search-wrapper>.btn-syndicate {
     display: inline-block;
     margin-top: 64px
 }
@@ -14430,7 +14430,7 @@ footer.sharesub-footer .footer-social img {
         margin: 5px 16px 0;
         width: calc(100% - 34px)
     }
-    .search-wrapper.open .lang-dropdown .dropdown-toggle.btn-sharesub:after {
+    .search-wrapper.open .lang-dropdown .dropdown-toggle.btn-syndicate:after {
         background: url(/img/home/caret-black.svg);
         margin-left: auto;
         transform: rotate(180deg)
@@ -15202,7 +15202,7 @@ footer.sharesub-footer .footer-social img {
     }
 }
 
-.share-section .share-card .btn-sharesub {
+.share-section .share-card .btn-syndicate {
     align-self: center;
     display: inline-flex;
     font-size: 16px;
@@ -15215,7 +15215,7 @@ footer.sharesub-footer .footer-social img {
 }
 
 @media (min-width:768px) {
-    .share-section .share-card .btn-sharesub {
+    .share-section .share-card .btn-syndicate {
         font-size: 18px;
         line-height: 24px;
         width: 80%
@@ -15619,7 +15619,7 @@ footer.sharesub-footer .footer-social img {
     top: -25px
 }
 
-.offer-section .offer-quote .btn-sharesub {
+.offer-section .offer-quote .btn-syndicate {
     margin-top: auto;
     width: 90%
 }
@@ -18196,7 +18196,7 @@ footer.sharesub-footer .footer-social img {
     margin-bottom: 20px
 }
 
-.call-to-action-content .btn-sharesub {
+.call-to-action-content .btn-syndicate {
     display: inline-flex;
     margin-top: 32px
 }
@@ -18529,11 +18529,11 @@ footer.sharesub-footer .footer-social img {
     width: 32px
 }
 
-.lang-dropdown .dropdown-toggle.btn-sharesub {
+.lang-dropdown .dropdown-toggle.btn-syndicate {
     padding: 6px 16px
 }
 
-.lang-dropdown .dropdown-toggle.btn-sharesub:after {
+.lang-dropdown .dropdown-toggle.btn-syndicate:after {
     background: url(/img/home/caret-white.svg);
     border: none;
     bottom: 1px;
@@ -19050,7 +19050,7 @@ img[class^=floating-].floating-music {
     }
 }
 
-.logo-sharesub-homepage {
+.logo-syndicate-homepage {
     margin-top: -40%;
     position: relative;
     transform: translateY(50%);
@@ -19058,19 +19058,19 @@ img[class^=floating-].floating-music {
 }
 
 @media (min-width:576px) {
-    .logo-sharesub-homepage {
+    .logo-syndicate-homepage {
         margin-top: -30%
     }
 }
 
 @media (min-width:768px) {
-    .logo-sharesub-homepage {
+    .logo-syndicate-homepage {
         margin-top: -20%
     }
 }
 
 @media (min-width:992px) {
-    .logo-sharesub-homepage {
+    .logo-syndicate-homepage {
         margin-top: -10%
     }
 }
@@ -20009,7 +20009,7 @@ img[class^=floating-].floating-music {
     margin-bottom: 8px
 }
 
-.subscription-country .btn-sharesub {
+.subscription-country .btn-syndicate {
     bottom: 16px;
     left: 16px;
     margin-top: 24px;
@@ -20019,7 +20019,7 @@ img[class^=floating-].floating-music {
 }
 
 @media (min-width:768px) {
-    .subscription-country .btn-sharesub {
+    .subscription-country .btn-syndicate {
         left: auto;
         position: static;
         width: -moz-fit-content;
@@ -20027,7 +20027,7 @@ img[class^=floating-].floating-music {
     }
 }
 
-.subscription-country .btn-sharesub-outline {
+.subscription-country .btn-syndicate-outline {
     align-items: center;
     background: transparent;
     border: 1px solid #016df4;
@@ -20042,7 +20042,7 @@ img[class^=floating-].floating-music {
     transition: background-color .15s ease, color .15s ease
 }
 
-.subscription-country .btn-sharesub-outline:hover {
+.subscription-country .btn-syndicate-outline:hover {
     background: #016df4;
     color: #fff;
     text-decoration: none
@@ -20499,35 +20499,35 @@ img[class^=floating-].floating-music {
     }
 }
 
-.subscription-email-content .input-sharesub {
+.subscription-email-content .input-syndicate {
     width: 100%;
     width: calc(100% - 30px)
 }
 
 @media (min-width:768px) {
-    .subscription-email-content .input-sharesub {
+    .subscription-email-content .input-syndicate {
         max-width: 464px
     }
 }
 
 @media (min-width:992px) {
-    .subscription-email-content .input-sharesub {
+    .subscription-email-content .input-syndicate {
         max-width: 448px
     }
 }
 
 @media (min-width:1200px) {
-    .subscription-email-content .input-sharesub {
+    .subscription-email-content .input-syndicate {
         max-width: 568px
     }
 }
 
-.subscription-email-content .btn-sharesub {
+.subscription-email-content .btn-syndicate {
     width: 100%
 }
 
 @media (min-width:768px) {
-    .subscription-email-content .btn-sharesub {
+    .subscription-email-content .btn-syndicate {
         margin-top: auto;
         width: -moz-fit-content;
         width: fit-content
@@ -20770,7 +20770,7 @@ img[class^=floating-].floating-music {
 }
 
 @media (min-width:768px) {
-    .subscription-share .btn-sharesub {
+    .subscription-share .btn-syndicate {
         margin-top: auto;
         width: -moz-fit-content;
         width: fit-content
@@ -20974,12 +20974,12 @@ img[class^=floating-].floating-music {
     margin: 0
 }
 
-.subscription-final-form .btn-sharesub {
+.subscription-final-form .btn-syndicate {
     min-width: 90%
 }
 
 @media (min-width:768px) {
-    .subscription-final-form .btn-sharesub {
+    .subscription-final-form .btn-syndicate {
         min-width: 50%
     }
 }
@@ -20989,7 +20989,7 @@ img[class^=floating-].floating-music {
     gap: .75rem
 }
 
-.subscription-final-form .device-otp-sms-modal-footer .btn-sharesub {
+.subscription-final-form .device-otp-sms-modal-footer .btn-syndicate {
     flex: 1 1 0;
     max-width: none;
     min-width: 0;
@@ -21199,7 +21199,7 @@ img[class^=floating-].floating-music {
     color: #016df4
 }
 
-.subscription-final-register.login a.btn-sharesub {
+.subscription-final-register.login a.btn-syndicate {
     color: #fff
 }
 
@@ -21781,12 +21781,12 @@ img[class^=floating-].floating-music {
     margin-bottom: 16px
 }
 
-.subscription-created-send .textarea-sharesub {
+.subscription-created-send .textarea-syndicate {
     min-height: 352px
 }
 
 @media (min-width:768px) {
-    .subscription-created-send .textarea-sharesub {
+    .subscription-created-send .textarea-syndicate {
         min-height: inherit
     }
 }
@@ -21809,18 +21809,18 @@ img[class^=floating-].floating-music {
     row-gap: 16px
 }
 
-.subscription-created .btn-sharesub {
+.subscription-created .btn-syndicate {
     width: 100%
 }
 
 @media (min-width:768px) {
-    .subscription-created .btn-sharesub {
+    .subscription-created .btn-syndicate {
         width: 50%
     }
 }
 
 @media (min-width:992px) {
-    .subscription-created .btn-sharesub {
+    .subscription-created .btn-syndicate {
         width: 40%
     }
 }
@@ -21981,12 +21981,12 @@ img[class^=floating-].floating-music {
     padding-top: 10px
 }
 
-.create-sub .btn-sharesub.bleu {
+.create-sub .btn-syndicate.bleu {
     width: 100%
 }
 
 @media (min-width:768px) {
-    .create-sub .btn-sharesub.bleu {
+    .create-sub .btn-syndicate.bleu {
         width: unset
     }
 }
@@ -22171,7 +22171,7 @@ h1.invite div.skip {
     position: relative
 }
 
-.neverbounce-group>.input-sharesub {
+.neverbounce-group>.input-syndicate {
     padding-right: 44px
 }
 
@@ -23872,7 +23872,7 @@ h1.invite div.skip {
     margin: 0
 }
 
-.credentials-form .textarea-sharesub {
+.credentials-form .textarea-syndicate {
     margin: 0 0 16px
 }
 
@@ -23900,20 +23900,20 @@ h1.invite div.skip {
     width: 24px
 }
 
-.credentials-form .btn-sharesub {
+.credentials-form .btn-syndicate {
     align-self: flex-end;
     justify-self: end;
     width: 100%
 }
 
 @media (min-width:768px) {
-    .credentials-form .btn-sharesub {
+    .credentials-form .btn-syndicate {
         width: -moz-fit-content;
         width: fit-content
     }
 }
 
-.credentials-form .btn-sharesub.blue {
+.credentials-form .btn-syndicate.blue {
     align-self: flex-start
 }
 
@@ -24253,17 +24253,17 @@ h1.invite div.skip {
     }
 }
 
-.gestion-form .input-sharesub {
+.gestion-form .input-syndicate {
     height: 44px
 }
 
-.gestion-form .btn-sharesub {
+.gestion-form .btn-syndicate {
     flex: 0 0 auto;
     width: 100%
 }
 
 @media (min-width:768px) {
-    .gestion-form .btn-sharesub {
+    .gestion-form .btn-syndicate {
         width: -moz-fit-content;
         width: fit-content
     }
@@ -24291,12 +24291,12 @@ h1.invite div.skip {
     margin-left: 16px
 }
 
-.gestion>.btn-sharesub {
+.gestion>.btn-syndicate {
     width: 100%
 }
 
 @media (min-width:768px) {
-    .gestion>.btn-sharesub {
+    .gestion>.btn-syndicate {
         width: -moz-fit-content;
         width: fit-content
     }
@@ -25102,7 +25102,7 @@ h1.invite div.skip {
     margin-top: 8px
 }
 
-.chat-noconv .btn-sharesub {
+.chat-noconv .btn-syndicate {
     margin-top: 24px
 }
 
@@ -25205,18 +25205,18 @@ h1.invite div.skip {
     border: 2px solid #016df4
 }
 
-.chat-wrapper-form .btn-sharesub {
+.chat-wrapper-form .btn-syndicate {
     flex: 0 0 auto;
     padding: 0 10px
 }
 
 @media (min-width:768px) {
-    .chat-wrapper-form .btn-sharesub {
+    .chat-wrapper-form .btn-syndicate {
         padding: 0 16px
     }
 }
 
-.chat-wrapper-form .btn-sharesub.send-sms {
+.chat-wrapper-form .btn-syndicate.send-sms {
     align-items: center;
     background: #fff;
     border: 2px solid #016df4;
@@ -25227,13 +25227,13 @@ h1.invite div.skip {
     width: 100%
 }
 
-.chat-wrapper-form .btn-sharesub.send-sms .send-sms-icon {
+.chat-wrapper-form .btn-syndicate.send-sms .send-sms-icon {
     color: #016df4;
     flex: 0 0 auto
 }
 
 @media (max-width:991.98px) {
-    .chat-wrapper-form .btn-sharesub.send-sms {
+    .chat-wrapper-form .btn-syndicate.send-sms {
         background: #ebf4ff;
         border: none;
         border-radius: 0;
@@ -25248,7 +25248,7 @@ h1.invite div.skip {
     .chat-wrapper-form .chat-sms-relance {
         margin: -10px -10px 10px
     }
-    .chat-wrapper-form>form .btn-sharesub {
+    .chat-wrapper-form>form .btn-syndicate {
         align-items: center;
         border-radius: 50%;
         display: inline-flex;
@@ -25714,12 +25714,12 @@ h1.invite div.skip {
     padding: 15px 10px
 }
 
-.sharesub-tooltip {
+.syndicate-tooltip {
     display: inline-block;
     position: relative
 }
 
-.sharesub-tooltip .sharesub-tooltip-text {
+.syndicate-tooltip .syndicate-tooltip-text {
     background: #112e45;
     border-radius: 12px;
     bottom: 115%;
@@ -25733,7 +25733,7 @@ h1.invite div.skip {
     z-index: 1
 }
 
-.sharesub-tooltip:hover .sharesub-tooltip-text {
+.syndicate-tooltip:hover .syndicate-tooltip-text {
     visibility: visible
 }
 
@@ -25754,11 +25754,11 @@ h1.invite div.skip {
     margin-top: 15px
 }
 
-.sharesub-input-file input[type=file] {
+.syndicate-input-file input[type=file] {
     display: none
 }
 
-.sharesub-input-file label {
+.syndicate-input-file label {
     border: 1px solid #016df4;
     border-radius: 64px;
     color: #016df4;
@@ -25766,7 +25766,7 @@ h1.invite div.skip {
     padding: 1rem 3rem
 }
 
-.sharesub-input-file label:hover {
+.syndicate-input-file label:hover {
     border-color: #005acb;
     color: #005acb
 }
@@ -26012,7 +26012,7 @@ h3.dashboard-progress-title {
     margin: 0
 }
 
-.invite-card-form .textarea-sharesub {
+.invite-card-form .textarea-syndicate {
     width: 100%
 }
 
@@ -26145,7 +26145,7 @@ h3.dashboard-progress-title {
 }
 
 @media (max-width:991.98px) {
-    .report_modal .btn-sharesub.bleu {
+    .report_modal .btn-syndicate.bleu {
         width: 100%
     }
 }
@@ -26160,7 +26160,7 @@ h3.dashboard-progress-title {
     #app:has(.chat--conversation) {
         background: #fff
     }
-    #app:has(.chat--conversation) .sharesub-navbar.is-scrolled {
+    #app:has(.chat--conversation) .syndicate-navbar.is-scrolled {
         background: transparent;
         box-shadow: none
     }
@@ -26254,7 +26254,7 @@ h3.dashboard-progress-title {
 
 @media (max-width:991.98px) {
     #app:has(.dashboard-container) .bottom,
-    #app:has(.dashboard-container) .sharesub-footer {
+    #app:has(.dashboard-container) .syndicate-footer {
         display: none
     }
 }
@@ -26569,7 +26569,7 @@ h2.autocomplete span {
     text-decoration: none
 }
 
-#map .sharesub-group-markers b {
+#map .syndicate-group-markers b {
     background: #016df4;
     border-radius: 32px;
     color: #fff;
@@ -26581,7 +26581,7 @@ h2.autocomplete span {
     width: 32px
 }
 
-#map .sharesub-group-markers b.disabled {
+#map .syndicate-group-markers b.disabled {
     background: #828282
 }
 
@@ -26627,12 +26627,12 @@ h2.autocomplete span {
     color: #112e45
 }
 
-#map .btn-sharesub {
+#map .btn-syndicate {
     font-size: 14px;
     min-height: 36px
 }
 
-#map .btn-sharesub.disabled {
+#map .btn-syndicate.disabled {
     font-size: 12px
 }
 
@@ -27520,7 +27520,7 @@ h2.autocomplete span {
     }
 }
 
-.join-action-content .btn-sharesub {
+.join-action-content .btn-syndicate {
     width: 100%
 }
 
@@ -27879,7 +27879,7 @@ h2.autocomplete span {
     }
 }
 
-.connect-content .btn-sharesub {
+.connect-content .btn-syndicate {
     margin-left: auto;
     margin-right: auto;
     margin-top: 8px;
@@ -27887,7 +27887,7 @@ h2.autocomplete span {
 }
 
 @media (min-width:992px) {
-    .connect-content .btn-sharesub {
+    .connect-content .btn-syndicate {
         width: -moz-fit-content;
         width: fit-content
     }
@@ -28168,13 +28168,13 @@ h2.autocomplete span {
     width: 100%
 }
 
-.pay-form-card>label .input-radio-sharesub+div:before {
+.pay-form-card>label .input-radio-syndicate+div:before {
     left: auto;
     position: relative;
     top: auto
 }
 
-.pay-form-card>label .input-radio-sharesub+div:after {
+.pay-form-card>label .input-radio-syndicate+div:after {
     height: 10px;
     left: 23px;
     position: absolute;
@@ -28242,13 +28242,13 @@ h2.autocomplete span {
     margin: 0
 }
 
-.pay-form .btn-sharesub {
+.pay-form .btn-syndicate {
     align-self: center;
     width: 100%
 }
 
 @media (min-width:768px) {
-    .pay-form .btn-sharesub {
+    .pay-form .btn-syndicate {
         width: -moz-fit-content;
         width: fit-content
     }
@@ -28777,7 +28777,7 @@ h2.autocomplete span {
     text-decoration: underline
 }
 
-.paid-content .btn-sharesub {
+.paid-content .btn-syndicate {
     height: 56px;
     line-height: 28px;
     text-align: center;
@@ -28785,7 +28785,7 @@ h2.autocomplete span {
 }
 
 @media (min-width:768px) {
-    .paid-content .btn-sharesub {
+    .paid-content .btn-syndicate {
         height: 44px;
         width: -moz-fit-content;
         width: fit-content
@@ -29113,7 +29113,7 @@ h2.autocomplete span {
     display: none
 }
 
-.category-card .btn-sharesub {
+.category-card .btn-syndicate {
     border-radius: 24px;
     margin: 20px auto 0;
     padding: 10px;
@@ -29858,7 +29858,7 @@ h2.autocomplete span {
     background: linear-gradient(135deg, rgba(0, 228, 151, .14), rgba(9, 28, 45, .48))
 }
 
-.model-header-offer-card .btn-sharesub {
+.model-header-offer-card .btn-syndicate {
     border-radius: 8px;
     justify-content: center;
     min-height: 50px;
@@ -32025,7 +32025,7 @@ h2.autocomplete span {
     margin-right: -1.5rem
 }
 
-.card-sharesub {
+.card-syndicate {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 80px rgba(0, 66, 148, .05);
@@ -32033,26 +32033,26 @@ h2.autocomplete span {
 }
 
 @media (min-width:768px) {
-    .card-sharesub {
+    .card-syndicate {
         padding: 1.5rem
     }
 }
 
-.card-sharesub.pt-none {
+.card-syndicate.pt-none {
     padding-top: 0
 }
 
 @media (min-width:768px) {
-    .card-sharesub.pt-none {
+    .card-syndicate.pt-none {
         padding-top: 10px
     }
 }
 
-.card-sharesub.card-sharesub--roomy {
+.card-syndicate.card-syndicate--roomy {
     padding: 32px 24px
 }
 
-.sharesub-alert {
+.syndicate-alert {
     border-radius: 12px;
     margin: 0 auto
 }
@@ -32193,22 +32193,22 @@ h2.autocomplete span {
     transform: rotate(0deg)
 }
 
-.checkbox-sharesub {
+.checkbox-syndicate {
     display: none;
     height: 0;
     width: 0
 }
 
-.checkbox-sharesub:checked+label {
+.checkbox-syndicate:checked+label {
     background: #00e497
 }
 
-.checkbox-sharesub:checked+label:after {
+.checkbox-syndicate:checked+label:after {
     left: calc(100% - 4px);
     transform: translateX(-100%)
 }
 
-.label-sharesub {
+.label-syndicate {
     background: #e1e1e1;
     border-radius: 28px;
     cursor: pointer;
@@ -32220,7 +32220,7 @@ h2.autocomplete span {
     width: 50px
 }
 
-.label-sharesub:after {
+.label-syndicate:after {
     background: #fff;
     border-radius: 20px;
     content: "";
@@ -32232,7 +32232,7 @@ h2.autocomplete span {
     width: 20px
 }
 
-.label-sharesub:active:after {
+.label-syndicate:active:after {
     width: 30px
 }
 

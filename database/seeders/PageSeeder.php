@@ -101,7 +101,7 @@ class PageSeeder extends Seeder
         $titleTag = $xpath->query('//title')->item(0);
         if ($titleTag !== null) {
             $title = $this->clean($titleTag->textContent);
-            $title = preg_replace('/\s*[^A-Za-z0-9]\s*Sharesub$/u', '', $title) ?? $title;
+            $title = preg_replace('/\s*[^A-Za-z0-9]\s*Syndicate$/u', '', $title) ?? $title;
             $title = trim($title);
             if ($title !== '') {
                 return $title;
