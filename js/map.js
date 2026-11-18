@@ -53783,7 +53783,7 @@
             shadowSize: [68, 95],
             shadowAnchor: [22, 94]
         };
-        window.sharesubIcon = L.icon(eu), eu.iconUrl = "/img/browse/location-pin-svgrepo-com-disabled.svg", window.sharesubIconDisabled = L.icon(eu), $(document).on("vue-loaded", (function() {
+        window.syndicateIcon = L.icon(eu), eu.iconUrl = "/img/browse/location-pin-svgrepo-com-disabled.svg", window.syndicateIconDisabled = L.icon(eu), $(document).on("vue-loaded", (function() {
             console.log("vue loaded (map.js)"), $("#map").click((function(t) {
                 userLogged && (t.preventDefault(), nu || navigator.geolocation.getCurrentPosition(su, au))
             }))
@@ -53826,7 +53826,7 @@
                                     var i = $(e).data("hash");
                                     void 0 !== n[i] ? $(e).remove() : n[i] = !0
                                 })), handleObfuscate(), pu(), $(".result.subscriptions .join-content").each((function(t, e) {
-                                    $(e).find("button.btn-sharesub").attr("disabled") && $(e).remove()
+                                    $(e).find("button.btn-syndicate").attr("disabled") && $(e).remove()
                                 })), $('[data-toggle="tooltip"]').tooltip()
                             }
                         })).always((function() {
@@ -53859,7 +53859,7 @@
                         return t.customDisabled
                     })) ? "disabled" : "";
                     return L.divIcon({
-                        className: "sharesub-group-markers ",
+                        className: "syndicate-group-markers ",
                         html: '<b class="' + e + '">' + t.getChildCount() + "</b>"
                     })
                 }
@@ -53877,7 +53877,7 @@
                     else s = "#";
                     "#" != s && (r.find(".join-action-content").append('<a href="' + s + '" class="' + o.attr("class") + '">' + o.html() + "</a>"), o.remove()), r.find(".join-action-content div").remove();
                     var a = L.marker(n, {
-                        icon: "#" == s ? sharesubIconDisabled : sharesubIcon
+                        icon: "#" == s ? syndicateIconDisabled : syndicateIcon
                     });
                     a.customHash = i, a.customDisabled = "#" == s, hu.addLayer(a), a.bindPopup("<div id='popup_" + i + "'><span class='p3-bold'>" + $(e).find(".join-content-name").attr("title") + "</span>" + r.html() + "</div>"), lu[i] = a, cu.extend(n)
                 }
