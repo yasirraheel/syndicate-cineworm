@@ -77,11 +77,11 @@
                 @if ($allCountries->isEmpty())
                     <p class="text-muted mt-2">No countries found.</p>
                 @endif
-                <a class="btn btn-sharesub-outline mt-2" href="https://ask.sharesub.com/country-waitlist" target="_blank" rel="noopener">Request the addition of my country</a>
+                <a class="btn btn-syndicate-outline mt-2" href="https://ask.syndicate.com/country-waitlist" target="_blank" rel="noopener">Request the addition of my country</a>
             </div>
         @endif
         @if ($selectedCountryId !== null)
-            <button type="submit" class="btn btn-sharesub green mt-4">Continue</button>
+            <button type="submit" class="btn btn-syndicate green mt-4">Continue</button>
         @endif
     </form>
 </div>
