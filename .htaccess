@@ -7,6 +7,11 @@
     # Laravel without exposing /public in the browser URL.
     RewriteRule ^$ public/index.php [END]
 
+    # Shared themed dialog assets live with Laravel's public assets, while
+    # the hosting document root is the repository root.
+    RewriteRule ^js/syndicate-dialog\.js$ public/js/syndicate-dialog.js [END]
+    RewriteRule ^css/syndicate-dialog\.css$ public/css/syndicate-dialog.css [END]
+
         # CMS media and theme assets are real files in the repository. Serve
         # them directly before the CMS page route is sent to Laravel.
         RewriteCond %{REQUEST_FILENAME} -f [OR]
