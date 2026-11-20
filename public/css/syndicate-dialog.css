@@ -1,0 +1,116 @@
+#syndicate-dialog-root[hidden] {
+    display: none !important;
+}
+
+.syndicate-dialog-backdrop {
+    align-items: center;
+    background: rgba(7, 24, 40, .68);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    padding: 20px;
+    position: fixed;
+    z-index: 100000;
+}
+
+.syndicate-dialog-card {
+    animation: syndicate-dialog-in .18s ease-out;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 24px 70px rgba(7, 24, 40, .3);
+    color: #172b3d;
+    max-width: 460px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.syndicate-dialog-accent {
+    background: linear-gradient(110deg, #00e497, #016df4 70%);
+    height: 7px;
+}
+
+.syndicate-dialog-body {
+    padding: 28px 30px 24px;
+}
+
+.syndicate-dialog-icon {
+    align-items: center;
+    background: #e9f2ff;
+    border-radius: 50%;
+    color: #016df4;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    margin-bottom: 18px;
+    width: 48px;
+}
+
+.syndicate-dialog-icon.danger {
+    background: #fff0f0;
+    color: #d9364f;
+}
+
+.syndicate-dialog-title {
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 10px;
+}
+
+.syndicate-dialog-message {
+    color: #536779;
+    font-size: 16px;
+    line-height: 1.55;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.syndicate-dialog-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 26px;
+}
+
+.syndicate-dialog-button {
+    border: 0;
+    border-radius: 9px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    min-width: 104px;
+    padding: 11px 18px;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.syndicate-dialog-button:hover {
+    box-shadow: 0 6px 16px rgba(7, 24, 40, .14);
+    transform: translateY(-1px);
+}
+
+.syndicate-dialog-button.cancel {
+    background: #edf2f7;
+    color: #29445c;
+}
+
+.syndicate-dialog-button.primary {
+    background: #016df4;
+    color: #fff;
+}
+
+.syndicate-dialog-button.danger {
+    background: #d9364f;
+    color: #fff;
+}
+
+@keyframes syndicate-dialog-in {
+    from { opacity: 0; transform: translateY(8px) scale(.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 520px) {
+    .syndicate-dialog-body { padding: 24px 22px 20px; }
+    .syndicate-dialog-actions { flex-direction: column-reverse; }
+    .syndicate-dialog-button { width: 100%; }
+}

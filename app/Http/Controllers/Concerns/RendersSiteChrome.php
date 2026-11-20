@@ -42,6 +42,7 @@ trait RendersSiteChrome
             }
             $html = $this->replaceSyndicatescriptionLinks($html);
             $html = $this->injectSupportChatWidget($html);
+            $html = $this->injectSyndicateDialog($html);
             $html = $this->replaceCreateAccountButtons($html);
             $html = $this->removeDeadRecaptchaInputs($html);
         } catch (\Throwable) {
@@ -141,6 +142,23 @@ trait RendersSiteChrome
         return substr($html, 0, $position)
             .'<script src="/js/support-chat.js" defer></script>'."\n"
             .substr($html, $position);
+    }
+
+    /**
+     * Load the shared themed dialog on every captured page. The dialog is
+     * also used by custom admin fragments because they render inside the
+     * captured admin shell.
+     */
+    protected function injectSyndicateDialog(string $html): string
+    {
+        if (str_contains($html, '/js/syndicate-dialog.js')) {
+            return $html;
+        }
+
+        $assets = '<link rel="stylesheet" href="/css/syndicate-dialog.css?v=1">'
+            .'<script src="/js/syndicate-dialog.js?v=1" defer></script>';
+
+        return preg_replace('/<\/head>/i', $assets.'</head>', $html, 1) ?? $html;
     }
 
     /**

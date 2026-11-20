@@ -17992,8 +17992,11 @@
                                     }))
                                 }))
                             }(), $("form#leave-subscription").submit((function(t) {
-                                window.confirm($(this).data("confirm")) || t.preventDefault()
-                            })), Ya(), Wa(),
+                                var e = this;
+                                t.preventDefault(), window.SyndicateDialog && window.SyndicateDialog.confirm($(this).data("confirm")).then((function(t) {
+                                    t && HTMLFormElement.prototype.submit.call(e)
+                                }))
+                                })), Ya(), Wa(),
                             function() {
                                 if ($(".subscriptions").length > 0 && ($("#showInactive").change((function(t) {
                                         $(this).is(":checked") ? ($(".subscriptions-item").hide(), $(".subscriptions-item[data-canceled]").show()) : ($(".subscriptions-item").show(), $(".subscriptions-item[data-canceled]").hide())

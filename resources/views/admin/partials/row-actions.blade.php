@@ -4,7 +4,7 @@
     @endforeach
     <a class="btn btn-light btn-sm" href="{{ $editUrl }}">{{ $label ?? 'Edit' }}</a>
     @if ($deleteUrl ?? null)
-        <form class="d-inline m-0" method="POST" action="{{ $deleteUrl }}" onsubmit="return confirm('{{ $deleteConfirm ?? 'Delete this item permanently?' }}');">
+        <form class="d-inline m-0" method="POST" action="{{ $deleteUrl }}" data-confirm="{{ $deleteConfirm ?? 'Delete this item permanently?' }}" data-dialog-variant="danger">
             @csrf
             @method('DELETE')
             <button type="submit" class="btn-syndicate red outline small">Delete</button>
