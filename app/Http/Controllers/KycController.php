@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Concerns\RendersAdminShell;
 use App\Models\KycSubmission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class KycController extends Controller
 {
+    use RendersAdminShell;
+
     public function show(): \Symfony\Component\HttpFoundation\Response
     {
         return app(CapturedPageController::class)->identityPage();
@@ -65,7 +68,11 @@ class KycController extends Controller
             ->latest('submitted_at')
             ->get();
 
-        return view('admin.kyc', compact('submissions'));
+        return $this->adminShell(
+            view('admin.kyc', compact('submissions'))->render(),
+            'KYC review',
+            '/en/admin/kyc',
+        );
     }
 
     public function approve(Request $request, KycSubmission $submission)

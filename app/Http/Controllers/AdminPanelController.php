@@ -304,18 +304,28 @@ HTML;
     <div class="row">
         <div class="col-12 col-md-6">
             <div class="share-card green">
-                <img src="/img/dashboard/share/proposer.svg" class="icon" alt="">
-                <h2 class="title">KYC reviews</h2>
-                <p class="content">Review identity documents submitted by users and approve or reject them.</p>
-                <a href="/en/admin/kyc" class="btn-syndicate dark big">Open KYC reviews</a>
+                <svg class="icon" viewBox="0 0 160 120" role="img" aria-label="Users and access">
+                    <circle cx="80" cy="42" r="22" fill="none" stroke="currentColor" stroke-width="8"/>
+                    <path d="M35 104c4-25 21-38 45-38s41 13 45 38" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                    <circle cx="30" cy="57" r="14" fill="none" stroke="currentColor" stroke-width="6"/>
+                    <circle cx="130" cy="57" r="14" fill="none" stroke="currentColor" stroke-width="6"/>
+                </svg>
+                <h2 class="title">Users &amp; access</h2>
+                <p class="content">Manage registered users, roles, account status and admin access from one place.</p>
+                <a href="/en/admin/users" class="btn-syndicate dark big">Manage users</a>
             </div>
         </div>
         <div class="col-12 col-md-6">
             <div class="share-card blue">
-                <img src="/img/dashboard/share/participer.svg" class="icon" alt="">
-                <h2 class="title">Subscription activity</h2>
-                <p class="content">Review the shared and joined subscription areas from the admin panel.</p>
-                <a href="/en/admin/shared-subscriptions" class="btn-syndicate dark big">Open subscriptions</a>
+                <svg class="icon" viewBox="0 0 160 120" role="img" aria-label="Platform controls">
+                    <path d="M32 28h96M32 60h96M32 92h96" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                    <circle cx="62" cy="28" r="12" fill="currentColor"/>
+                    <circle cx="104" cy="60" r="12" fill="currentColor"/>
+                    <circle cx="76" cy="92" r="12" fill="currentColor"/>
+                </svg>
+                <h2 class="title">Platform controls</h2>
+                <p class="content">Configure brands, categories, offers and global settings that control the platform.</p>
+                <a href="/en/admin/content/settings" class="btn-syndicate dark big">Open controls</a>
             </div>
         </div>
     </div>
