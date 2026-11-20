@@ -28,6 +28,10 @@ class AdminPanelController extends Controller
 
         abort_unless(isset(self::PAGES[$section]), 404);
 
+        if ($section === 'account') {
+            return app(AdminUsersController::class)->edit(Auth::user(), 'Administrator account', '/en/admin/account');
+        }
+
         return $this->adminResponse(
             app(CapturedPageController::class)->show(self::PAGES[$section]),
             $section,
@@ -38,9 +42,7 @@ class AdminPanelController extends Controller
     {
         abort_unless(Auth::user()?->isAdmin(), 403);
 
-        return $this->adminResponse(
-            app(KycController::class)->show(),
-        );
+        return redirect()->route('admin.kyc');
     }
 
     protected function adminResponse(Response $response, ?string $section = null): Response
@@ -70,7 +72,7 @@ class AdminPanelController extends Controller
             'href="/en/waiting-list"' => 'href="/en/admin/waiting-list"',
             'href="/en/my-wallet"' => 'href="/en/admin/wallet"',
             'href="/en/my-cards"' => 'href="/en/admin/cards"',
-            'href="/en/my-account/identity"' => 'href="/en/admin/account/identity"',
+            'href="/en/my-account/identity"' => 'href="/en/admin/kyc"',
             'href="/en/my-account"' => 'href="/en/admin/account"',
             'href="/en/my-settings"' => 'href="/en/admin/settings"',
             'href="/en/my-chat/subscriptions"' => 'href="/en/admin/chat"',
@@ -283,9 +285,60 @@ HTML;
             1,
         ) ?? $html;
 
+        // The captured dashboard contains the regular user's sidebar. Replace
+        // the complete navigation so every admin page has admin-only links.
+        $html = $this->replaceAdminNavigation($html);
+
         return response($html)
             ->header('Content-Type', 'text/html; charset=UTF-8')
             ->header('Cache-Control', 'no-store, no-cache, must-revalidate');
+    }
+
+    protected function replaceAdminNavigation(string $html): string
+    {
+        $navigationStart = strpos($html, '<ul class="navi_dash">');
+        $contentStart = $navigationStart === false
+            ? false
+            : strpos($html, '<div class="col-12 col-lg-8">', $navigationStart);
+
+        if ($navigationStart === false || $contentStart === false) {
+            return $html;
+        }
+
+        return substr($html, 0, $navigationStart)
+            .$this->adminNavigation()
+            .'</div>'
+            .substr($html, $contentStart);
+    }
+
+    protected function adminNavigation(): string
+    {
+        $currentPath = '/'.trim(request()->path(), '/');
+        $items = [
+            ['/en/admin', 'Dashboard', '<path d="M21 13C21 18.5 16.5 23 11 23S1 18.5 1 13 5.5 3 11 3v10h10Z"/><path d="M23 11c0-5.5-4.5-10-10-10v10h10Z"/>'],
+            ['/en/admin/users', 'Users', '<path d="M15 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm-9 9c0-4 3.6-6 9-6s9 2 9 6H6Z"/>'],
+            ['/en/admin/kyc', 'KYC reviews', '<path d="M6 3h12l4 4v14H6V3Zm3 6h7M9 13h7M9 17h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'],
+            ['/en/admin/support', 'Support', '<path d="M22 12c0 5-4.5 9-10 9-1 0-2-.1-3-.4L4 23l1.2-4.1A8.5 8.5 0 0 1 2 12c0-5 4.5-9 10-9s10 4 10 9Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="8" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="16" cy="12" r="1"/>'],
+            ['/en/admin/brands', 'Brands', '<path d="M4 5h10l9 9-9 9-10-10V5Zm5 5h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'],
+            ['/en/admin/categories', 'Categories', '<path d="M4 4h8v8H4V4Zm14 0h8v8h-8V4ZM4 18h8v8H4v-8Zm14 0h8v8h-8v-8Z"/>'],
+            ['/en/admin/offers', 'Offers', '<path d="M4 6h22v18H4V6Zm2 2v4h18V8H6Zm0 6v8h7v-8H6Zm9 0v3h7v-3h-7Zm0 5v3h7v-3h-7Z"/>'],
+            ['/en/admin/templates', 'Templates', '<path d="M5 4h20v22H5V4Zm4 6h12M9 15h12M9 20h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'],
+            ['/en/admin/content/settings', 'Site settings', '<path d="M4 7h22M4 15h22M4 23h22" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="7" r="3"/><circle cx="20" cy="15" r="3"/><circle cx="13" cy="23" r="3"/>'],
+            ['/en/admin/pages', 'Pages', '<path d="M7 3h10l5 5v19H7V3Zm10 1v5h5M10 14h9M10 19h9M10 24h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'],
+            ['/en/admin/faqs', 'FAQs', '<path d="M15 25a10 10 0 1 0-8-4l-3 4 5-1a10 10 0 0 0 6 1Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11a3 3 0 1 1 5 2c-2 1-2 3-2 3M15 20h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'],
+            ['/en/admin/account', 'Admin account', '<path d="M15 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm-9 9c0-4 3.6-6 9-6s9 2 9 6H6Z" fill="none" stroke="currentColor" stroke-width="2"/>'],
+        ];
+
+        $html = '<ul class="navi_dash">';
+        foreach ($items as [$href, $label, $icon]) {
+            $active = $currentPath === $href || ($href !== '/en/admin' && str_starts_with($currentPath, $href.'/'));
+            $html .= '<li class="navi_dash-item '.($active ? 'active' : '').'">'
+                .'<a class="navi_dash-link'.($active ? ' active' : '').'" href="'.e($href).'">'
+                .'<span class="navi_dash-icon"><svg width="24" height="24" viewBox="0 0 30 30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'.$icon.'</svg></span>'
+                .'<span class="navi_dash-text">'.e($label).'</span></a></li>';
+        }
+
+        return $html.'</ul>';
     }
 
     protected function adminDashboardContent(string $html): string

@@ -20,13 +20,13 @@ class AdminUsersController extends Controller
         return $this->adminShell(view('admin.users.index', compact('users'))->render(), 'Users', '/en/admin/users');
     }
 
-    public function edit(User $user)
+    public function edit(User $user, string $title = 'Edit user', string $activeUrl = '/en/admin/users')
     {
         $roles = $this->roles();
         $countries = Country::orderBy('name')->get();
         $languages = $this->languages();
 
-        return $this->adminShell(view('admin.users.edit', compact('user', 'roles', 'countries', 'languages'))->render(), 'Edit user', '/en/admin/users');
+        return $this->adminShell(view('admin.users.edit', compact('user', 'roles', 'countries', 'languages'))->render(), $title, $activeUrl);
     }
 
     public function update(Request $request, User $user)
