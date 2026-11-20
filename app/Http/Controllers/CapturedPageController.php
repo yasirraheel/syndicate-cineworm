@@ -2485,6 +2485,7 @@ class CapturedPageController extends Controller
             $html = $this->replaceDashboardProposeLink($html);
             $html = $this->renderDashboardStats($html);
             $html = $this->renderDashboardPayments($html);
+            $html = $this->addCinewormWorkstation($html);
         } elseif ($page === 'en/my-shared-subscriptions.html') {
             $html = $this->replaceCreateSubscriptionLink($html);
             $html = $this->replaceCreateSubscriptionLabel($html);
@@ -2505,6 +2506,100 @@ class CapturedPageController extends Controller
         }
 
         return $html;
+    }
+
+    /**
+     * Add the Cineworm tools hub to the authenticated user's dashboard.
+     *
+     * This intentionally uses the existing dashboard card/button palette
+     * rather than introducing a separate product theme. CineShop is not
+     * included until its dashboard destination is ready.
+     */
+    protected function addCinewormWorkstation(string $html): string
+    {
+        $workstation = <<<'HTML'
+<section class="share-section dashboard mb-4 p-4 cw-workstation" aria-labelledby="cw-workstation-title">
+    <div class="cw-workstation-heading">
+        <div>
+            <h3 id="cw-workstation-title" class="share-section-title cta-dashboard">Cineworm <u>Workstation</u></h3>
+            <p class="cw-workstation-subtitle mb-0">Open your Cineworm creative tools from one place.</p>
+        </div>
+        <span class="cw-workstation-status" aria-label="Cineworm tools available">Tools</span>
+    </div>
+    <div class="cw-workstation-grid">
+        <a class="cw-workstation-card" href="https://cineworm.org/reel2reel/#/editor" target="_blank" rel="noopener" aria-label="Open Reel2Reel video editor">
+            <span class="cw-workstation-icon" aria-hidden="true">✂</span>
+            <span class="cw-workstation-card-copy">
+                <strong>Reel2Reel</strong>
+                <small>Video editor, effects and stock</small>
+            </span>
+            <span class="cw-workstation-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="cw-workstation-card" href="https://cinemeet.cineworm.org/" target="_blank" rel="noopener" aria-label="Open CineMeet">
+            <span class="cw-workstation-icon" aria-hidden="true">◉</span>
+            <span class="cw-workstation-card-copy">
+                <strong>CineMeet</strong>
+                <small>Meetings and collaboration rooms</small>
+            </span>
+            <span class="cw-workstation-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="cw-workstation-card" href="https://cineworm.org/cinegrab/" target="_blank" rel="noopener" aria-label="Open CineGrab Downloader">
+            <span class="cw-workstation-icon" aria-hidden="true">↓</span>
+            <span class="cw-workstation-card-copy">
+                <strong>CineGrab</strong>
+                <small>Download videos from supported sites</small>
+            </span>
+            <span class="cw-workstation-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="cw-workstation-card" href="https://stock.cineworm.org/" target="_blank" rel="noopener" aria-label="Open Cineworm Stock">
+            <span class="cw-workstation-icon" aria-hidden="true">▦</span>
+            <span class="cw-workstation-card-copy">
+                <strong>CineStock</strong>
+                <small>Stock audio, video, effects and LUTs</small>
+            </span>
+            <span class="cw-workstation-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="cw-workstation-card" href="https://cineworm.org/livetv/" target="_blank" rel="noopener" aria-label="Open Cineworm Live TV">
+            <span class="cw-workstation-icon" aria-hidden="true">▶</span>
+            <span class="cw-workstation-card-copy">
+                <strong>Live TV</strong>
+                <small>Browse live channels and streams</small>
+            </span>
+            <span class="cw-workstation-arrow" aria-hidden="true">→</span>
+        </a>
+    </div>
+</section>
+HTML;
+
+        $html = preg_replace(
+            '/(<div class="dashboard-progress dashboard-revenues-expenses mb-4 p-4">)/',
+            $this->cinewormWorkstationStyles().$workstation.'$1',
+            $html,
+            1,
+        ) ?? $html;
+
+        return $html;
+    }
+
+    protected function cinewormWorkstationStyles(): string
+    {
+        return <<<'HTML'
+<style>
+.cw-workstation{background:#fff;border:1px solid #c6ddff;border-radius:4px;overflow:hidden}
+.cw-workstation-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
+.cw-workstation-heading .share-section-title{margin-bottom:4px}
+.cw-workstation-subtitle{color:#687083;font-size:15px;line-height:22px}
+.cw-workstation-status{background:#00e497;border-radius:18px;color:#112e45;font-size:12px;font-weight:700;padding:6px 12px;white-space:nowrap}
+.cw-workstation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cw-workstation-card{align-items:center;background:linear-gradient(135deg,#fff 0%,#f5f9ff 100%);border:1px solid #c6ddff;border-radius:12px;color:#112e45;display:flex;gap:12px;min-height:78px;padding:14px;text-decoration:none;transition:box-shadow .2s ease,transform .2s ease,border-color .2s ease}
+.cw-workstation-card:hover{border-color:#016df4;box-shadow:0 10px 24px rgba(1,109,244,.14);color:#112e45;text-decoration:none;transform:translateY(-3px)}
+.cw-workstation-icon{align-items:center;animation:cw-workstation-pulse 2.8s ease-in-out infinite;background:linear-gradient(135deg,#016df4,#00e497);border-radius:50%;color:#112e45;display:inline-flex;flex:0 0 38px;font-size:20px;font-weight:800;height:38px;justify-content:center;line-height:1;width:38px}
+.cw-workstation-card:nth-child(2) .cw-workstation-icon{animation-delay:.25s}.cw-workstation-card:nth-child(3) .cw-workstation-icon{animation-delay:.5s}.cw-workstation-card:nth-child(4) .cw-workstation-icon{animation-delay:.75s}.cw-workstation-card:nth-child(5) .cw-workstation-icon{animation-delay:1s}
+.cw-workstation-card-copy{display:flex;flex:1;flex-direction:column;gap:3px;min-width:0}.cw-workstation-card-copy strong{font-size:16px;font-weight:700}.cw-workstation-card-copy small{color:#687083;font-size:12px;line-height:17px}.cw-workstation-arrow{color:#016df4;font-size:22px;font-weight:700;line-height:1}
+@keyframes cw-workstation-pulse{0%,100%{box-shadow:0 0 0 0 rgba(0,228,151,.18);transform:scale(1)}50%{box-shadow:0 0 0 6px rgba(0,228,151,0);transform:scale(1.04)}}
+@media (max-width:575.98px){.cw-workstation-heading{display:block}.cw-workstation-status{display:inline-block;margin-top:10px}.cw-workstation-grid{grid-template-columns:1fr}.cw-workstation-card-copy strong{font-size:15px}}
+</style>
+HTML;
     }
 
     /**
