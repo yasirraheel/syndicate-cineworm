@@ -48,6 +48,7 @@ class AdminPanelController extends Controller
     protected function adminResponse(Response $response, ?string $section = null): Response
     {
         $html = (string) $response->getContent();
+        $html = $this->injectAdminLoadingState($html);
         if ($section === 'dashboard') {
             $html = $this->adminDashboardContent($html);
         }
@@ -292,6 +293,43 @@ HTML;
         return response($html)
             ->header('Content-Type', 'text/html; charset=UTF-8')
             ->header('Cache-Control', 'no-store, no-cache, must-revalidate');
+    }
+
+    protected function injectAdminLoadingState(string $html): string
+    {
+        if (str_contains($html, 'id="admin-page-loader"')) {
+            return $html;
+        }
+
+        $loader = <<<'HTML'
+<div id="admin-page-loader" role="status" aria-live="polite">
+    <div class="admin-page-loader-spinner" aria-hidden="true"></div>
+    <span>Loading admin panel…</span>
+</div>
+<style>
+    #admin-page-loader { align-items:center; background:#f4f6fb; color:#123d68; display:flex; flex-direction:column; font-size:16px; font-weight:600; gap:14px; inset:0; justify-content:center; position:fixed; transition:opacity .18s ease, visibility .18s ease; visibility:visible; z-index:99999; }
+    #admin-page-loader.is-hidden { opacity:0; pointer-events:none; visibility:hidden; }
+    .admin-page-loader-spinner { animation:admin-page-loader-spin .8s linear infinite; border:4px solid rgba(1,109,244,.18); border-radius:50%; border-top-color:#016df4; height:42px; width:42px; }
+    @keyframes admin-page-loader-spin { to { transform:rotate(360deg); } }
+</style>
+<script>
+    (function () {
+        var loader = document.getElementById('admin-page-loader');
+        if (!loader) return;
+        var hideLoader = function () {
+            loader.classList.add('is-hidden');
+            window.setTimeout(function () { loader.remove(); }, 220);
+        };
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', hideLoader, { once: true });
+        } else {
+            hideLoader();
+        }
+    }());
+</script>
+HTML;
+
+        return preg_replace('/(<body\b[^>]*>)/i', '$1'.$loader, $html, 1) ?? $html;
     }
 
     protected function replaceAdminNavigation(string $html): string
